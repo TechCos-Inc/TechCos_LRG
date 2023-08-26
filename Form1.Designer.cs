@@ -32,7 +32,7 @@
             label1 = new Label();
             button1 = new Button();
             button2 = new Button();
-            button3 = new Button();
+            SuperUserBtn = new Button();
             button4 = new Button();
             pictureBox1 = new PictureBox();
             LoginInfoPanel = new Panel();
@@ -52,12 +52,24 @@
             UsernameUserLoginTxtField = new TextBox();
             label4 = new Label();
             label5 = new Label();
+            SuperUserPanel = new Panel();
+            label11 = new Label();
+            roleCombo = new ComboBox();
+            label8 = new Label();
+            label9 = new Label();
+            label10 = new Label();
+            superusrBackBtn = new PictureBox();
+            AddUserBtn = new Button();
+            addPass = new TextBox();
+            addName = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             LoginInfoPanel.SuspendLayout();
             AdminLoginPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)backAdminBtn).BeginInit();
             UserloginPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)backUserBtn).BeginInit();
+            SuperUserPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)superusrBackBtn).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -91,20 +103,21 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
-            // button3
+            // SuperUserBtn
             // 
-            button3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button3.Location = new Point(1044, 12);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 23);
-            button3.TabIndex = 3;
-            button3.Text = "Super User";
-            button3.UseVisualStyleBackColor = true;
+            SuperUserBtn.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            SuperUserBtn.Location = new Point(1144, 12);
+            SuperUserBtn.Name = "SuperUserBtn";
+            SuperUserBtn.Size = new Size(75, 23);
+            SuperUserBtn.TabIndex = 3;
+            SuperUserBtn.Text = "Super User";
+            SuperUserBtn.UseVisualStyleBackColor = true;
+            SuperUserBtn.Click += SuperUserBtn_Click;
             // 
             // button4
             // 
             button4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button4.Location = new Point(1143, 12);
+            button4.Location = new Point(1243, 12);
             button4.Name = "button4";
             button4.Size = new Size(75, 23);
             button4.TabIndex = 4;
@@ -113,30 +126,29 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Anchor = AnchorStyles.None;
             pictureBox1.BackgroundImageLayout = ImageLayout.None;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(164, 12);
+            pictureBox1.Location = new Point(132, 120);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(615, 432);
+            pictureBox1.Size = new Size(625, 532);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 5;
             pictureBox1.TabStop = false;
             // 
             // LoginInfoPanel
             // 
-            LoginInfoPanel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            LoginInfoPanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             LoginInfoPanel.Controls.Add(label1);
             LoginInfoPanel.Controls.Add(button1);
             LoginInfoPanel.Controls.Add(button2);
-            LoginInfoPanel.Location = new Point(1020, 240);
+            LoginInfoPanel.Location = new Point(937, 272);
             LoginInfoPanel.Name = "LoginInfoPanel";
             LoginInfoPanel.Size = new Size(434, 183);
             LoginInfoPanel.TabIndex = 6;
             // 
             // AdminLoginPanel
             // 
-            AdminLoginPanel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            AdminLoginPanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             AdminLoginPanel.Controls.Add(label7);
             AdminLoginPanel.Controls.Add(label3);
             AdminLoginPanel.Controls.Add(label2);
@@ -144,9 +156,9 @@
             AdminLoginPanel.Controls.Add(AdminSubmitBtn);
             AdminLoginPanel.Controls.Add(PasswordAdminLoginTxtField);
             AdminLoginPanel.Controls.Add(UsernameAdminLoginTxtField);
-            AdminLoginPanel.Location = new Point(1035, 224);
+            AdminLoginPanel.Location = new Point(970, 242);
             AdminLoginPanel.Name = "AdminLoginPanel";
-            AdminLoginPanel.Size = new Size(416, 208);
+            AdminLoginPanel.Size = new Size(453, 238);
             AdminLoginPanel.TabIndex = 7;
             // 
             // label7
@@ -217,7 +229,7 @@
             // 
             // UserloginPanel
             // 
-            UserloginPanel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            UserloginPanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             UserloginPanel.Controls.Add(label6);
             UserloginPanel.Controls.Add(backUserBtn);
             UserloginPanel.Controls.Add(UserSubmitBtn);
@@ -225,7 +237,7 @@
             UserloginPanel.Controls.Add(UsernameUserLoginTxtField);
             UserloginPanel.Controls.Add(label4);
             UserloginPanel.Controls.Add(label5);
-            UserloginPanel.Location = new Point(1052, 212);
+            UserloginPanel.Location = new Point(952, 260);
             UserloginPanel.Name = "UserloginPanel";
             UserloginPanel.Size = new Size(416, 208);
             UserloginPanel.TabIndex = 8;
@@ -296,16 +308,119 @@
             label5.TabIndex = 0;
             label5.Text = "Username ";
             // 
+            // SuperUserPanel
+            // 
+            SuperUserPanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            SuperUserPanel.Controls.Add(label11);
+            SuperUserPanel.Controls.Add(roleCombo);
+            SuperUserPanel.Controls.Add(label8);
+            SuperUserPanel.Controls.Add(label9);
+            SuperUserPanel.Controls.Add(label10);
+            SuperUserPanel.Controls.Add(superusrBackBtn);
+            SuperUserPanel.Controls.Add(AddUserBtn);
+            SuperUserPanel.Controls.Add(addPass);
+            SuperUserPanel.Controls.Add(addName);
+            SuperUserPanel.Location = new Point(987, 227);
+            SuperUserPanel.Name = "SuperUserPanel";
+            SuperUserPanel.Size = new Size(463, 253);
+            SuperUserPanel.TabIndex = 9;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            label11.Location = new Point(90, 156);
+            label11.Name = "label11";
+            label11.Size = new Size(46, 25);
+            label11.TabIndex = 11;
+            label11.Text = "Role";
+            // 
+            // roleCombo
+            // 
+            roleCombo.FormattingEnabled = true;
+            roleCombo.Location = new Point(233, 158);
+            roleCombo.Name = "roleCombo";
+            roleCombo.Size = new Size(121, 23);
+            roleCombo.TabIndex = 10;
+            roleCombo.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            label8.Location = new Point(80, 18);
+            label8.Name = "label8";
+            label8.Size = new Size(90, 28);
+            label8.TabIndex = 9;
+            label8.Text = "Add user";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            label9.Location = new Point(80, 104);
+            label9.Name = "label9";
+            label9.Size = new Size(87, 25);
+            label9.TabIndex = 8;
+            label9.Text = "Password";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            label10.Location = new Point(80, 57);
+            label10.Name = "label10";
+            label10.Size = new Size(96, 25);
+            label10.TabIndex = 7;
+            label10.Text = "Username ";
+            // 
+            // superusrBackBtn
+            // 
+            superusrBackBtn.Image = Properties.Resources.icons8_back_arrow_100;
+            superusrBackBtn.Location = new Point(17, 18);
+            superusrBackBtn.Name = "superusrBackBtn";
+            superusrBackBtn.Size = new Size(37, 34);
+            superusrBackBtn.SizeMode = PictureBoxSizeMode.StretchImage;
+            superusrBackBtn.TabIndex = 6;
+            superusrBackBtn.TabStop = false;
+            superusrBackBtn.Click += superusrBackBtn_Click;
+            // 
+            // AddUserBtn
+            // 
+            AddUserBtn.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            AddUserBtn.Location = new Point(151, 194);
+            AddUserBtn.Name = "AddUserBtn";
+            AddUserBtn.Size = new Size(128, 43);
+            AddUserBtn.TabIndex = 4;
+            AddUserBtn.Text = "Add";
+            AddUserBtn.UseVisualStyleBackColor = true;
+            AddUserBtn.Click += AddUserBtn_Click;
+            // 
+            // addPass
+            // 
+            addPass.Location = new Point(233, 107);
+            addPass.Name = "addPass";
+            addPass.Size = new Size(100, 23);
+            addPass.TabIndex = 3;
+            // 
+            // addName
+            // 
+            addName.Location = new Point(233, 60);
+            addName.Name = "addName";
+            addName.Size = new Size(100, 23);
+            addName.TabIndex = 2;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1454, 761);
+            ClientSize = new Size(1554, 761);
+            Controls.Add(SuperUserPanel);
             Controls.Add(AdminLoginPanel);
             Controls.Add(UserloginPanel);
             Controls.Add(pictureBox1);
             Controls.Add(button4);
-            Controls.Add(button3);
+            Controls.Add(SuperUserBtn);
             Controls.Add(LoginInfoPanel);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
@@ -321,6 +436,9 @@
             UserloginPanel.ResumeLayout(false);
             UserloginPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)backUserBtn).EndInit();
+            SuperUserPanel.ResumeLayout(false);
+            SuperUserPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)superusrBackBtn).EndInit();
             ResumeLayout(false);
         }
 
@@ -329,16 +447,16 @@
         private Label label1;
         private Button button1;
         private Button button2;
-        private Button button3;
+        private Button SuperUserBtn;
         private Button button4;
         private PictureBox pictureBox1;
         private Panel LoginInfoPanel;
         private Panel AdminLoginPanel;
-        private TextBox textBox1;
+        private TextBox addPass;
         private Button AdminSubmitBtn;
         private TextBox PasswordAdminLoginTxtField;
         private TextBox UsernameAdminLoginTxtField;
-        private TextBox textBox2;
+        private TextBox addName;
         private Panel UserloginPanel;
         private Button UserSubmitBtn;
         private TextBox PasswordUserLoginTxtField;
@@ -352,5 +470,13 @@
         private Label label2;
         private Label label6;
         private Label label7;
+        private Panel SuperUserPanel;
+        private Label label8;
+        private Label label9;
+        private Label label10;
+        private PictureBox superusrBackBtn;
+        private Button AddUserBtn;
+        private ComboBox roleCombo;
+        private Label label11;
     }
 }

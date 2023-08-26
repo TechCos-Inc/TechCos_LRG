@@ -28,12 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form2";
+            panel1 = new Panel();
+            panel2 = new Panel();
+            SuspendLayout();
+            // 
+            // panel1
+            // 
+            panel1.Location = new Point(25, 31);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(141, 700);
+            panel1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            panel2.Location = new Point(195, 31);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1247, 700);
+            panel2.TabIndex = 1;
+            // 
+            // Form2
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1454, 761);
+            Controls.Add(panel2);
+            Controls.Add(panel1);
+            Name = "Form2";
+            Text = "Loan Report Generator - TechCos Inc";
+            WindowState = FormWindowState.Maximized;
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Panel panel1;
+        private Panel panel2;
     }
 }
