@@ -17,9 +17,9 @@ namespace TechCos_LRG
             InitializeComponent();
         }
 
-        private void CloseBtn_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            System.Windows.Forms.Application.Exit();
+
         }
     }
 }
