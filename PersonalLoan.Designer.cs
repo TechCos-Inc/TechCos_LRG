@@ -34,13 +34,15 @@
             button3 = new Button();
             button4 = new Button();
             button5 = new Button();
+            CloseBtn = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)CloseBtn).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
-            panel1.Location = new Point(185, 12);
+            panel1.Location = new Point(185, 92);
             panel1.Name = "panel1";
-            panel1.Size = new Size(973, 737);
+            panel1.Size = new Size(952, 657);
             panel1.TabIndex = 0;
             // 
             // button1
@@ -89,12 +91,25 @@
             button5.Text = "button5";
             button5.UseVisualStyleBackColor = true;
             // 
+            // CloseBtn
+            // 
+            CloseBtn.BackgroundImage = Properties.Resources.cancel;
+            CloseBtn.BackgroundImageLayout = ImageLayout.Stretch;
+            CloseBtn.Location = new Point(1119, 12);
+            CloseBtn.Name = "CloseBtn";
+            CloseBtn.Size = new Size(37, 34);
+            CloseBtn.SizeMode = PictureBoxSizeMode.StretchImage;
+            CloseBtn.TabIndex = 13;
+            CloseBtn.TabStop = false;
+            CloseBtn.Click += CloseBtn_Click;
+            // 
             // PersonalLoan
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             ClientSize = new Size(1184, 761);
+            Controls.Add(CloseBtn);
             Controls.Add(button5);
             Controls.Add(button4);
             Controls.Add(button3);
@@ -104,6 +119,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "PersonalLoan";
             Text = "PersonalLoan";
+            ((System.ComponentModel.ISupportInitialize)CloseBtn).EndInit();
             ResumeLayout(false);
         }
 
@@ -115,5 +131,6 @@
         private Button button3;
         private Button button4;
         private Button button5;
+        private PictureBox CloseBtn;
     }
 }
