@@ -426,8 +426,8 @@
             // 
             // CloseBtn
             // 
-            CloseBtn.BackgroundImage = Properties.Resources.cancel;
             CloseBtn.BackgroundImageLayout = ImageLayout.Stretch;
+            CloseBtn.Image = Properties.Resources.cancel;
             CloseBtn.Location = new Point(1114, 12);
             CloseBtn.Name = "CloseBtn";
             CloseBtn.Size = new Size(37, 34);
