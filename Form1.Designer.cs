@@ -62,6 +62,7 @@
             AddUserBtn = new Button();
             addPass = new TextBox();
             addName = new TextBox();
+            BranchBtn = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             LoginInfoPanel.SuspendLayout();
             AdminLoginPanel.SuspendLayout();
@@ -410,11 +411,23 @@
             addName.Size = new Size(100, 23);
             addName.TabIndex = 2;
             // 
+            // BranchBtn
+            // 
+            BranchBtn.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            BranchBtn.Location = new Point(1348, 12);
+            BranchBtn.Name = "BranchBtn";
+            BranchBtn.Size = new Size(75, 23);
+            BranchBtn.TabIndex = 10;
+            BranchBtn.Text = "Branch";
+            BranchBtn.UseVisualStyleBackColor = true;
+            BranchBtn.Click += BranchBtn_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1554, 761);
+            Controls.Add(BranchBtn);
             Controls.Add(SuperUserPanel);
             Controls.Add(AdminLoginPanel);
             Controls.Add(UserloginPanel);
@@ -425,7 +438,6 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
             Text = "Loan Report Generator - TechCos Inc";
-            TopMost = true;
             WindowState = FormWindowState.Maximized;
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -478,5 +490,6 @@
         private Button AddUserBtn;
         private ComboBox roleCombo;
         private Label label11;
+        private Button BranchBtn;
     }
 }
