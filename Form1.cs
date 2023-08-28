@@ -37,7 +37,7 @@ namespace TechCos_LRG
         }
 
 
-        z
+
         private void button2_Click(object sender, EventArgs e)
         {
             LoginInfoPanel.Hide();
@@ -178,6 +178,11 @@ namespace TechCos_LRG
             this.Hide();
             BranchForm branchForm = new BranchForm();
             branchForm.ShowDialog();
+        }
+
+        private void CloseBtn_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
         }
     }
 }

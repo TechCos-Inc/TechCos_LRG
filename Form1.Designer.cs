@@ -63,6 +63,7 @@
             addPass = new TextBox();
             addName = new TextBox();
             BranchBtn = new Button();
+            CloseBtn = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             LoginInfoPanel.SuspendLayout();
             AdminLoginPanel.SuspendLayout();
@@ -71,6 +72,7 @@
             ((System.ComponentModel.ISupportInitialize)backUserBtn).BeginInit();
             SuperUserPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)superusrBackBtn).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)CloseBtn).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -107,7 +109,7 @@
             // SuperUserBtn
             // 
             SuperUserBtn.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            SuperUserBtn.Location = new Point(1144, 12);
+            SuperUserBtn.Location = new Point(790, 12);
             SuperUserBtn.Name = "SuperUserBtn";
             SuperUserBtn.Size = new Size(75, 23);
             SuperUserBtn.TabIndex = 3;
@@ -118,7 +120,7 @@
             // button4
             // 
             button4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button4.Location = new Point(1243, 12);
+            button4.Location = new Point(889, 12);
             button4.Name = "button4";
             button4.Size = new Size(75, 23);
             button4.TabIndex = 4;
@@ -129,9 +131,9 @@
             // 
             pictureBox1.BackgroundImageLayout = ImageLayout.None;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(132, 120);
+            pictureBox1.Location = new Point(90, 164);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(625, 532);
+            pictureBox1.Size = new Size(478, 368);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 5;
             pictureBox1.TabStop = false;
@@ -142,9 +144,9 @@
             LoginInfoPanel.Controls.Add(label1);
             LoginInfoPanel.Controls.Add(button1);
             LoginInfoPanel.Controls.Add(button2);
-            LoginInfoPanel.Location = new Point(937, 272);
+            LoginInfoPanel.Location = new Point(723, 278);
             LoginInfoPanel.Name = "LoginInfoPanel";
-            LoginInfoPanel.Size = new Size(434, 183);
+            LoginInfoPanel.Size = new Size(294, 203);
             LoginInfoPanel.TabIndex = 6;
             // 
             // AdminLoginPanel
@@ -157,9 +159,9 @@
             AdminLoginPanel.Controls.Add(AdminSubmitBtn);
             AdminLoginPanel.Controls.Add(PasswordAdminLoginTxtField);
             AdminLoginPanel.Controls.Add(UsernameAdminLoginTxtField);
-            AdminLoginPanel.Location = new Point(970, 242);
+            AdminLoginPanel.Location = new Point(753, 243);
             AdminLoginPanel.Name = "AdminLoginPanel";
-            AdminLoginPanel.Size = new Size(453, 238);
+            AdminLoginPanel.Size = new Size(453, 277);
             AdminLoginPanel.TabIndex = 7;
             // 
             // label7
@@ -238,9 +240,9 @@
             UserloginPanel.Controls.Add(UsernameUserLoginTxtField);
             UserloginPanel.Controls.Add(label4);
             UserloginPanel.Controls.Add(label5);
-            UserloginPanel.Location = new Point(952, 260);
+            UserloginPanel.Location = new Point(735, 263);
             UserloginPanel.Name = "UserloginPanel";
-            UserloginPanel.Size = new Size(416, 208);
+            UserloginPanel.Size = new Size(416, 247);
             UserloginPanel.TabIndex = 8;
             // 
             // label6
@@ -321,9 +323,9 @@
             SuperUserPanel.Controls.Add(AddUserBtn);
             SuperUserPanel.Controls.Add(addPass);
             SuperUserPanel.Controls.Add(addName);
-            SuperUserPanel.Location = new Point(987, 227);
+            SuperUserPanel.Location = new Point(770, 218);
             SuperUserPanel.Name = "SuperUserPanel";
-            SuperUserPanel.Size = new Size(463, 253);
+            SuperUserPanel.Size = new Size(463, 292);
             SuperUserPanel.TabIndex = 9;
             // 
             // label11
@@ -414,7 +416,7 @@
             // BranchBtn
             // 
             BranchBtn.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BranchBtn.Location = new Point(1348, 12);
+            BranchBtn.Location = new Point(994, 12);
             BranchBtn.Name = "BranchBtn";
             BranchBtn.Size = new Size(75, 23);
             BranchBtn.TabIndex = 10;
@@ -422,11 +424,24 @@
             BranchBtn.UseVisualStyleBackColor = true;
             BranchBtn.Click += BranchBtn_Click;
             // 
+            // CloseBtn
+            // 
+            CloseBtn.BackgroundImage = Properties.Resources.cancel;
+            CloseBtn.BackgroundImageLayout = ImageLayout.Stretch;
+            CloseBtn.Location = new Point(1114, 12);
+            CloseBtn.Name = "CloseBtn";
+            CloseBtn.Size = new Size(37, 34);
+            CloseBtn.SizeMode = PictureBoxSizeMode.StretchImage;
+            CloseBtn.TabIndex = 11;
+            CloseBtn.TabStop = false;
+            CloseBtn.Click += CloseBtn_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1554, 761);
+            ClientSize = new Size(1200, 800);
+            Controls.Add(CloseBtn);
             Controls.Add(BranchBtn);
             Controls.Add(SuperUserPanel);
             Controls.Add(AdminLoginPanel);
@@ -435,10 +450,11 @@
             Controls.Add(button4);
             Controls.Add(SuperUserBtn);
             Controls.Add(LoginInfoPanel);
+            FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Loan Report Generator - TechCos Inc";
-            WindowState = FormWindowState.Maximized;
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             LoginInfoPanel.ResumeLayout(false);
@@ -451,6 +467,7 @@
             SuperUserPanel.ResumeLayout(false);
             SuperUserPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)superusrBackBtn).EndInit();
+            ((System.ComponentModel.ISupportInitialize)CloseBtn).EndInit();
             ResumeLayout(false);
         }
 
@@ -491,5 +508,6 @@
         private ComboBox roleCombo;
         private Label label11;
         private Button BranchBtn;
+        private PictureBox CloseBtn;
     }
 }

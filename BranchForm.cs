@@ -128,5 +128,10 @@ namespace TechCos_LRG
             }
 
         }
+
+        private void CloseBtn_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+        }
     }
 }

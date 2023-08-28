@@ -48,5 +48,10 @@ namespace TechCos_LRG
             MessageBox.Show("Added Succesful.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
+
+        private void CloseBtn_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+        }
     }
 }

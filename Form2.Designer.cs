@@ -36,9 +36,11 @@
             LoanListPanel = new Panel();
             panel1 = new Panel();
             dataGridView = new DataGridView();
+            CloseBtn = new PictureBox();
             LoanListPanel.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)CloseBtn).BeginInit();
             SuspendLayout();
             // 
             // branchComboBox
@@ -96,9 +98,9 @@
             LoanListPanel.Controls.Add(PersonalBtn);
             LoanListPanel.Controls.Add(GroupBtn);
             LoanListPanel.Controls.Add(BusinessBtn);
-            LoanListPanel.Location = new Point(488, 142);
+            LoanListPanel.Location = new Point(343, 147);
             LoanListPanel.Name = "LoanListPanel";
-            LoanListPanel.Size = new Size(492, 122);
+            LoanListPanel.Size = new Size(461, 122);
             LoanListPanel.TabIndex = 5;
             // 
             // panel1
@@ -107,9 +109,9 @@
             panel1.BackgroundImageLayout = ImageLayout.Center;
             panel1.Controls.Add(label1);
             panel1.Controls.Add(branchComboBox);
-            panel1.Location = new Point(570, 12);
+            panel1.Location = new Point(399, 12);
             panel1.Name = "panel1";
-            panel1.Size = new Size(322, 100);
+            panel1.Size = new Size(372, 100);
             panel1.TabIndex = 6;
             // 
             // dataGridView
@@ -119,25 +121,39 @@
             dataGridView.Location = new Point(162, 302);
             dataGridView.Name = "dataGridView";
             dataGridView.RowTemplate.Height = 25;
-            dataGridView.Size = new Size(1137, 319);
+            dataGridView.Size = new Size(867, 319);
             dataGridView.TabIndex = 7;
+            // 
+            // CloseBtn
+            // 
+            CloseBtn.BackgroundImage = Properties.Resources.cancel;
+            CloseBtn.BackgroundImageLayout = ImageLayout.Stretch;
+            CloseBtn.Location = new Point(1122, 12);
+            CloseBtn.Name = "CloseBtn";
+            CloseBtn.Size = new Size(37, 34);
+            CloseBtn.SizeMode = PictureBoxSizeMode.StretchImage;
+            CloseBtn.TabIndex = 12;
+            CloseBtn.TabStop = false;
+            CloseBtn.Click += CloseBtn_Click;
             // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1454, 761);
+            ClientSize = new Size(1184, 761);
+            Controls.Add(CloseBtn);
             Controls.Add(dataGridView);
             Controls.Add(panel1);
             Controls.Add(LoanListPanel);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Form2";
             Text = "Loan Report Generator - TechCos Inc";
-            WindowState = FormWindowState.Maximized;
             Load += Form2_Load;
             LoanListPanel.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView).EndInit();
+            ((System.ComponentModel.ISupportInitialize)CloseBtn).EndInit();
             ResumeLayout(false);
         }
 
@@ -151,5 +167,6 @@
         private Panel LoanListPanel;
         private Panel panel1;
         private DataGridView dataGridView;
+        private PictureBox CloseBtn;
     }
 }

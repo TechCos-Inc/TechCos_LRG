@@ -15,9 +15,9 @@ namespace TechCos_LRG
     {
         public static Form2 instance;
         public ComboBox branchCB;
-        SqlConnection cn ;
-        SqlCommand cmd ;
-        SqlDataReader dr ;
+        SqlConnection cn;
+        SqlCommand cmd;
+        SqlDataReader dr;
 
         public Form2()
         {
@@ -73,6 +73,9 @@ namespace TechCos_LRG
             }
         }
 
-
+        private void CloseBtn_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+        }
     }
 }

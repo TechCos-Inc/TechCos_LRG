@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             ClassCombo = new ComboBox();
             panel1 = new Panel();
             ClearBtn = new Button();
@@ -50,8 +50,10 @@
             IFSCtxt = new TextBox();
             label1 = new Label();
             dataGridView = new DataGridView();
+            CloseBtn = new PictureBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)CloseBtn).BeginInit();
             SuspendLayout();
             // 
             // ClassCombo
@@ -86,7 +88,7 @@
             panel1.Controls.Add(label1);
             panel1.Location = new Point(39, 36);
             panel1.Name = "panel1";
-            panel1.Size = new Size(507, 694);
+            panel1.Size = new Size(507, 733);
             panel1.TabIndex = 2;
             // 
             // ClearBtn
@@ -248,44 +250,58 @@
             dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView.BorderStyle = BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.TopLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
-            dataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.TopLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dataGridView.DefaultCellStyle = dataGridViewCellStyle2;
-            dataGridView.Location = new Point(563, 36);
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Window;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dataGridView.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridView.Location = new Point(563, 83);
             dataGridView.Name = "dataGridView";
             dataGridView.RowTemplate.Height = 25;
-            dataGridView.Size = new Size(1002, 633);
+            dataGridView.Size = new Size(1002, 586);
             dataGridView.TabIndex = 3;
             dataGridView.CellClick += dataGridView_CellClick;
+            // 
+            // CloseBtn
+            // 
+            CloseBtn.BackgroundImage = Properties.Resources.cancel;
+            CloseBtn.BackgroundImageLayout = ImageLayout.Stretch;
+            CloseBtn.Location = new Point(1151, 12);
+            CloseBtn.Name = "CloseBtn";
+            CloseBtn.Size = new Size(37, 34);
+            CloseBtn.SizeMode = PictureBoxSizeMode.StretchImage;
+            CloseBtn.TabIndex = 12;
+            CloseBtn.TabStop = false;
+            CloseBtn.Click += CloseBtn_Click;
             // 
             // BranchForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1554, 761);
+            ClientSize = new Size(1200, 800);
+            Controls.Add(CloseBtn);
             Controls.Add(dataGridView);
             Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "BranchForm";
             Text = "BranchForm";
-            WindowState = FormWindowState.Maximized;
             Load += BranchForm_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView).EndInit();
+            ((System.ComponentModel.ISupportInitialize)CloseBtn).EndInit();
             ResumeLayout(false);
         }
 
@@ -310,5 +326,6 @@
         private Button AddBtn;
         private DataGridView dataGridView;
         private Button ClearBtn;
+        private PictureBox CloseBtn;
     }
 }

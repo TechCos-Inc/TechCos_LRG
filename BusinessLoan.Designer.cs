@@ -33,6 +33,8 @@
             BAddressTxt = new TextBox();
             label3 = new Label();
             AddBtn = new Button();
+            CloseBtn = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)CloseBtn).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -78,19 +80,34 @@
             AddBtn.UseVisualStyleBackColor = true;
             AddBtn.Click += AddBtn_Click;
             // 
+            // CloseBtn
+            // 
+            CloseBtn.BackgroundImage = Properties.Resources.cancel;
+            CloseBtn.BackgroundImageLayout = ImageLayout.Stretch;
+            CloseBtn.Location = new Point(1123, 12);
+            CloseBtn.Name = "CloseBtn";
+            CloseBtn.Size = new Size(37, 34);
+            CloseBtn.SizeMode = PictureBoxSizeMode.StretchImage;
+            CloseBtn.TabIndex = 12;
+            CloseBtn.TabStop = false;
+            CloseBtn.Click += CloseBtn_Click;
+            // 
             // BusinessLoan
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1454, 761);
+            ClientSize = new Size(1184, 761);
+            Controls.Add(CloseBtn);
             Controls.Add(AddBtn);
             Controls.Add(BAddressTxt);
             Controls.Add(label3);
             Controls.Add(BNameTxt);
             Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "BusinessLoan";
             Text = "BusinessLoan";
             Load += BusinessLoan_Load;
+            ((System.ComponentModel.ISupportInitialize)CloseBtn).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -102,5 +119,6 @@
         private TextBox BAddressTxt;
         private Label label3;
         private Button AddBtn;
+        private PictureBox CloseBtn;
     }
 }

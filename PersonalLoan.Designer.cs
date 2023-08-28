@@ -28,19 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
+            CloseBtn = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)CloseBtn).BeginInit();
             SuspendLayout();
+            // 
+            // CloseBtn
+            // 
+            CloseBtn.BackgroundImage = Properties.Resources.cancel;
+            CloseBtn.BackgroundImageLayout = ImageLayout.Stretch;
+            CloseBtn.Location = new Point(1124, 12);
+            CloseBtn.Name = "CloseBtn";
+            CloseBtn.Size = new Size(37, 34);
+            CloseBtn.SizeMode = PictureBoxSizeMode.StretchImage;
+            CloseBtn.TabIndex = 12;
+            CloseBtn.TabStop = false;
+            CloseBtn.Click += CloseBtn_Click;
             // 
             // PersonalLoan
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
-            ClientSize = new Size(1454, 761);
+            ClientSize = new Size(1184, 761);
+            Controls.Add(CloseBtn);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "PersonalLoan";
             Text = "PersonalLoan";
+            ((System.ComponentModel.ISupportInitialize)CloseBtn).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
+
+        private PictureBox CloseBtn;
     }
 }
