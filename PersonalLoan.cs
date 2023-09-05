@@ -19,7 +19,8 @@ namespace TechCos_LRG
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            BorrowerDetailpanel.Show();
+            BorrowerOffice.Hide();
         }
 
         private void CloseBtn_Click(object sender, EventArgs e)
@@ -28,6 +29,21 @@ namespace TechCos_LRG
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            BorrowerDetailpanel.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
         {
 
         }
