@@ -34,7 +34,10 @@
             label3 = new Label();
             AddBtn = new Button();
             CloseBtn = new PictureBox();
+            generateBtn = new Button();
+            BLBackBtn = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)CloseBtn).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)BLBackBtn).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -92,11 +95,34 @@
             CloseBtn.TabStop = false;
             CloseBtn.Click += CloseBtn_Click;
             // 
+            // generateBtn
+            // 
+            generateBtn.Location = new Point(649, 417);
+            generateBtn.Name = "generateBtn";
+            generateBtn.Size = new Size(75, 23);
+            generateBtn.TabIndex = 13;
+            generateBtn.Text = "generate";
+            generateBtn.UseVisualStyleBackColor = true;
+            generateBtn.Click += generateBtn_Click;
+            // 
+            // BLBackBtn
+            // 
+            BLBackBtn.Image = Properties.Resources.icons8_back_arrow_100;
+            BLBackBtn.Location = new Point(1063, 12);
+            BLBackBtn.Name = "BLBackBtn";
+            BLBackBtn.Size = new Size(37, 34);
+            BLBackBtn.SizeMode = PictureBoxSizeMode.StretchImage;
+            BLBackBtn.TabIndex = 14;
+            BLBackBtn.TabStop = false;
+            BLBackBtn.Click += BLBackBtn_Click;
+            // 
             // BusinessLoan
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1184, 761);
+            Controls.Add(BLBackBtn);
+            Controls.Add(generateBtn);
             Controls.Add(CloseBtn);
             Controls.Add(AddBtn);
             Controls.Add(BAddressTxt);
@@ -105,9 +131,11 @@
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "BusinessLoan";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "BusinessLoan";
             Load += BusinessLoan_Load;
             ((System.ComponentModel.ISupportInitialize)CloseBtn).EndInit();
+            ((System.ComponentModel.ISupportInitialize)BLBackBtn).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -120,5 +148,7 @@
         private Label label3;
         private Button AddBtn;
         private PictureBox CloseBtn;
+        private Button generateBtn;
+        private PictureBox BLBackBtn;
     }
 }

@@ -26,14 +26,25 @@ namespace TechCos_LRG
             branchCB = branchComboBox;
             LoanListPanel.Hide();
             dataGridView.Hide();
-            branchComboBox.Items.Add("Pondy");
 
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            cn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Harish K\\source\\repos\\TechCos_LRG\\Database.mdf\";Integrated Security=True");
+            cn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Harish K\\source\\repos\\HarishK-CS\\TechCos_LRG\\Database.mdf\";Integrated Security=True");
             cn.Open();
+            string Sql = "select BranchName from Branch";
+
+            cmd = new SqlCommand(Sql, cn);
+            dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                branchComboBox.Items.Add(dr[0]);
+
+            }
+
+            dr.Close();
         }
 
         private void PersonalBtn_Click(object sender, EventArgs e)

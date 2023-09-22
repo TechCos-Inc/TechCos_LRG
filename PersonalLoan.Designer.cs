@@ -29,12 +29,16 @@
         private void InitializeComponent()
         {
             BorrowerDetailpanel = new Panel();
+            textBox7 = new TextBox();
+            label8 = new Label();
+            textBox6 = new TextBox();
+            label7 = new Label();
             label6 = new Label();
             textBox5 = new TextBox();
             textBox1 = new TextBox();
             label2 = new Label();
             label5 = new Label();
-            textBox4 = new TextBox();
+            ff = new TextBox();
             label4 = new Label();
             textBox3 = new TextBox();
             label3 = new Label();
@@ -48,12 +52,10 @@
             button5 = new Button();
             CloseBtn = new PictureBox();
             label1 = new Label();
-            label7 = new Label();
-            textBox6 = new TextBox();
-            label8 = new Label();
-            textBox7 = new TextBox();
+            PLBackBtn = new PictureBox();
             BorrowerDetailpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)CloseBtn).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)PLBackBtn).BeginInit();
             SuspendLayout();
             // 
             // BorrowerDetailpanel
@@ -68,7 +70,7 @@
             BorrowerDetailpanel.Controls.Add(textBox1);
             BorrowerDetailpanel.Controls.Add(label2);
             BorrowerDetailpanel.Controls.Add(label5);
-            BorrowerDetailpanel.Controls.Add(textBox4);
+            BorrowerDetailpanel.Controls.Add(ff);
             BorrowerDetailpanel.Controls.Add(label4);
             BorrowerDetailpanel.Controls.Add(textBox3);
             BorrowerDetailpanel.Controls.Add(label3);
@@ -80,6 +82,39 @@
             BorrowerDetailpanel.Size = new Size(952, 649);
             BorrowerDetailpanel.TabIndex = 0;
             BorrowerDetailpanel.Paint += panel1_Paint;
+            // 
+            // textBox7
+            // 
+            textBox7.Location = new Point(144, 257);
+            textBox7.Multiline = true;
+            textBox7.Name = "textBox7";
+            textBox7.Size = new Size(244, 27);
+            textBox7.TabIndex = 15;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(78, 260);
+            label8.Name = "label8";
+            label8.Size = new Size(49, 15);
+            label8.TabIndex = 14;
+            label8.Text = "Address";
+            // 
+            // textBox6
+            // 
+            textBox6.Location = new Point(144, 109);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(300, 23);
+            textBox6.TabIndex = 13;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(53, 117);
+            label7.Name = "label7";
+            label7.Size = new Size(74, 15);
+            label7.TabIndex = 12;
+            label7.Text = "Pan Number";
             // 
             // label6
             // 
@@ -122,12 +157,12 @@
             label5.TabIndex = 7;
             label5.Text = "SB Account No";
             // 
-            // textBox4
+            // ff
             // 
-            textBox4.Location = new Point(144, 41);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(300, 23);
-            textBox4.TabIndex = 6;
+            ff.Location = new Point(144, 41);
+            ff.Name = "ff";
+            ff.Size = new Size(300, 23);
+            ff.TabIndex = 6;
             // 
             // label4
             // 
@@ -248,38 +283,16 @@
             label1.TabIndex = 14;
             label1.Text = "Personal Loan";
             // 
-            // label7
+            // PLBackBtn
             // 
-            label7.AutoSize = true;
-            label7.Location = new Point(53, 117);
-            label7.Name = "label7";
-            label7.Size = new Size(74, 15);
-            label7.TabIndex = 12;
-            label7.Text = "Pan Number";
-            // 
-            // textBox6
-            // 
-            textBox6.Location = new Point(144, 109);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(300, 23);
-            textBox6.TabIndex = 13;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(78, 260);
-            label8.Name = "label8";
-            label8.Size = new Size(49, 15);
-            label8.TabIndex = 14;
-            label8.Text = "Address";
-            // 
-            // textBox7
-            // 
-            textBox7.Location = new Point(144, 257);
-            textBox7.Multiline = true;
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(244, 27);
-            textBox7.TabIndex = 15;
+            PLBackBtn.Image = Properties.Resources.icons8_back_arrow_100;
+            PLBackBtn.Location = new Point(1062, 12);
+            PLBackBtn.Name = "PLBackBtn";
+            PLBackBtn.Size = new Size(37, 34);
+            PLBackBtn.SizeMode = PictureBoxSizeMode.StretchImage;
+            PLBackBtn.TabIndex = 15;
+            PLBackBtn.TabStop = false;
+            PLBackBtn.Click += PLBackBtn_Click;
             // 
             // PersonalLoan
             // 
@@ -288,6 +301,7 @@
             AutoScroll = true;
             BackColor = SystemColors.GradientActiveCaption;
             ClientSize = new Size(1184, 761);
+            Controls.Add(PLBackBtn);
             Controls.Add(label1);
             Controls.Add(CloseBtn);
             Controls.Add(button5);
@@ -298,10 +312,12 @@
             Controls.Add(BorrowerDetailpanel);
             FormBorderStyle = FormBorderStyle.None;
             Name = "PersonalLoan";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "PersonalLoan";
             BorrowerDetailpanel.ResumeLayout(false);
             BorrowerDetailpanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)CloseBtn).EndInit();
+            ((System.ComponentModel.ISupportInitialize)PLBackBtn).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -321,7 +337,7 @@
         private Label label3;
         private TextBox textBox2;
         private Label label5;
-        private TextBox textBox4;
+        private TextBox ff;
         private Label label4;
         private TextBox textBox3;
         private Label label6;
@@ -332,5 +348,6 @@
         private TextBox textBox6;
         private Label label7;
         private TextBox textBox7;
+        private PictureBox PLBackBtn;
     }
 }

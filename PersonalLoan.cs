@@ -20,7 +20,7 @@ namespace TechCos_LRG
         private void button1_Click(object sender, EventArgs e)
         {
             BorrowerDetailpanel.Show();
-            BorrowerOffice.Hide();
+
         }
 
         private void CloseBtn_Click(object sender, EventArgs e)
@@ -46,6 +46,13 @@ namespace TechCos_LRG
         private void button3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void PLBackBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form2 form2 = new Form2();
+            form2.ShowDialog();
         }
     }
 }

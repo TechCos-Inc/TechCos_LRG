@@ -46,9 +46,9 @@
             // branchComboBox
             // 
             branchComboBox.FormattingEnabled = true;
-            branchComboBox.Location = new Point(186, 35);
+            branchComboBox.Location = new Point(147, 35);
             branchComboBox.Name = "branchComboBox";
-            branchComboBox.Size = new Size(121, 23);
+            branchComboBox.Size = new Size(192, 23);
             branchComboBox.TabIndex = 0;
             branchComboBox.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
@@ -147,6 +147,7 @@
             Controls.Add(LoanListPanel);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Form2";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Loan Report Generator - TechCos Inc";
             Load += Form2_Load;
             LoanListPanel.ResumeLayout(false);
