@@ -37,6 +37,7 @@
             panel1 = new Panel();
             dataGridView = new DataGridView();
             CloseBtn = new PictureBox();
+            JlgBtn = new Button();
             LoanListPanel.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
@@ -64,7 +65,7 @@
             // 
             // PersonalBtn
             // 
-            PersonalBtn.Location = new Point(41, 40);
+            PersonalBtn.Location = new Point(25, 50);
             PersonalBtn.Name = "PersonalBtn";
             PersonalBtn.Size = new Size(75, 23);
             PersonalBtn.TabIndex = 2;
@@ -74,7 +75,7 @@
             // 
             // BusinessBtn
             // 
-            BusinessBtn.Location = new Point(161, 40);
+            BusinessBtn.Location = new Point(108, 50);
             BusinessBtn.Name = "BusinessBtn";
             BusinessBtn.Size = new Size(122, 23);
             BusinessBtn.TabIndex = 3;
@@ -84,7 +85,7 @@
             // 
             // GroupBtn
             // 
-            GroupBtn.Location = new Point(344, 40);
+            GroupBtn.Location = new Point(367, 50);
             GroupBtn.Name = "GroupBtn";
             GroupBtn.Size = new Size(75, 23);
             GroupBtn.TabIndex = 4;
@@ -95,6 +96,7 @@
             // 
             LoanListPanel.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             LoanListPanel.BackgroundImageLayout = ImageLayout.Center;
+            LoanListPanel.Controls.Add(JlgBtn);
             LoanListPanel.Controls.Add(PersonalBtn);
             LoanListPanel.Controls.Add(GroupBtn);
             LoanListPanel.Controls.Add(BusinessBtn);
@@ -136,6 +138,16 @@
             CloseBtn.TabStop = false;
             CloseBtn.Click += CloseBtn_Click;
             // 
+            // JlgBtn
+            // 
+            JlgBtn.Location = new Point(239, 50);
+            JlgBtn.Name = "JlgBtn";
+            JlgBtn.Size = new Size(122, 23);
+            JlgBtn.TabIndex = 5;
+            JlgBtn.Text = "JLG ";
+            JlgBtn.UseVisualStyleBackColor = true;
+            JlgBtn.Click += JlgBtn_Click;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -169,5 +181,6 @@
         private Panel panel1;
         private DataGridView dataGridView;
         private PictureBox CloseBtn;
+        private Button JlgBtn;
     }
 }

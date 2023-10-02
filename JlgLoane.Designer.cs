@@ -36,13 +36,24 @@
             button5 = new Button();
             button6 = new Button();
             button7 = new Button();
-            button8 = new Button();
-            button9 = new Button();
+            SaveAndContinue1Btn = new Button();
+            ExportPdfBtn = new Button();
             label2 = new Label();
             JLGName = new TextBox();
             label3 = new Label();
             SBno = new TextBox();
             panel1 = new Panel();
+            App_date = new DateTimePicker();
+            Doc_date = new DateTimePicker();
+            SECR_Ph = new TextBox();
+            label15 = new Label();
+            SECR_Name = new TextBox();
+            label14 = new Label();
+            PRES_Ph = new TextBox();
+            label13 = new Label();
+            PRES_Name = new TextBox();
+            label9 = new Label();
+            label12 = new Label();
             label11 = new Label();
             label10 = new Label();
             label8 = new Label();
@@ -50,22 +61,11 @@
             label6 = new Label();
             label5 = new Label();
             label4 = new Label();
-            DistrictName = new TextBox();
-            CityName = new TextBox();
+            ADDs4 = new TextBox();
+            ADDs3 = new TextBox();
             PinCode = new TextBox();
-            StreetName = new TextBox();
-            HouseNo = new TextBox();
-            label12 = new Label();
-            label9 = new Label();
-            PresidentName = new TextBox();
-            label13 = new Label();
-            PresidentPhone = new TextBox();
-            label14 = new Label();
-            SecertaryName = new TextBox();
-            label15 = new Label();
-            SecertaryPhone = new TextBox();
-            Doc_date = new DateTimePicker();
-            App_date = new DateTimePicker();
+            ADDs2 = new TextBox();
+            ADDs1 = new TextBox();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -144,24 +144,25 @@
             button7.Text = "button7";
             button7.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // SaveAndContinue1Btn
             // 
-            button8.Location = new Point(988, 763);
-            button8.Name = "button8";
-            button8.Size = new Size(151, 43);
-            button8.TabIndex = 9;
-            button8.Text = "save and continue";
-            button8.UseVisualStyleBackColor = true;
-            button8.Click += button8_Click;
+            SaveAndContinue1Btn.Location = new Point(988, 763);
+            SaveAndContinue1Btn.Name = "SaveAndContinue1Btn";
+            SaveAndContinue1Btn.Size = new Size(151, 43);
+            SaveAndContinue1Btn.TabIndex = 9;
+            SaveAndContinue1Btn.Text = "save and continue";
+            SaveAndContinue1Btn.UseVisualStyleBackColor = true;
+            SaveAndContinue1Btn.Click += SaveAndContinue1Btn_Click;
             // 
-            // button9
+            // ExportPdfBtn
             // 
-            button9.Location = new Point(761, 763);
-            button9.Name = "button9";
-            button9.Size = new Size(151, 43);
-            button9.TabIndex = 10;
-            button9.Text = "Export pdf";
-            button9.UseVisualStyleBackColor = true;
+            ExportPdfBtn.Location = new Point(761, 763);
+            ExportPdfBtn.Name = "ExportPdfBtn";
+            ExportPdfBtn.Size = new Size(151, 43);
+            ExportPdfBtn.TabIndex = 10;
+            ExportPdfBtn.Text = "Export pdf";
+            ExportPdfBtn.UseVisualStyleBackColor = true;
+            ExportPdfBtn.Click += ExportPdfBtn_Click;
             // 
             // label2
             // 
@@ -203,13 +204,13 @@
             // 
             panel1.Controls.Add(App_date);
             panel1.Controls.Add(Doc_date);
-            panel1.Controls.Add(SecertaryPhone);
+            panel1.Controls.Add(SECR_Ph);
             panel1.Controls.Add(label15);
-            panel1.Controls.Add(SecertaryName);
+            panel1.Controls.Add(SECR_Name);
             panel1.Controls.Add(label14);
-            panel1.Controls.Add(PresidentPhone);
+            panel1.Controls.Add(PRES_Ph);
             panel1.Controls.Add(label13);
-            panel1.Controls.Add(PresidentName);
+            panel1.Controls.Add(PRES_Name);
             panel1.Controls.Add(label9);
             panel1.Controls.Add(label12);
             panel1.Controls.Add(label11);
@@ -219,11 +220,11 @@
             panel1.Controls.Add(label6);
             panel1.Controls.Add(label5);
             panel1.Controls.Add(label4);
-            panel1.Controls.Add(DistrictName);
-            panel1.Controls.Add(CityName);
+            panel1.Controls.Add(ADDs4);
+            panel1.Controls.Add(ADDs3);
             panel1.Controls.Add(PinCode);
-            panel1.Controls.Add(StreetName);
-            panel1.Controls.Add(HouseNo);
+            panel1.Controls.Add(ADDs2);
+            panel1.Controls.Add(ADDs1);
             panel1.Controls.Add(SBno);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(JLGName);
@@ -232,6 +233,104 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(980, 675);
             panel1.TabIndex = 0;
+            // 
+            // App_date
+            // 
+            App_date.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            App_date.Location = new Point(547, 44);
+            App_date.Name = "App_date";
+            App_date.Size = new Size(200, 34);
+            App_date.TabIndex = 40;
+            // 
+            // Doc_date
+            // 
+            Doc_date.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            Doc_date.Location = new Point(151, 44);
+            Doc_date.Name = "Doc_date";
+            Doc_date.Size = new Size(200, 34);
+            Doc_date.TabIndex = 39;
+            // 
+            // SECR_Ph
+            // 
+            SECR_Ph.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            SECR_Ph.Location = new Point(671, 439);
+            SECR_Ph.Name = "SECR_Ph";
+            SECR_Ph.Size = new Size(237, 34);
+            SECR_Ph.TabIndex = 38;
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            label15.Location = new Point(562, 442);
+            label15.Name = "label15";
+            label15.Size = new Size(103, 28);
+            label15.TabIndex = 37;
+            label15.Text = "Phone No:";
+            // 
+            // SECR_Name
+            // 
+            SECR_Name.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            SECR_Name.Location = new Point(201, 442);
+            SECR_Name.Name = "SECR_Name";
+            SECR_Name.Size = new Size(331, 34);
+            SECR_Name.TabIndex = 36;
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            label14.Location = new Point(41, 442);
+            label14.Name = "label14";
+            label14.Size = new Size(154, 28);
+            label14.TabIndex = 35;
+            label14.Text = "Secertary Name:";
+            // 
+            // PRES_Ph
+            // 
+            PRES_Ph.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            PRES_Ph.Location = new Point(671, 378);
+            PRES_Ph.Name = "PRES_Ph";
+            PRES_Ph.Size = new Size(237, 34);
+            PRES_Ph.TabIndex = 34;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            label13.Location = new Point(562, 378);
+            label13.Name = "label13";
+            label13.Size = new Size(103, 28);
+            label13.TabIndex = 33;
+            label13.Text = "Phone No:";
+            // 
+            // PRES_Name
+            // 
+            PRES_Name.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            PRES_Name.Location = new Point(201, 381);
+            PRES_Name.Name = "PRES_Name";
+            PRES_Name.Size = new Size(331, 34);
+            PRES_Name.TabIndex = 32;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            label9.Location = new Point(430, 44);
+            label9.Name = "label9";
+            label9.Size = new Size(111, 28);
+            label9.TabIndex = 29;
+            label9.Text = "Applic.date";
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            label12.Location = new Point(48, 46);
+            label12.Name = "label12";
+            label12.Size = new Size(95, 28);
+            label12.TabIndex = 28;
+            label12.Text = "Doc. date";
             // 
             // label11
             // 
@@ -305,21 +404,21 @@
             label4.TabIndex = 20;
             label4.Text = "House no:";
             // 
-            // DistrictName
+            // ADDs4
             // 
-            DistrictName.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            DistrictName.Location = new Point(178, 301);
-            DistrictName.Name = "DistrictName";
-            DistrictName.Size = new Size(214, 34);
-            DistrictName.TabIndex = 17;
+            ADDs4.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            ADDs4.Location = new Point(178, 301);
+            ADDs4.Name = "ADDs4";
+            ADDs4.Size = new Size(214, 34);
+            ADDs4.TabIndex = 17;
             // 
-            // CityName
+            // ADDs3
             // 
-            CityName.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            CityName.Location = new Point(729, 218);
-            CityName.Name = "CityName";
-            CityName.Size = new Size(237, 34);
-            CityName.TabIndex = 16;
+            ADDs3.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            ADDs3.Location = new Point(729, 218);
+            ADDs3.Name = "ADDs3";
+            ADDs3.Size = new Size(237, 34);
+            ADDs3.TabIndex = 16;
             // 
             // PinCode
             // 
@@ -329,119 +428,21 @@
             PinCode.Size = new Size(136, 34);
             PinCode.TabIndex = 15;
             // 
-            // StreetName
+            // ADDs2
             // 
-            StreetName.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            StreetName.Location = new Point(387, 221);
-            StreetName.Name = "StreetName";
-            StreetName.Size = new Size(227, 34);
-            StreetName.TabIndex = 14;
+            ADDs2.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            ADDs2.Location = new Point(387, 221);
+            ADDs2.Name = "ADDs2";
+            ADDs2.Size = new Size(227, 34);
+            ADDs2.TabIndex = 14;
             // 
-            // HouseNo
+            // ADDs1
             // 
-            HouseNo.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            HouseNo.Location = new Point(152, 221);
-            HouseNo.Name = "HouseNo";
-            HouseNo.Size = new Size(99, 34);
-            HouseNo.TabIndex = 13;
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            label12.Location = new Point(48, 46);
-            label12.Name = "label12";
-            label12.Size = new Size(95, 28);
-            label12.TabIndex = 28;
-            label12.Text = "Doc. date";
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.Location = new Point(430, 44);
-            label9.Name = "label9";
-            label9.Size = new Size(111, 28);
-            label9.TabIndex = 29;
-            label9.Text = "Applic.date";
-            // 
-            // PresidentName
-            // 
-            PresidentName.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            PresidentName.Location = new Point(201, 381);
-            PresidentName.Name = "PresidentName";
-            PresidentName.Size = new Size(331, 34);
-            PresidentName.TabIndex = 32;
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            label13.Location = new Point(562, 378);
-            label13.Name = "label13";
-            label13.Size = new Size(103, 28);
-            label13.TabIndex = 33;
-            label13.Text = "Phone No:";
-            // 
-            // PresidentPhone
-            // 
-            PresidentPhone.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            PresidentPhone.Location = new Point(671, 378);
-            PresidentPhone.Name = "PresidentPhone";
-            PresidentPhone.Size = new Size(237, 34);
-            PresidentPhone.TabIndex = 34;
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            label14.Location = new Point(41, 442);
-            label14.Name = "label14";
-            label14.Size = new Size(154, 28);
-            label14.TabIndex = 35;
-            label14.Text = "Secertary Name:";
-            // 
-            // SecertaryName
-            // 
-            SecertaryName.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            SecertaryName.Location = new Point(201, 442);
-            SecertaryName.Name = "SecertaryName";
-            SecertaryName.Size = new Size(331, 34);
-            SecertaryName.TabIndex = 36;
-            // 
-            // label15
-            // 
-            label15.AutoSize = true;
-            label15.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            label15.Location = new Point(562, 442);
-            label15.Name = "label15";
-            label15.Size = new Size(103, 28);
-            label15.TabIndex = 37;
-            label15.Text = "Phone No:";
-            // 
-            // SecertaryPhone
-            // 
-            SecertaryPhone.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            SecertaryPhone.Location = new Point(671, 439);
-            SecertaryPhone.Name = "SecertaryPhone";
-            SecertaryPhone.Size = new Size(237, 34);
-            SecertaryPhone.TabIndex = 38;
-            // 
-            // Doc_date
-            // 
-            Doc_date.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            Doc_date.Location = new Point(151, 44);
-            Doc_date.Name = "Doc_date";
-            Doc_date.Size = new Size(200, 34);
-            Doc_date.TabIndex = 39;
-            // 
-            // App_date
-            // 
-            App_date.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            App_date.Location = new Point(547, 44);
-            App_date.Name = "App_date";
-            App_date.Size = new Size(200, 34);
-            App_date.TabIndex = 40;
+            ADDs1.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            ADDs1.Location = new Point(152, 221);
+            ADDs1.Name = "ADDs1";
+            ADDs1.Size = new Size(99, 34);
+            ADDs1.TabIndex = 13;
             // 
             // JlgLoane
             // 
@@ -449,8 +450,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientActiveCaption;
             ClientSize = new Size(1213, 818);
-            Controls.Add(button9);
-            Controls.Add(button8);
+            Controls.Add(ExportPdfBtn);
+            Controls.Add(SaveAndContinue1Btn);
             Controls.Add(button7);
             Controls.Add(button6);
             Controls.Add(button5);
@@ -465,6 +466,7 @@
             RightToLeftLayout = true;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "JlgLoane";
+            Load += JlgLoane_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -480,18 +482,18 @@
         private Button button5;
         private Button button6;
         private Button button7;
-        private Button button8;
-        private Button button9;
+        private Button SaveAndContinue1Btn;
+        private Button ExportPdfBtn;
         private Label label2;
         private TextBox JLGName;
         private Label label3;
         private TextBox SBno;
         private Panel panel1;
-        private TextBox DistrictName;
-        private TextBox CityName;
+        private TextBox ADDs4;
+        private TextBox ADDs3;
         private TextBox PinCode;
-        private TextBox StreetName;
-        private TextBox HouseNo;
+        private TextBox ADDs2;
+        private TextBox ADDs1;
         private Label label5;
         private Label label4;
         private Label label7;
@@ -501,13 +503,13 @@
         private Label label10;
         private Label label12;
         private Label label9;
-        private TextBox SecertaryPhone;
+        private TextBox SECR_Ph;
         private Label label15;
-        private TextBox SecertaryName;
+        private TextBox SECR_Name;
         private Label label14;
-        private TextBox PresidentPhone;
+        private TextBox PRES_Ph;
         private Label label13;
-        private TextBox PresidentName;
+        private TextBox PRES_Name;
         private DateTimePicker App_date;
         private DateTimePicker Doc_date;
     }
