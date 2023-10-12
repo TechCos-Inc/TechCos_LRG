@@ -3254,19 +3254,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Harish K\\.nuget\\packages\\": {}
+    "C:\\Users\\mugil\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Harish K\\Source\\Repos\\HarishK-CS\\TechCos_LRG\\TechCos_LRG.csproj",
+      "projectUniqueName": "C:\\Users\\mugil\\Source\\Repos\\HarishK-CS\\TechCos_LRG\\TechCos_LRG.csproj",
       "projectName": "TechCos_LRG",
-      "projectPath": "C:\\Users\\Harish K\\Source\\Repos\\HarishK-CS\\TechCos_LRG\\TechCos_LRG.csproj",
-      "packagesPath": "C:\\Users\\Harish K\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Harish K\\Source\\Repos\\HarishK-CS\\TechCos_LRG\\obj\\",
+      "projectPath": "C:\\Users\\mugil\\Source\\Repos\\HarishK-CS\\TechCos_LRG\\TechCos_LRG.csproj",
+      "packagesPath": "C:\\Users\\mugil\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mugil\\Source\\Repos\\HarishK-CS\\TechCos_LRG\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Harish K\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mugil\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3342,7 +3342,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   },

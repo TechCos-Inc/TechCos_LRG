@@ -14,7 +14,19 @@
     <Compile Update="Form2.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="JLGAmt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JLGBowDtl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JLGLoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="JlgLoane.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JLGMember1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="PersonalLoan.cs">

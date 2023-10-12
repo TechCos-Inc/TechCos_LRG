@@ -24,7 +24,7 @@ namespace TechCos_LRG
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            cn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Harish K\\source\\repos\\HarishK-CS\\TechCos_LRG\\Database.mdf\";Integrated Security=True");
+            cn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\mugil\\source\\repos\\HarishK-CS\\TechCos_LRG\\Database.mdf\";Integrated Security=True");
             cn.Open();
 
         }
@@ -79,7 +79,7 @@ namespace TechCos_LRG
             dr = cmd.ExecuteReader();
             if (dr.Read())
             {
-                MessageBox.Show("Succesfully Loged In !", "Loan Report Generator - TechCos Inc");
+                //MessageBox.Show("Succesfully Loged In !", "Loan Report Generator - TechCos Inc");
                 dr.Close();
                 this.Hide();
                 Form2 form = new Form2();
@@ -112,7 +112,7 @@ namespace TechCos_LRG
             dr = cmd.ExecuteReader();
             if (dr.Read())
             {
-                MessageBox.Show("Succesfully Loged In !", "Loan Report Generator - TechCos Inc");
+                //MessageBox.Show("Succesfully Loged In !", "Loan Report Generator - TechCos Inc");
                 dr.Close();
                 this.Hide();
                 Form2 form = new Form2();
