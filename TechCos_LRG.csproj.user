@@ -29,7 +29,67 @@
     <Compile Update="JLGMember1.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="JLGUserControl\AnnexurePageNum.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="JLGUserControl\JLGAmount.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="JLGUserControl\JLGBorrower.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="JLGUserControl\JLGMem1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="JLGUserControl\JLGMem10.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="JLGUserControl\JLGMem11.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="JLGUserControl\JLGMem12.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="JLGUserControl\JLGMem13.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="JLGUserControl\JLGMem14.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="JLGUserControl\JLGMem15.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="JLGUserControl\JLGMem2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="JLGUserControl\JLGMem3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="JLGUserControl\JLGMem4.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="JLGUserControl\JLGMem5.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="JLGUserControl\JLGMem6.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="JLGUserControl\JLGMem7.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="JLGUserControl\JLGMem8.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="JLGUserControl\JLGMem9.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="JLGUserControl\memberpageNum.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="PersonalLoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SuperUserForm.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

@@ -12,10 +12,11 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\mugil\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\mugil\\.nuget\\packages"
+      "C:\\Users\\Harish K\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Harish K\\.nuget\\packages"
     ],
     "configProperties": {
+      "Windows.ApplicationModel.DataTransfer.DragDrop.ExternalSupport": true,
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true
     }
   }

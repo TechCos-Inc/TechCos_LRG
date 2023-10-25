@@ -29,29 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            label1 = new Label();
-            button1 = new Button();
-            button2 = new Button();
             SuperUserBtn = new Button();
             button4 = new Button();
             pictureBox1 = new PictureBox();
-            LoginInfoPanel = new Panel();
-            AdminLoginPanel = new Panel();
-            label7 = new Label();
-            label3 = new Label();
-            label2 = new Label();
-            backAdminBtn = new PictureBox();
-            AdminSubmitBtn = new Button();
-            PasswordAdminLoginTxtField = new TextBox();
-            UsernameAdminLoginTxtField = new TextBox();
-            UserloginPanel = new Panel();
-            label6 = new Label();
-            backUserBtn = new PictureBox();
-            UserSubmitBtn = new Button();
-            PasswordUserLoginTxtField = new TextBox();
-            UsernameUserLoginTxtField = new TextBox();
-            label4 = new Label();
-            label5 = new Label();
             SuperUserPanel = new Panel();
             label11 = new Label();
             roleCombo = new ComboBox();
@@ -62,65 +42,34 @@
             AddUserBtn = new Button();
             addPass = new TextBox();
             addName = new TextBox();
-            BranchBtn = new Button();
             CloseBtn = new PictureBox();
+            panelContainer = new Panel();
+            SubmitBtn = new MaterialSkin.Controls.MaterialButton();
+            PasswordTxt = new MaterialSkin.Controls.MaterialTextBox();
+            UsernameTxt = new MaterialSkin.Controls.MaterialTextBox();
+            label12 = new Label();
+            button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            LoginInfoPanel.SuspendLayout();
-            AdminLoginPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)backAdminBtn).BeginInit();
-            UserloginPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)backUserBtn).BeginInit();
             SuperUserPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)superusrBackBtn).BeginInit();
             ((System.ComponentModel.ISupportInitialize)CloseBtn).BeginInit();
+            panelContainer.SuspendLayout();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(3, 16);
-            label1.Name = "label1";
-            label1.Size = new Size(257, 59);
-            label1.TabIndex = 0;
-            label1.Text = "Login To Continue";
-            // 
-            // button1
-            // 
-            button1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(3, 78);
-            button1.Name = "button1";
-            button1.Size = new Size(128, 42);
-            button1.TabIndex = 1;
-            button1.Text = "Admin";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
-            // button2
-            // 
-            button2.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.Location = new Point(0, 137);
-            button2.Name = "button2";
-            button2.Size = new Size(128, 43);
-            button2.TabIndex = 2;
-            button2.Text = "User";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
             // 
             // SuperUserBtn
             // 
             SuperUserBtn.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            SuperUserBtn.Location = new Point(790, 12);
+            SuperUserBtn.Location = new Point(1820, 18);
             SuperUserBtn.Name = "SuperUserBtn";
             SuperUserBtn.Size = new Size(75, 23);
             SuperUserBtn.TabIndex = 3;
             SuperUserBtn.Text = "Super User";
             SuperUserBtn.UseVisualStyleBackColor = true;
-            SuperUserBtn.Click += SuperUserBtn_Click;
             // 
             // button4
             // 
             button4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button4.Location = new Point(889, 12);
+            button4.Location = new Point(1919, 18);
             button4.Name = "button4";
             button4.Size = new Size(75, 23);
             button4.TabIndex = 4;
@@ -138,179 +87,6 @@
             pictureBox1.TabIndex = 5;
             pictureBox1.TabStop = false;
             // 
-            // LoginInfoPanel
-            // 
-            LoginInfoPanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            LoginInfoPanel.Controls.Add(label1);
-            LoginInfoPanel.Controls.Add(button1);
-            LoginInfoPanel.Controls.Add(button2);
-            LoginInfoPanel.Location = new Point(723, 278);
-            LoginInfoPanel.Name = "LoginInfoPanel";
-            LoginInfoPanel.Size = new Size(294, 203);
-            LoginInfoPanel.TabIndex = 6;
-            // 
-            // AdminLoginPanel
-            // 
-            AdminLoginPanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            AdminLoginPanel.Controls.Add(label7);
-            AdminLoginPanel.Controls.Add(label3);
-            AdminLoginPanel.Controls.Add(label2);
-            AdminLoginPanel.Controls.Add(backAdminBtn);
-            AdminLoginPanel.Controls.Add(AdminSubmitBtn);
-            AdminLoginPanel.Controls.Add(PasswordAdminLoginTxtField);
-            AdminLoginPanel.Controls.Add(UsernameAdminLoginTxtField);
-            AdminLoginPanel.Location = new Point(753, 243);
-            AdminLoginPanel.Name = "AdminLoginPanel";
-            AdminLoginPanel.Size = new Size(453, 277);
-            AdminLoginPanel.TabIndex = 7;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(80, 18);
-            label7.Name = "label7";
-            label7.Size = new Size(124, 28);
-            label7.TabIndex = 9;
-            label7.Text = "Admin Login";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(80, 104);
-            label3.Name = "label3";
-            label3.Size = new Size(87, 25);
-            label3.TabIndex = 8;
-            label3.Text = "Password";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(80, 57);
-            label2.Name = "label2";
-            label2.Size = new Size(96, 25);
-            label2.TabIndex = 7;
-            label2.Text = "Username ";
-            // 
-            // backAdminBtn
-            // 
-            backAdminBtn.Image = Properties.Resources.icons8_back_arrow_100;
-            backAdminBtn.Location = new Point(17, 18);
-            backAdminBtn.Name = "backAdminBtn";
-            backAdminBtn.Size = new Size(37, 34);
-            backAdminBtn.SizeMode = PictureBoxSizeMode.StretchImage;
-            backAdminBtn.TabIndex = 6;
-            backAdminBtn.TabStop = false;
-            backAdminBtn.Click += backAdminBtn_Click;
-            // 
-            // AdminSubmitBtn
-            // 
-            AdminSubmitBtn.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            AdminSubmitBtn.Location = new Point(145, 162);
-            AdminSubmitBtn.Name = "AdminSubmitBtn";
-            AdminSubmitBtn.Size = new Size(128, 43);
-            AdminSubmitBtn.TabIndex = 4;
-            AdminSubmitBtn.Text = "Continue";
-            AdminSubmitBtn.UseVisualStyleBackColor = true;
-            AdminSubmitBtn.Click += AdminSubmitBtn_Click;
-            // 
-            // PasswordAdminLoginTxtField
-            // 
-            PasswordAdminLoginTxtField.Location = new Point(233, 107);
-            PasswordAdminLoginTxtField.Name = "PasswordAdminLoginTxtField";
-            PasswordAdminLoginTxtField.Size = new Size(100, 23);
-            PasswordAdminLoginTxtField.TabIndex = 3;
-            // 
-            // UsernameAdminLoginTxtField
-            // 
-            UsernameAdminLoginTxtField.Location = new Point(233, 60);
-            UsernameAdminLoginTxtField.Name = "UsernameAdminLoginTxtField";
-            UsernameAdminLoginTxtField.Size = new Size(100, 23);
-            UsernameAdminLoginTxtField.TabIndex = 2;
-            // 
-            // UserloginPanel
-            // 
-            UserloginPanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            UserloginPanel.Controls.Add(label6);
-            UserloginPanel.Controls.Add(backUserBtn);
-            UserloginPanel.Controls.Add(UserSubmitBtn);
-            UserloginPanel.Controls.Add(PasswordUserLoginTxtField);
-            UserloginPanel.Controls.Add(UsernameUserLoginTxtField);
-            UserloginPanel.Controls.Add(label4);
-            UserloginPanel.Controls.Add(label5);
-            UserloginPanel.Location = new Point(735, 263);
-            UserloginPanel.Name = "UserloginPanel";
-            UserloginPanel.Size = new Size(416, 247);
-            UserloginPanel.TabIndex = 8;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(69, 13);
-            label6.Name = "label6";
-            label6.Size = new Size(105, 28);
-            label6.TabIndex = 6;
-            label6.Text = "User Login";
-            // 
-            // backUserBtn
-            // 
-            backUserBtn.Image = Properties.Resources.icons8_back_arrow_100;
-            backUserBtn.Location = new Point(18, 13);
-            backUserBtn.Name = "backUserBtn";
-            backUserBtn.Size = new Size(37, 34);
-            backUserBtn.SizeMode = PictureBoxSizeMode.StretchImage;
-            backUserBtn.TabIndex = 5;
-            backUserBtn.TabStop = false;
-            backUserBtn.Click += backUserBtn_Click;
-            // 
-            // UserSubmitBtn
-            // 
-            UserSubmitBtn.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            UserSubmitBtn.Location = new Point(145, 162);
-            UserSubmitBtn.Name = "UserSubmitBtn";
-            UserSubmitBtn.Size = new Size(128, 43);
-            UserSubmitBtn.TabIndex = 4;
-            UserSubmitBtn.Text = "Continue";
-            UserSubmitBtn.UseVisualStyleBackColor = true;
-            UserSubmitBtn.Click += UserSubmitBtn_Click;
-            // 
-            // PasswordUserLoginTxtField
-            // 
-            PasswordUserLoginTxtField.Location = new Point(233, 108);
-            PasswordUserLoginTxtField.Name = "PasswordUserLoginTxtField";
-            PasswordUserLoginTxtField.Size = new Size(150, 23);
-            PasswordUserLoginTxtField.TabIndex = 3;
-            // 
-            // UsernameUserLoginTxtField
-            // 
-            UsernameUserLoginTxtField.Location = new Point(233, 57);
-            UsernameUserLoginTxtField.Name = "UsernameUserLoginTxtField";
-            UsernameUserLoginTxtField.Size = new Size(150, 23);
-            UsernameUserLoginTxtField.TabIndex = 2;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(69, 105);
-            label4.Name = "label4";
-            label4.Size = new Size(87, 25);
-            label4.TabIndex = 1;
-            label4.Text = "Password";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(69, 54);
-            label5.Name = "label5";
-            label5.Size = new Size(96, 25);
-            label5.TabIndex = 0;
-            label5.Text = "Username ";
-            // 
             // SuperUserPanel
             // 
             SuperUserPanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
@@ -323,7 +99,7 @@
             SuperUserPanel.Controls.Add(AddUserBtn);
             SuperUserPanel.Controls.Add(addPass);
             SuperUserPanel.Controls.Add(addName);
-            SuperUserPanel.Location = new Point(770, 218);
+            SuperUserPanel.Location = new Point(138, 578);
             SuperUserPanel.Name = "SuperUserPanel";
             SuperUserPanel.Size = new Size(463, 292);
             SuperUserPanel.TabIndex = 9;
@@ -345,7 +121,6 @@
             roleCombo.Name = "roleCombo";
             roleCombo.Size = new Size(121, 23);
             roleCombo.TabIndex = 10;
-            roleCombo.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // label8
             // 
@@ -386,7 +161,6 @@
             superusrBackBtn.SizeMode = PictureBoxSizeMode.StretchImage;
             superusrBackBtn.TabIndex = 6;
             superusrBackBtn.TabStop = false;
-            superusrBackBtn.Click += superusrBackBtn_Click;
             // 
             // AddUserBtn
             // 
@@ -397,7 +171,6 @@
             AddUserBtn.TabIndex = 4;
             AddUserBtn.Text = "Add";
             AddUserBtn.UseVisualStyleBackColor = true;
-            AddUserBtn.Click += AddUserBtn_Click;
             // 
             // addPass
             // 
@@ -413,22 +186,11 @@
             addName.Size = new Size(100, 23);
             addName.TabIndex = 2;
             // 
-            // BranchBtn
-            // 
-            BranchBtn.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BranchBtn.Location = new Point(994, 12);
-            BranchBtn.Name = "BranchBtn";
-            BranchBtn.Size = new Size(75, 23);
-            BranchBtn.TabIndex = 10;
-            BranchBtn.Text = "Branch";
-            BranchBtn.UseVisualStyleBackColor = true;
-            BranchBtn.Click += BranchBtn_Click;
-            // 
             // CloseBtn
             // 
             CloseBtn.BackgroundImageLayout = ImageLayout.Stretch;
             CloseBtn.Image = Properties.Resources.cancel;
-            CloseBtn.Location = new Point(1114, 12);
+            CloseBtn.Location = new Point(1151, 12);
             CloseBtn.Name = "CloseBtn";
             CloseBtn.Size = new Size(37, 34);
             CloseBtn.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -436,69 +198,128 @@
             CloseBtn.TabStop = false;
             CloseBtn.Click += CloseBtn_Click;
             // 
+            // panelContainer
+            // 
+            panelContainer.Controls.Add(SubmitBtn);
+            panelContainer.Controls.Add(PasswordTxt);
+            panelContainer.Controls.Add(UsernameTxt);
+            panelContainer.Controls.Add(label12);
+            panelContainer.Location = new Point(642, 210);
+            panelContainer.Name = "panelContainer";
+            panelContainer.Size = new Size(509, 322);
+            panelContainer.TabIndex = 12;
+            // 
+            // SubmitBtn
+            // 
+            SubmitBtn.AutoEllipsis = true;
+            SubmitBtn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            SubmitBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            SubmitBtn.Depth = 0;
+            SubmitBtn.HighEmphasis = true;
+            SubmitBtn.Icon = null;
+            SubmitBtn.Location = new Point(195, 259);
+            SubmitBtn.Margin = new Padding(4, 6, 4, 6);
+            SubmitBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            SubmitBtn.Name = "SubmitBtn";
+            SubmitBtn.NoAccentTextColor = Color.Empty;
+            SubmitBtn.Size = new Size(75, 36);
+            SubmitBtn.TabIndex = 6;
+            SubmitBtn.Text = "SUBMIT";
+            SubmitBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            SubmitBtn.UseAccentColor = false;
+            SubmitBtn.UseVisualStyleBackColor = true;
+            SubmitBtn.Click += SubmitBtn_Click;
+            // 
+            // PasswordTxt
+            // 
+            PasswordTxt.AnimateReadOnly = false;
+            PasswordTxt.BorderStyle = BorderStyle.None;
+            PasswordTxt.Depth = 0;
+            PasswordTxt.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            PasswordTxt.Hint = "Password";
+            PasswordTxt.LeadingIcon = (Image)resources.GetObject("PasswordTxt.LeadingIcon");
+            PasswordTxt.Location = new Point(150, 179);
+            PasswordTxt.MaxLength = 50;
+            PasswordTxt.MouseState = MaterialSkin.MouseState.OUT;
+            PasswordTxt.Multiline = false;
+            PasswordTxt.Name = "PasswordTxt";
+            PasswordTxt.Password = true;
+            PasswordTxt.Size = new Size(184, 50);
+            PasswordTxt.TabIndex = 5;
+            PasswordTxt.Text = "";
+            PasswordTxt.TrailingIcon = null;
+            // 
+            // UsernameTxt
+            // 
+            UsernameTxt.AnimateReadOnly = false;
+            UsernameTxt.BorderStyle = BorderStyle.None;
+            UsernameTxt.Depth = 0;
+            UsernameTxt.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            UsernameTxt.Hint = "Username";
+            UsernameTxt.LeadingIcon = Properties.Resources.user;
+            UsernameTxt.Location = new Point(150, 110);
+            UsernameTxt.MaxLength = 50;
+            UsernameTxt.MouseState = MaterialSkin.MouseState.OUT;
+            UsernameTxt.Multiline = false;
+            UsernameTxt.Name = "UsernameTxt";
+            UsernameTxt.Size = new Size(184, 50);
+            UsernameTxt.TabIndex = 4;
+            UsernameTxt.Text = "";
+            UsernameTxt.TrailingIcon = null;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Lucida Fax", 36F, FontStyle.Bold, GraphicsUnit.Point);
+            label12.Location = new Point(34, 14);
+            label12.Name = "label12";
+            label12.Size = new Size(181, 55);
+            label12.TabIndex = 1;
+            label12.Text = "Log In";
+            // 
+            // button3
+            // 
+            button3.Location = new Point(633, 483);
+            button3.Name = "button3";
+            button3.Size = new Size(8, 8);
+            button3.TabIndex = 13;
+            button3.Text = "button3";
+            button3.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1200, 800);
+            Controls.Add(button3);
+            Controls.Add(panelContainer);
             Controls.Add(CloseBtn);
-            Controls.Add(BranchBtn);
-            Controls.Add(SuperUserPanel);
-            Controls.Add(AdminLoginPanel);
-            Controls.Add(UserloginPanel);
             Controls.Add(pictureBox1);
             Controls.Add(button4);
             Controls.Add(SuperUserBtn);
-            Controls.Add(LoginInfoPanel);
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
+            StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
+            StateCommon.Border.Rounding = 20;
             Text = "Loan Report Generator - TechCos Inc";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            LoginInfoPanel.ResumeLayout(false);
-            AdminLoginPanel.ResumeLayout(false);
-            AdminLoginPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)backAdminBtn).EndInit();
-            UserloginPanel.ResumeLayout(false);
-            UserloginPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)backUserBtn).EndInit();
             SuperUserPanel.ResumeLayout(false);
             SuperUserPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)superusrBackBtn).EndInit();
             ((System.ComponentModel.ISupportInitialize)CloseBtn).EndInit();
+            panelContainer.ResumeLayout(false);
+            panelContainer.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
-
-        private Label label1;
-        private Button button1;
-        private Button button2;
         private Button SuperUserBtn;
         private Button button4;
         private PictureBox pictureBox1;
-        private Panel LoginInfoPanel;
-        private Panel AdminLoginPanel;
         private TextBox addPass;
-        private Button AdminSubmitBtn;
-        private TextBox PasswordAdminLoginTxtField;
-        private TextBox UsernameAdminLoginTxtField;
         private TextBox addName;
-        private Panel UserloginPanel;
-        private Button UserSubmitBtn;
-        private TextBox PasswordUserLoginTxtField;
         private TextBox textBox3;
-        private TextBox UsernameUserLoginTxtField;
-        private Label label4;
-        private Label label5;
-        private PictureBox backUserBtn;
-        private PictureBox backAdminBtn;
-        private Label label3;
-        private Label label2;
-        private Label label6;
-        private Label label7;
         private Panel SuperUserPanel;
         private Label label8;
         private Label label9;
@@ -507,7 +328,13 @@
         private Button AddUserBtn;
         private ComboBox roleCombo;
         private Label label11;
-        private Button BranchBtn;
         private PictureBox CloseBtn;
+        private Panel panelContainer;
+        private Button button3;
+        private Krypton.Toolkit.KryptonBreadCrumb kryptonBreadCrumb1;
+        private Label label12;
+        private MaterialSkin.Controls.MaterialTextBox UsernameTxt;
+        private MaterialSkin.Controls.MaterialTextBox PasswordTxt;
+        private MaterialSkin.Controls.MaterialButton SubmitBtn;
     }
 }

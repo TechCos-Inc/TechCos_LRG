@@ -28,144 +28,190 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panelbtn = new Panel();
-            button7 = new Button();
-            button6 = new Button();
-            button5 = new Button();
-            button4 = new Button();
-            mem1Btn = new Button();
-            AmtBtn = new Button();
-            JlgBtn = new Button();
-            panelExpt = new Panel();
-            JLGpanal = new Panel();
-            panelbtn.SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(JLGLoan));
+            exportBtn = new MaterialSkin.Controls.MaterialButton();
+            containerPanel = new Panel();
+            topPanel = new Krypton.Toolkit.KryptonPanel();
+            amountDetailsBtn = new MaterialSkin.Controls.MaterialButton();
+            memberDetailsBtn = new MaterialSkin.Controls.MaterialButton();
+            borrowerBtn = new MaterialSkin.Controls.MaterialButton();
+            BackBtn = new PictureBox();
+            CloseBtn = new PictureBox();
+            bottomMemPgPanel = new Panel();
+            ((System.ComponentModel.ISupportInitialize)topPanel).BeginInit();
+            topPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)BackBtn).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)CloseBtn).BeginInit();
             SuspendLayout();
             // 
-            // panelbtn
+            // exportBtn
             // 
-            panelbtn.BackColor = SystemColors.Highlight;
-            panelbtn.Controls.Add(button7);
-            panelbtn.Controls.Add(button6);
-            panelbtn.Controls.Add(button5);
-            panelbtn.Controls.Add(button4);
-            panelbtn.Controls.Add(mem1Btn);
-            panelbtn.Controls.Add(AmtBtn);
-            panelbtn.Controls.Add(JlgBtn);
-            panelbtn.Dock = DockStyle.Left;
-            panelbtn.Location = new Point(0, 0);
-            panelbtn.Name = "panelbtn";
-            panelbtn.Size = new Size(200, 676);
-            panelbtn.TabIndex = 0;
+            exportBtn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            exportBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            exportBtn.Depth = 0;
+            exportBtn.HighEmphasis = true;
+            exportBtn.Icon = null;
+            exportBtn.Location = new Point(1052, 710);
+            exportBtn.Margin = new Padding(4, 6, 4, 6);
+            exportBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            exportBtn.Name = "exportBtn";
+            exportBtn.NoAccentTextColor = Color.Empty;
+            exportBtn.Size = new Size(77, 36);
+            exportBtn.TabIndex = 0;
+            exportBtn.Text = "Export";
+            exportBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            exportBtn.UseAccentColor = false;
+            exportBtn.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // containerPanel
             // 
-            button7.Location = new Point(30, 524);
-            button7.Name = "button7";
-            button7.Size = new Size(151, 43);
-            button7.TabIndex = 15;
-            button7.Text = "button7";
-            button7.UseVisualStyleBackColor = true;
+            containerPanel.Location = new Point(-4, 92);
+            containerPanel.Margin = new Padding(0, 0, 0, 3);
+            containerPanel.Name = "containerPanel";
+            containerPanel.Size = new Size(1184, 605);
+            containerPanel.TabIndex = 2;
             // 
-            // button6
+            // topPanel
             // 
-            button6.Location = new Point(30, 458);
-            button6.Name = "button6";
-            button6.Size = new Size(151, 43);
-            button6.TabIndex = 14;
-            button6.Text = "button6";
-            button6.UseVisualStyleBackColor = true;
+            topPanel.Controls.Add(amountDetailsBtn);
+            topPanel.Controls.Add(memberDetailsBtn);
+            topPanel.Controls.Add(borrowerBtn);
+            topPanel.Controls.Add(BackBtn);
+            topPanel.Controls.Add(CloseBtn);
+            topPanel.Dock = DockStyle.Top;
+            topPanel.Location = new Point(0, 0);
+            topPanel.Name = "topPanel";
+            topPanel.Size = new Size(1184, 83);
+            topPanel.TabIndex = 0;
             // 
-            // button5
+            // amountDetailsBtn
             // 
-            button5.Location = new Point(30, 382);
-            button5.Name = "button5";
-            button5.Size = new Size(151, 43);
-            button5.TabIndex = 13;
-            button5.Text = "button5";
-            button5.UseVisualStyleBackColor = true;
+            amountDetailsBtn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            amountDetailsBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            amountDetailsBtn.Depth = 0;
+            amountDetailsBtn.HighEmphasis = true;
+            amountDetailsBtn.Icon = null;
+            amountDetailsBtn.Location = new Point(766, 24);
+            amountDetailsBtn.Margin = new Padding(4, 6, 4, 6);
+            amountDetailsBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            amountDetailsBtn.Name = "amountDetailsBtn";
+            amountDetailsBtn.NoAccentTextColor = Color.Empty;
+            amountDetailsBtn.Size = new Size(145, 36);
+            amountDetailsBtn.TabIndex = 22;
+            amountDetailsBtn.Text = "Amount Details";
+            amountDetailsBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            amountDetailsBtn.UseAccentColor = false;
+            amountDetailsBtn.UseVisualStyleBackColor = true;
+            amountDetailsBtn.Click += amountDetailsBtn_Click;
             // 
-            // button4
+            // memberDetailsBtn
             // 
-            button4.Location = new Point(30, 308);
-            button4.Name = "button4";
-            button4.Size = new Size(151, 43);
-            button4.TabIndex = 12;
-            button4.Text = "button4";
-            button4.UseVisualStyleBackColor = true;
+            memberDetailsBtn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            memberDetailsBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            memberDetailsBtn.Depth = 0;
+            memberDetailsBtn.HighEmphasis = true;
+            memberDetailsBtn.Icon = null;
+            memberDetailsBtn.Location = new Point(491, 24);
+            memberDetailsBtn.Margin = new Padding(4, 6, 4, 6);
+            memberDetailsBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            memberDetailsBtn.Name = "memberDetailsBtn";
+            memberDetailsBtn.NoAccentTextColor = Color.Empty;
+            memberDetailsBtn.Size = new Size(144, 36);
+            memberDetailsBtn.TabIndex = 21;
+            memberDetailsBtn.Text = "Member Details";
+            memberDetailsBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            memberDetailsBtn.UseAccentColor = false;
+            memberDetailsBtn.UseVisualStyleBackColor = true;
+            memberDetailsBtn.Click += memberDetailsBtn_Click;
             // 
-            // mem1Btn
+            // borrowerBtn
             // 
-            mem1Btn.Location = new Point(30, 238);
-            mem1Btn.Name = "mem1Btn";
-            mem1Btn.Size = new Size(151, 43);
-            mem1Btn.TabIndex = 11;
-            mem1Btn.Text = "member 1";
-            mem1Btn.UseVisualStyleBackColor = true;
-            mem1Btn.Click += mem1Btn_Click;
+            borrowerBtn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            borrowerBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            borrowerBtn.Depth = 0;
+            borrowerBtn.HighEmphasis = true;
+            borrowerBtn.Icon = null;
+            borrowerBtn.Location = new Point(203, 24);
+            borrowerBtn.Margin = new Padding(4, 6, 4, 6);
+            borrowerBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            borrowerBtn.Name = "borrowerBtn";
+            borrowerBtn.NoAccentTextColor = Color.Empty;
+            borrowerBtn.Size = new Size(161, 36);
+            borrowerBtn.TabIndex = 20;
+            borrowerBtn.Text = "Borrower Details";
+            borrowerBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            borrowerBtn.UseAccentColor = false;
+            borrowerBtn.UseVisualStyleBackColor = true;
+            borrowerBtn.Click += borrowerBtn_Click;
             // 
-            // AmtBtn
+            // BackBtn
             // 
-            AmtBtn.Location = new Point(30, 167);
-            AmtBtn.Name = "AmtBtn";
-            AmtBtn.Size = new Size(151, 43);
-            AmtBtn.TabIndex = 10;
-            AmtBtn.Text = "Amount Detial";
-            AmtBtn.UseVisualStyleBackColor = true;
-            AmtBtn.Click += AmtBtn_Click;
+            BackBtn.BackColor = Color.Transparent;
+            BackBtn.Image = Properties.Resources.icons8_back_arrow_100;
+            BackBtn.Location = new Point(1076, 10);
+            BackBtn.Name = "BackBtn";
+            BackBtn.Size = new Size(37, 34);
+            BackBtn.SizeMode = PictureBoxSizeMode.StretchImage;
+            BackBtn.TabIndex = 19;
+            BackBtn.TabStop = false;
+            BackBtn.Click += BackBtn_Click_1;
             // 
-            // JlgBtn
+            // CloseBtn
             // 
-            JlgBtn.Location = new Point(30, 97);
-            JlgBtn.Name = "JlgBtn";
-            JlgBtn.Size = new Size(151, 43);
-            JlgBtn.TabIndex = 9;
-            JlgBtn.Text = "JLG Browor";
-            JlgBtn.UseVisualStyleBackColor = true;
-            JlgBtn.Click += JlgBtn_Click;
+            CloseBtn.BackColor = Color.Transparent;
+            CloseBtn.BackgroundImage = Properties.Resources.cancel;
+            CloseBtn.BackgroundImageLayout = ImageLayout.Stretch;
+            CloseBtn.Location = new Point(1132, 10);
+            CloseBtn.Name = "CloseBtn";
+            CloseBtn.Size = new Size(37, 34);
+            CloseBtn.SizeMode = PictureBoxSizeMode.StretchImage;
+            CloseBtn.TabIndex = 18;
+            CloseBtn.TabStop = false;
+            CloseBtn.Click += CloseBtn_Click_1;
             // 
-            // panelExpt
+            // bottomMemPgPanel
             // 
-            panelExpt.BackColor = SystemColors.Highlight;
-            panelExpt.Dock = DockStyle.Bottom;
-            panelExpt.Location = new Point(200, 616);
-            panelExpt.Name = "panelExpt";
-            panelExpt.Size = new Size(885, 60);
-            panelExpt.TabIndex = 1;
-            // 
-            // JLGpanal
-            // 
-            JLGpanal.BackColor = SystemColors.MenuHighlight;
-            JLGpanal.Dock = DockStyle.Fill;
-            JLGpanal.Location = new Point(200, 0);
-            JLGpanal.Name = "JLGpanal";
-            JLGpanal.Size = new Size(885, 616);
-            JLGpanal.TabIndex = 2;
+            bottomMemPgPanel.Location = new Point(261, 703);
+            bottomMemPgPanel.Name = "bottomMemPgPanel";
+            bottomMemPgPanel.Size = new Size(680, 55);
+            bottomMemPgPanel.TabIndex = 3;
             // 
             // JLGLoan
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1085, 676);
-            Controls.Add(JLGpanal);
-            Controls.Add(panelExpt);
-            Controls.Add(panelbtn);
+            ClientSize = new Size(1184, 761);
+            Controls.Add(bottomMemPgPanel);
+            Controls.Add(topPanel);
+            Controls.Add(exportBtn);
+            Controls.Add(containerPanel);
+            FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "JLGLoan";
+            StartPosition = FormStartPosition.CenterScreen;
+            StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
+            StateCommon.Border.Rounding = 20;
             Text = "JLGLoan";
-            panelbtn.ResumeLayout(false);
+            Load += JLGLoan_Load;
+            ((System.ComponentModel.ISupportInitialize)topPanel).EndInit();
+            topPanel.ResumeLayout(false);
+            topPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)BackBtn).EndInit();
+            ((System.ComponentModel.ISupportInitialize)CloseBtn).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-
-        private Panel panelbtn;
-        private Panel panelExpt;
-        private Panel JLGpanal;
-        private Button button7;
-        private Button button6;
-        private Button button5;
-        private Button button4;
-        private Button mem1Btn;
-        private Button AmtBtn;
-        private Button JlgBtn;
+        private Panel containerPanel;
+        private Button button10;
+        private MaterialSkin.Controls.MaterialButton exportBtn;
+        private Krypton.Toolkit.KryptonPanel topPanel;
+        private MaterialSkin.Controls.MaterialButton amountDetailsBtn;
+        private MaterialSkin.Controls.MaterialButton memberDetailsBtn;
+        private MaterialSkin.Controls.MaterialButton borrowerBtn;
+        private PictureBox BackBtn;
+        private PictureBox CloseBtn;
+        private Panel bottomMemPgPanel;
     }
 }

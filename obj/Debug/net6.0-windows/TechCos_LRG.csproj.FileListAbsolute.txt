@@ -246,7 +246,6 @@ C:\Users\Harish K\Source\Repos\HarishK-CS\TechCos_LRG\obj\Debug\net6.0-windows\T
 C:\Users\Harish K\Source\Repos\HarishK-CS\TechCos_LRG\obj\Debug\net6.0-windows\TechCos_LRG.PersonalLoan.resources
 C:\Users\Harish K\Source\Repos\HarishK-CS\TechCos_LRG\obj\Debug\net6.0-windows\TechCos_LRG.Properties.Resources.resources
 C:\Users\Harish K\Source\Repos\HarishK-CS\TechCos_LRG\obj\Debug\net6.0-windows\TechCos_LRG.csproj.GenerateResource.cache
-C:\Users\Harish K\Source\Repos\HarishK-CS\TechCos_LRG\obj\Debug\net6.0-windows\TechCos_LRG.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Harish K\Source\Repos\HarishK-CS\TechCos_LRG\obj\Debug\net6.0-windows\TechCos_LRG.AssemblyInfoInputs.cache
 C:\Users\Harish K\Source\Repos\HarishK-CS\TechCos_LRG\obj\Debug\net6.0-windows\TechCos_LRG.AssemblyInfo.cs
 C:\Users\Harish K\Source\Repos\HarishK-CS\TechCos_LRG\obj\Debug\net6.0-windows\TechCos_LRG.csproj.CoreCompileInputs.cache
@@ -260,3 +259,43 @@ C:\Users\mugil\Source\Repos\HarishK-CS\TechCos_LRG\obj\Debug\net6.0-windows\Tech
 C:\Users\mugil\Source\Repos\HarishK-CS\TechCos_LRG\obj\Debug\net6.0-windows\TechCos_LRG.JLGBowDtl.resources
 C:\Users\mugil\Source\Repos\HarishK-CS\TechCos_LRG\obj\Debug\net6.0-windows\TechCos_LRG.JLGLoan.resources
 C:\Users\mugil\Source\Repos\HarishK-CS\TechCos_LRG\obj\Debug\net6.0-windows\TechCos_LRG.JLGMember1.resources
+C:\Users\Harish K\Source\Repos\HarishK-CS\TechCos_LRG\obj\Debug\net6.0-windows\TechCos_LRG.JLGAmt.resources
+C:\Users\Harish K\Source\Repos\HarishK-CS\TechCos_LRG\obj\Debug\net6.0-windows\TechCos_LRG.JLGBowDtl.resources
+C:\Users\Harish K\Source\Repos\HarishK-CS\TechCos_LRG\obj\Debug\net6.0-windows\TechCos_LRG.JLGLoan.resources
+C:\Users\Harish K\Source\Repos\HarishK-CS\TechCos_LRG\obj\Debug\net6.0-windows\TechCos_LRG.JLGMember1.resources
+C:\Users\Harish K\Source\Repos\HarishK-CS\TechCos_LRG\obj\Debug\net6.0-windows\TechCos_LRG.Usercontrols.AdminLogInUC.resources
+C:\Users\Harish K\Source\Repos\HarishK-CS\TechCos_LRG\obj\Debug\net6.0-windows\TechCos_LRG.LogInInfoUC.resources
+C:\Users\Harish K\Source\Repos\HarishK-CS\TechCos_LRG\obj\Debug\net6.0-windows\TechCos_LRG.Usercontrols.SuperUserUC.resources
+C:\Users\Harish K\Source\Repos\HarishK-CS\TechCos_LRG\obj\Debug\net6.0-windows\TechCos_LRG.Usercontrols.UserLogInUC.resources
+C:\Users\Harish K\Source\Repos\HarishK-CS\TechCos_LRG\bin\Debug\net6.0-windows\Avalonia.Base.dll
+C:\Users\Harish K\Source\Repos\HarishK-CS\TechCos_LRG\bin\Debug\net6.0-windows\Avalonia.Controls.dll
+C:\Users\Harish K\Source\Repos\HarishK-CS\TechCos_LRG\bin\Debug\net6.0-windows\Avalonia.DesignerSupport.dll
+C:\Users\Harish K\Source\Repos\HarishK-CS\TechCos_LRG\bin\Debug\net6.0-windows\Avalonia.Dialogs.dll
+C:\Users\Harish K\Source\Repos\HarishK-CS\TechCos_LRG\bin\Debug\net6.0-windows\Avalonia.Markup.Xaml.dll
+C:\Users\Harish K\Source\Repos\HarishK-CS\TechCos_LRG\bin\Debug\net6.0-windows\Avalonia.Markup.dll
+C:\Users\Harish K\Source\Repos\HarishK-CS\TechCos_LRG\bin\Debug\net6.0-windows\Avalonia.Metal.dll
+C:\Users\Harish K\Source\Repos\HarishK-CS\TechCos_LRG\bin\Debug\net6.0-windows\Avalonia.MicroCom.dll
+C:\Users\Harish K\Source\Repos\HarishK-CS\TechCos_LRG\bin\Debug\net6.0-windows\Avalonia.OpenGL.dll
+C:\Users\Harish K\Source\Repos\HarishK-CS\TechCos_LRG\bin\Debug\net6.0-windows\Avalonia.dll
+C:\Users\Harish K\Source\Repos\HarishK-CS\TechCos_LRG\bin\Debug\net6.0-windows\Avalonia.Remote.Protocol.dll
+C:\Users\Harish K\Source\Repos\HarishK-CS\TechCos_LRG\bin\Debug\net6.0-windows\Avalonia.Win32.dll
+C:\Users\Harish K\Source\Repos\HarishK-CS\TechCos_LRG\bin\Debug\net6.0-windows\MicroCom.Runtime.dll
+C:\Users\Harish K\Source\Repos\HarishK-CS\TechCos_LRG\bin\Debug\net6.0-windows\runtimes\win-arm64\native\av_libglesv2.dll
+C:\Users\Harish K\Source\Repos\HarishK-CS\TechCos_LRG\bin\Debug\net6.0-windows\runtimes\win-x64\native\av_libglesv2.dll
+C:\Users\Harish K\Source\Repos\HarishK-CS\TechCos_LRG\bin\Debug\net6.0-windows\runtimes\win-x86\native\av_libglesv2.dll
+C:\Users\Harish K\Source\Repos\HarishK-CS\TechCos_LRG\obj\Debug\net6.0-windows\Avalonia\Resources.Inputs.cache
+C:\Users\Harish K\source\repos\HarishK-CS\TechCos_LRG\bin\Debug\net6.0-windows\System.Runtime.InteropServices.WindowsRuntime.dll
+C:\Users\Harish K\source\repos\HarishK-CS\TechCos_LRG\bin\Debug\net6.0-windows\Uno.Diagnostics.Eventing.dll
+C:\Users\Harish K\source\repos\HarishK-CS\TechCos_LRG\bin\Debug\net6.0-windows\Uno.Fonts.Fluent.dll
+C:\Users\Harish K\source\repos\HarishK-CS\TechCos_LRG\bin\Debug\net6.0-windows\Uno.Foundation.Logging.dll
+C:\Users\Harish K\source\repos\HarishK-CS\TechCos_LRG\bin\Debug\net6.0-windows\Uno.Foundation.dll
+C:\Users\Harish K\source\repos\HarishK-CS\TechCos_LRG\bin\Debug\net6.0-windows\Uno.UI.Composition.dll
+C:\Users\Harish K\source\repos\HarishK-CS\TechCos_LRG\bin\Debug\net6.0-windows\Uno.UI.Dispatching.dll
+C:\Users\Harish K\source\repos\HarishK-CS\TechCos_LRG\bin\Debug\net6.0-windows\Uno.UI.FluentTheme.dll
+C:\Users\Harish K\source\repos\HarishK-CS\TechCos_LRG\bin\Debug\net6.0-windows\Uno.UI.FluentTheme.v1.dll
+C:\Users\Harish K\source\repos\HarishK-CS\TechCos_LRG\bin\Debug\net6.0-windows\Uno.UI.FluentTheme.v2.dll
+C:\Users\Harish K\source\repos\HarishK-CS\TechCos_LRG\bin\Debug\net6.0-windows\Uno.UI.Toolkit.dll
+C:\Users\Harish K\source\repos\HarishK-CS\TechCos_LRG\bin\Debug\net6.0-windows\Uno.UI.dll
+C:\Users\Harish K\source\repos\HarishK-CS\TechCos_LRG\bin\Debug\net6.0-windows\Uno.Xaml.dll
+C:\Users\Harish K\source\repos\HarishK-CS\TechCos_LRG\bin\Debug\net6.0-windows\Uno.dll
+C:\Users\Harish K\source\repos\HarishK-CS\TechCos_LRG\obj\Debug\net6.0-windows\TechCos_LRG.d-bfalse.GeneratedMSBuildEditorConfig.editorconfig

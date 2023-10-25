@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>TechCos_LRG</id>
+    <version>1.0.0</version>
+    <authors>TechCos_LRG</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net6.0-windows7.0">
+        <dependency id="Avalonia.Win32" version="11.0.5" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" version="4.1.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Office.Interop.Word" version="15.0.4797.1004" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.SqlServer.SqlManagementObjects" version="170.18.0" exclude="Build,Analyzers" />
+        <dependency id="PdfSharp" version="1.50.5147" exclude="Build,Analyzers" />
+        <dependency id="System.Data.SqlClient" version="4.8.5" exclude="Build,Analyzers" />
+        <dependency id="System.Text.Encoding" version="4.3.0" exclude="Build,Analyzers" />
+        <dependency id="Uno.WinUI" version="4.10.26" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net6.0-windows7.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WindowsForms" />
+      </group>
+    </frameworkReferences>
+  </metadata>
+  <files>
+    <file src="C:\Users\Harish K\source\repos\HarishK-CS\TechCos_LRG\bin\Debug\net6.0-windows\TechCos_LRG.runtimeconfig.json" target="lib\net6.0-windows7.0\TechCos_LRG.runtimeconfig.json" />
+    <file src="C:\Users\Harish K\source\repos\HarishK-CS\TechCos_LRG\bin\Debug\net6.0-windows\TechCos_LRG.dll" target="lib\net6.0-windows7.0\TechCos_LRG.dll" />
+  </files>
+</package>

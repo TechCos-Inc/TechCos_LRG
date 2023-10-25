@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ComponentFactory.Krypton.Toolkit;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,27 +12,26 @@ using System.Windows.Forms;
 
 namespace TechCos_LRG
 {
-    public partial class Form2 : Form
+    public partial class Form2 : KryptonForm
     {
         public static Form2 instance;
         public ComboBox branchCB;
         SqlConnection cn;
         SqlCommand cmd;
-        SqlDataReader dr;
-
+        SqlDataReader dr,dra;
+        object baseDir = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\TechCos LRG\\";
         public Form2()
         {
             InitializeComponent();
             instance = this;
             branchCB = branchComboBox;
-            LoanListPanel.Hide();
-            dataGridView.Hide();
+            containerPanel.Hide();
 
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            cn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\mugil\\source\\repos\\HarishK-CS\\TechCos_LRG\\Database.mdf\";Integrated Security=True");
+            cn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Harish K\\source\\repos\\HarishK-CS\\TechCos_LRG\\Database.mdf\";Integrated Security=True");
             cn.Open();
             string Sql = "select BranchName from Branch";
 
@@ -41,11 +41,20 @@ namespace TechCos_LRG
             while (dr.Read())
             {
                 branchComboBox.Items.Add(dr[0]);
-
             }
 
             dr.Close();
+            
+            if (Form1.instance.role.Equals("Normal"))
+            {
+                SuperUserBtn.Visible = false;
+            }
+
         }
+        
+        
+
+ 
 
         private void PersonalBtn_Click(object sender, EventArgs e)
         {
@@ -63,19 +72,19 @@ namespace TechCos_LRG
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            LoanListPanel.Show();
-            dataGridView.Show();
+            containerPanel.Show();
             TableData();
         }
         public void TableData()
         {
             try
             {
-                String sqlQuery = "Select * from BusinessLoan ";
+                String sqlQuery = "Select * from JLGLoan where BranchName='" + branchCB.SelectedItem + "'";
                 DataTable dt = new DataTable("Records");
                 SqlDataAdapter adapter = new SqlDataAdapter(sqlQuery, cn);
                 adapter.Fill(dt);
                 dataGridView.DataSource = dt;
+
 
             }
             catch (SqlException ex)
@@ -84,19 +93,72 @@ namespace TechCos_LRG
             }
         }
 
-        private void CloseBtn_Click(object sender, EventArgs e)
+
+
+
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-            System.Windows.Forms.Application.Exit();
+            Environment.Exit(0);
         }
 
-        private void JlgBtn_Click(object sender, EventArgs e)
+        private void SuperUserBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            cn.Close();
-            JlgLoane jlg = new JlgLoane();
-            //JLGLoan jlg = new JLGLoan();
-            jlg.ShowDialog();
+            SuperUserForm superUserForm = new SuperUserForm();
+            superUserForm.ShowDialog();
+        }
+
+        private void branchComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            containerPanel.Show();
+            TableData();
 
         }
+
+
+        private void BranchBtn_Click_1(object sender, EventArgs e)
+        {
+
+            this.Hide();
+            BranchForm branchForm = new BranchForm();
+            branchForm.ShowDialog();
+        }
+
+        private void JlgBtn_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            JLGLoan jLGLoan = new JLGLoan();
+            jLGLoan.ShowDialog();
+
+        }
+
+        private void PersonalBtn_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BusinessBtn_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GroupBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void openDirBtn_Click(object sender, EventArgs e)
+        {
+                //string cmd = "explorer.exe";
+                //string arg = "/select, " + baseDir.ToString() ;
+                //Process.Start(cmd, arg);
+                System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo()
+                {
+                    FileName = baseDir.ToString(),
+                    UseShellExecute = true,
+                    Verb = "open"
+                });
+            }
     }
 }

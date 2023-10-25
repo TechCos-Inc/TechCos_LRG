@@ -1,32 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mugil\\Source\\Repos\\HarishK-CS\\TechCos_LRG\\TechCos_LRG.csproj": {}
+    "C:\\Users\\Harish K\\source\\repos\\HarishK-CS\\TechCos_LRG\\TechCos_LRG.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mugil\\Source\\Repos\\HarishK-CS\\TechCos_LRG\\TechCos_LRG.csproj": {
+    "C:\\Users\\Harish K\\source\\repos\\HarishK-CS\\TechCos_LRG\\TechCos_LRG.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mugil\\Source\\Repos\\HarishK-CS\\TechCos_LRG\\TechCos_LRG.csproj",
+        "projectUniqueName": "C:\\Users\\Harish K\\source\\repos\\HarishK-CS\\TechCos_LRG\\TechCos_LRG.csproj",
         "projectName": "TechCos_LRG",
-        "projectPath": "C:\\Users\\mugil\\Source\\Repos\\HarishK-CS\\TechCos_LRG\\TechCos_LRG.csproj",
-        "packagesPath": "C:\\Users\\mugil\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mugil\\Source\\Repos\\HarishK-CS\\TechCos_LRG\\obj\\",
+        "projectPath": "C:\\Users\\Harish K\\source\\repos\\HarishK-CS\\TechCos_LRG\\TechCos_LRG.csproj",
+        "packagesPath": "C:\\Users\\Harish K\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Harish K\\source\\repos\\HarishK-CS\\TechCos_LRG\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\mugil\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Harish K\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0-windows"
+          "net7.0-windows10.0.17763.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0-windows7.0": {
-            "targetAlias": "net6.0-windows",
+          "net7.0-windows10.0.17763": {
+            "targetAlias": "net7.0-windows10.0.17763.0",
             "projectReferences": {}
           }
         },
@@ -37,9 +37,25 @@
         }
       },
       "frameworks": {
-        "net6.0-windows7.0": {
-          "targetAlias": "net6.0-windows",
+        "net7.0-windows10.0.17763": {
+          "targetAlias": "net7.0-windows10.0.17763.0",
           "dependencies": {
+            "Avalonia.Win32": {
+              "target": "Package",
+              "version": "[11.0.5, )"
+            },
+            "Krypton.Toolkit": {
+              "target": "Package",
+              "version": "[70.22.11.312, )"
+            },
+            "MaterialSkin": {
+              "target": "Package",
+              "version": "[0.2.1, )"
+            },
+            "MaterialSkin.2": {
+              "target": "Package",
+              "version": "[2.3.1, )"
+            },
             "Microsoft.CodeDom.Providers.DotNetCompilerPlatform": {
               "target": "Package",
               "version": "[4.1.0, )"
@@ -69,6 +85,10 @@
             "System.Text.Encoding": {
               "target": "Package",
               "version": "[4.3.0, )"
+            },
+            "Uno.WinUI": {
+              "target": "Package",
+              "version": "[4.10.26, )"
             }
           },
           "imports": [
@@ -82,15 +102,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.Windows.SDK.NET.Ref",
+              "version": "[10.0.17763.29, 10.0.17763.29]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             },
-            "Microsoft.WindowsDesktop.App.WindowsForms": {
+            "Microsoft.Windows.SDK.NET.Ref": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App": {
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

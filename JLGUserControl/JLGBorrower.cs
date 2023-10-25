@@ -1,0 +1,66 @@
+﻿using MaterialSkin.Controls;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace TechCos_LRG.JLG_usercontrol
+{
+    public partial class JLGBorrower : UserControl
+    {
+        public static JLGBorrower Instance;
+        public DateTimePicker doc_date, app_date;
+        public MaterialTextBox jlgname, sbno, adds1, adds2, adds3, adds4, pincode, presname, presno, secrname, secrno;
+        public MaterialComboBox memcountCmb;
+        public JLGBorrower()
+        {
+            InitializeComponent();
+            Instance = this;
+            memCountCombo.Items.Add("1");
+            memCountCombo.Items.Add("2");
+            memCountCombo.Items.Add("3");
+            memCountCombo.Items.Add("4");
+            memCountCombo.Items.Add("5");
+            memCountCombo.Items.Add("6");
+            memCountCombo.Items.Add("7");
+            memCountCombo.Items.Add("8");
+            memCountCombo.Items.Add("9");
+            memCountCombo.Items.Add("10");
+            memCountCombo.Items.Add("11");
+            memCountCombo.Items.Add("12");
+            memCountCombo.Items.Add("13");
+            memCountCombo.Items.Add("14");
+            memCountCombo.Items.Add("15");
+            doc_date = Doc_date;
+            app_date = App_date;
+            jlgname = JlgNameTxt;
+            sbno = SbNoTxt;
+            adds1 = ADDs1Txt;
+            adds2 = ADDs2Txt;
+            adds3 = ADDs3Txt;
+            adds4 = ADDs4Txt;
+            pincode = PinCodeTxt;
+            presname = PRESNameTxt;
+            presno = PRESNoTxt;
+            secrname = SECRNameTxt;
+            secrno = SECRNoTxt;
+            memcountCmb = memCountCombo;
+        }
+
+
+        private void continueImg_Click(object sender, EventArgs e)
+        {
+            JLGMem1 jLGMem1 = new JLGMem1();
+            JLGLoan.instance.AddContUserControl(jLGMem1);
+            memberpageNum membpageNum = new memberpageNum();
+            JLGLoan.instance.memBottomPanel.Visible = true;
+            JLGLoan.instance.AddBottoMemPgUserControl(membpageNum);
+            JLGLoan.instance.memBtn.Enabled = true;
+        }
+    }
+}

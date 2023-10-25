@@ -1,10 +1,14 @@
 ﻿using Microsoft.Office.Interop.Word;
+using Microsoft.SqlServer.Management.Smo;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -21,25 +25,39 @@ namespace TechCos_LRG
         Microsoft.Office.Interop.Word.Application app;
         Microsoft.Office.Interop.Word.Document doc;
         object objMiss = Missing.Value;
-        object tmpfile = System.IO.Path.GetTempPath() + "hello.pdf";
-        object FileLocation = @"C:\Users\mugil\Documents\sample.docx";
-        String Ifsc, brph, brmgr, brphno, braddr, pincode, bremail;
+        object baseDir = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\TechCos LRG\\";
+        object tmpfile = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\TechCos LRG\\Hello.pdf";
+        object FileLocation = @"C:\Users\Harish K\Documents\sample.docx";
+        String Ifsc, brph, brmgr, brphno, braddr, pincode, bremail, brname;
         public JlgLoane()
         {
             InitializeComponent();
 
+            OpenDirBtn.Hide();
             jlgamt.Hide();
             mem1.Hide();
             mem2.Hide();
             mem3.Hide();
             mem4.Hide();
+            mem5.Hide();
+            mem6.Hide();
+            mem7.Hide();
+            mem8.Hide();
+            mem9.Hide();
+            mem10.Hide();
+            mem11.Hide();
+            mem12.Hide();
+            mem13.Hide();
+            mem14.Hide();
+            mem15.Hide();
+
             System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
 
         }
 
         private void JlgLoane_Load(object sender, EventArgs e)
         {
-            cn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\mugil\\source\\repos\\HarishK-CS\\TechCos_LRG\\Database.mdf\";Integrated Security=True");
+            cn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Harish K\\source\\repos\\HarishK-CS\\TechCos_LRG\\Database.mdf\";Integrated Security=True");
             cn.Open();
         }
 
@@ -53,6 +71,7 @@ namespace TechCos_LRG
 
         private void button1_Click(object sender, EventArgs e)
         {
+            JlgBrowor.BringToFront();
             JlgBrowor.Show();
             jlgamt.Hide();
             mem1.Hide();
@@ -83,7 +102,14 @@ namespace TechCos_LRG
                  MessageBox.Show("Enter Valid Password !", "Loan Report Generator - TechCos Inc");
              }
             */
-            cmd = new SqlCommand("insert into JLGLoan values(@presph,@jlgname,@adds1,@adds2,@adds3,@adds4,@pincode,@presname,@secrname,@secrph,@docdate,@appldate)", cn);
+
+
+
+        }
+
+        private void ExportPdfBtn_Click(object sender, EventArgs e)
+        {
+            cmd = new SqlCommand("insert into JLGLoan values(@presph,@jlgname,@adds1,@adds2,@adds3,@adds4,@pincode,@presname,@secrname,@secrph,@docdate,@appldate,@brname)", cn);
             cmd.Parameters.AddWithValue("presph", PRES_Ph.Text);
             cmd.Parameters.AddWithValue("jlgname", JLGName.Text);
             cmd.Parameters.AddWithValue("adds1", ADDs1.Text);
@@ -94,10 +120,13 @@ namespace TechCos_LRG
             cmd.Parameters.AddWithValue("presname", PRES_Name.Text);
             cmd.Parameters.AddWithValue("secrname", SECR_Name.Text);
             cmd.Parameters.AddWithValue("secrph", SECR_Ph.Text);
-            String docdate = Doc_date.Value.ToString("dd/MM/yyyy");
-            String appdate = App_date.Value.ToString("dd/MM/yyyy");
-            cmd.Parameters.AddWithValue("docdate", docdate);
-            cmd.Parameters.AddWithValue("appldate", appdate);
+            //  String docdate = Doc_date.Value.Date
+            //   String appdate = App_date.Value.Date.ToString("dd/MM/yyyy");
+
+            //   String appdate = App_date.Value.ToString("dd/MM/yyyy");
+            cmd.Parameters.AddWithValue("docdate", Doc_date.Value.Date);
+            cmd.Parameters.AddWithValue("appldate", App_date.Value.Date);
+            cmd.Parameters.AddWithValue("brname", Form2.instance.branchCB.SelectedItem);
 
 
 
@@ -105,15 +134,11 @@ namespace TechCos_LRG
 
 
             cmd.ExecuteNonQuery();
-            MessageBox.Show("Added Succesful.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
-        }
-
-        private void ExportPdfBtn_Click(object sender, EventArgs e)
-        {
             try
             {
+
                 app = new Microsoft.Office.Interop.Word.Application();
                 doc = app.Documents.Open(ref FileLocation, ref objMiss, ref objMiss, ref objMiss, ref objMiss, ref objMiss, ref objMiss, ref objMiss, ref objMiss, ref objMiss, ref objMiss, ref objMiss, ref objMiss, ref objMiss, ref objMiss, ref objMiss);
 
@@ -125,11 +150,14 @@ namespace TechCos_LRG
                     while (dr.Read())
                     {
                         Ifsc = dr.GetString(0);
+                        brname = dr.GetString(1);
                         brmgr = dr.GetString(2);
                         braddr = dr.GetString(3);
                         pincode = dr["PinCode"].ToString() ?? "";
                         string tempPh = dr["PhoneNo"].ToString() ?? "";
                         brphno = tempPh;
+
+
                         bremail = dr.GetString(7);
 
                     }
@@ -147,6 +175,8 @@ namespace TechCos_LRG
                 FindAndReplace("[BrAddress]", braddr);
                 FindAndReplace("[BrEmail]", bremail);
                 FindAndReplace("[BrPh]", brphno);
+                FindAndReplace("[BrName]", brname);
+                FindAndReplace("[BrPinCode]", pincode);
                 FindAndReplace("[JLG_Name]", JLGName.Text);
                 FindAndReplace("[ADDs1]", ADDs1.Text);
                 FindAndReplace("[ADDs2]", ADDs2.Text);
@@ -160,13 +190,9 @@ namespace TechCos_LRG
                 FindAndReplace("[SECR_Ph]", SECR_Ph.Text);
 
 
-
-
-
-
-
-
                 doc.ExportAsFixedFormat(tmpfile.ToString(), Microsoft.Office.Interop.Word.WdExportFormat.wdExportFormatPDF);
+                MessageBox.Show("PDF Succesfully Generated", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                OpenDirBtn.Show();
 
 
 
@@ -235,6 +261,7 @@ namespace TechCos_LRG
 
         private void mem1Btn_Click(object sender, EventArgs e)
         {
+            mem1.BringToFront();
             mem1.Show();
             JlgBrowor.Hide();
             jlgamt.Hide();
@@ -311,6 +338,26 @@ namespace TechCos_LRG
         private void CloseBtn_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.Application.Exit();
+        }
+
+        private void OpenDirBtn_Click(object sender, EventArgs e)
+        {
+            //string cmd = "explorer.exe";
+            //string arg = "/select, " + baseDir.ToString() ;
+            //Process.Start(cmd, arg);
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo()
+            {
+                FileName = baseDir.ToString(),
+                UseShellExecute = true,
+                Verb = "open"
+            });
+        }
+
+        private void superusrBackBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form2 form2 = new Form2();
+            form2.ShowDialog();
         }
     }
 }

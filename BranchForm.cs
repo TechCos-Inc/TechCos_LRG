@@ -1,4 +1,5 @@
-﻿using Microsoft.SqlServer.Management.Sdk.Sfc;
+﻿using ComponentFactory.Krypton.Toolkit;
+using Microsoft.SqlServer.Management.Sdk.Sfc;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,7 +13,7 @@ using System.Windows.Forms;
 
 namespace TechCos_LRG
 {
-    public partial class BranchForm : Form
+    public partial class BranchForm : KryptonForm
     {
         SqlConnection cn;
         SqlCommand cmd;
@@ -30,7 +31,15 @@ namespace TechCos_LRG
         {
             cn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Harish K\\source\\repos\\HarishK-CS\\TechCos_LRG\\Database.mdf\";Integrated Security=True");
             cn.Open();
+
+            if (Form1.instance.role.Equals("Normal"))
+            {
+                AddBtn.Visible = false;
+                updateBtn.Visible = false;  
+            }
+
             TableData();
+
         }
 
         private void AddBtn_Click(object sender, EventArgs e)
@@ -126,19 +135,52 @@ namespace TechCos_LRG
             {
                 MessageBox.Show(se.Message);
             }
+            finally { dr.Close(); }
 
         }
 
         private void CloseBtn_Click(object sender, EventArgs e)
         {
-            System.Windows.Forms.Application.Exit();
+            Environment.Exit(0);
         }
 
         private void BranchBackBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form1 form1 = new Form1();
-            form1.ShowDialog();
+            Form2 form2 = new Form2();
+            form2.ShowDialog();
+
+        }
+
+        private void updateBtn_Click(object sender, EventArgs e)
+        {
+            if (IFSCtxt.Text == "" || BrNametxt.Text == "" || BrManagerNametxt.Text == "" || Addresstxt.Text == ""
+                || PhNotxt.Text == "" || PinCodetxt.Text == "" || Emailtxt.Text == "" || ClassCombo.SelectedIndex == -1)
+            {
+                MessageBox.Show("Fill All the Fields !", "Loan Report Generator - TechCos Inc");
+            }
+            else
+            {
+                cmd = cn.CreateCommand();
+                cmd.CommandText = "update  Branch set BranchName=@brname,BranchManagerName=@brmanager,Address=@address,PinCode=@pincode,Classification=@class,PhoneNo=@ph,Email=@email where  IFSC=@ifsc";
+                cmd.Parameters.AddWithValue("ifsc", IFSCtxt.Text);
+                cmd.Parameters.AddWithValue("brname", BrNametxt.Text);
+                cmd.Parameters.AddWithValue("brmanager", BrManagerNametxt.Text);
+                cmd.Parameters.AddWithValue("address", Addresstxt.Text);
+                cmd.Parameters.AddWithValue("pincode", PinCodetxt.Text);
+                cmd.Parameters.AddWithValue("class", ClassCombo.SelectedItem);
+                cmd.Parameters.AddWithValue("ph", PhNotxt.Text);
+                cmd.Parameters.AddWithValue("email", Emailtxt.Text);
+                cmd.Connection = cn;
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Branch has been Updated Successfully.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            TableData();
+
+        }
+
+        private void AddBtn_Click_1(object sender, EventArgs e)
+        {
 
         }
     }
