@@ -38,23 +38,16 @@
       <Isolated>false</Isolated>
       <EmbedInteropTypes>true</EmbedInteropTypes>
     </COMReference>
-    <COMReference Include="{d1fbd7eb-8e86-42f8-a9e5-d55105212a90}">
-      <WrapperTool>tlbimp</WrapperTool>
-      <VersionMinor>0</VersionMinor>
-      <VersionMajor>16</VersionMajor>
-      <Guid>d1fbd7eb-8e86-42f8-a9e5-d55105212a90</Guid>
-    </COMReference>
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Avalonia.Win32" Version="11.0.5" />
+    <PackageReference Include="FreeSpire.Doc" Version="11.6.0" />
     <PackageReference Include="Krypton.Toolkit" Version="70.22.11.312" />
-    <PackageReference Include="MaterialSkin" Version="0.2.1" />
     <PackageReference Include="MaterialSkin.2" Version="2.3.1" />
-    <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="4.1.0" />
+    <PackageReference Include="Microsoft.Office.Interop.Excel" Version="15.0.4795.1001" />
     <PackageReference Include="Microsoft.Office.Interop.Word" Version="15.0.4797.1004" />
     <PackageReference Include="Microsoft.SqlServer.SqlManagementObjects" Version="170.18.0" />
-    <PackageReference Include="PdfSharp" Version="1.50.5147" />
     <PackageReference Include="SqlConnection" Version="1.0.4">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

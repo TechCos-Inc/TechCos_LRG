@@ -14,19 +14,10 @@
     <Compile Update="Form2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="JLGAmt.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="JLGBowDtl.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="JLGLoan.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="JlgLoane.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="JLGMember1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="JLGUserControl\AnnexurePageNum.cs">
@@ -42,21 +33,6 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="JLGUserControl\JLGMem10.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="JLGUserControl\JLGMem11.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="JLGUserControl\JLGMem12.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="JLGUserControl\JLGMem13.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="JLGUserControl\JLGMem14.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="JLGUserControl\JLGMem15.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="JLGUserControl\JLGMem2.cs">
@@ -87,6 +63,9 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="PersonalLoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Procode.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="SuperUserForm.cs">

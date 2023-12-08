@@ -6,6 +6,9 @@ using System.Drawing;
 using System.IO.Compression;
 using ComponentFactory.Krypton.Toolkit;
 using MaterialSkin.Controls;
+using System.Reflection.Metadata;
+using Spire.Doc;
+using Document = Spire.Doc.Document;
 
 namespace TechCos_LRG
 {
@@ -25,8 +28,8 @@ namespace TechCos_LRG
             instance = this;
             role = "";
             username = UsernameTxt;
-
         }
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -89,9 +92,11 @@ namespace TechCos_LRG
                 }
             }
         */
+
+
         private void CloseBtn_Click(object sender, EventArgs e)
         {
-            System.Windows.Forms.Application.Exit();
+            Environment.Exit(0);
         }
 
         public void addUserControl(UserControl userControl)
@@ -133,5 +138,21 @@ namespace TechCos_LRG
 
         }
 
+        private void procodeBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Procode procode = new Procode();
+            procode.ShowDialog();
+        }
+
+
+        private void materialButton1_Click(object sender, EventArgs e)
+        {
+            Document document = new Document();
+            document.LoadFromFile(@"C:\Users\Harish K\Documents\A.docx", FileFormat.Docx);
+            document.InsertTextFromFile(@"C:\Users\Harish K\Documents\B.docx", FileFormat.Docx);
+            document.InsertTextFromFile(@"C:\Users\Harish K\Documents\C.docx", FileFormat.Docx);
+            document.SaveToFile("MergeFile.docx", FileFormat.Docx);
+        }
     }
 }

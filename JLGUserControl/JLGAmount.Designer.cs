@@ -33,22 +33,22 @@
             label19 = new Label();
             label26 = new Label();
             label17 = new Label();
-            dateTimePicker1 = new DateTimePicker();
+            dateOfFormationdt = new DateTimePicker();
             label16 = new Label();
             label25 = new Label();
             label24 = new Label();
             label23 = new Label();
             label22 = new Label();
             label20 = new Label();
-            materialTextBox1 = new MaterialSkin.Controls.MaterialTextBox();
-            materialTextBox2 = new MaterialSkin.Controls.MaterialTextBox();
-            materialTextBox3 = new MaterialSkin.Controls.MaterialTextBox();
-            materialTextBox4 = new MaterialSkin.Controls.MaterialTextBox();
-            materialTextBox5 = new MaterialSkin.Controls.MaterialTextBox();
-            materialTextBox6 = new MaterialSkin.Controls.MaterialTextBox();
-            materialTextBox7 = new MaterialSkin.Controls.MaterialTextBox();
-            materialTextBox8 = new MaterialSkin.Controls.MaterialTextBox();
-            materialTextBox9 = new MaterialSkin.Controls.MaterialTextBox();
+            typeOfCredittTxt = new MaterialSkin.Controls.MaterialTextBox();
+            productCode1Txt = new MaterialSkin.Controls.MaterialTextBox();
+            productCode2Txt = new MaterialSkin.Controls.MaterialTextBox();
+            amountTxt = new MaterialSkin.Controls.MaterialTextBox();
+            interestTxt = new MaterialSkin.Controls.MaterialTextBox();
+            mclrTxt = new MaterialSkin.Controls.MaterialTextBox();
+            spreadTxt = new MaterialSkin.Controls.MaterialTextBox();
+            emiAmountTxt = new MaterialSkin.Controls.MaterialTextBox();
+            noOfMonthTxt = new MaterialSkin.Controls.MaterialTextBox();
             SuspendLayout();
             // 
             // label18
@@ -101,13 +101,13 @@
             label17.TabIndex = 102;
             label17.Text = "Product Code";
             // 
-            // dateTimePicker1
+            // dateOfFormationdt
             // 
-            dateTimePicker1.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            dateTimePicker1.Location = new Point(345, 146);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(194, 34);
-            dateTimePicker1.TabIndex = 101;
+            dateOfFormationdt.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            dateOfFormationdt.Location = new Point(345, 146);
+            dateOfFormationdt.Name = "dateOfFormationdt";
+            dateOfFormationdt.Size = new Size(194, 34);
+            dateOfFormationdt.TabIndex = 101;
             // 
             // label16
             // 
@@ -169,178 +169,178 @@
             label20.TabIndex = 108;
             label20.Text = "Amount Detail";
             // 
-            // materialTextBox1
+            // typeOfCredittTxt
             // 
-            materialTextBox1.AnimateReadOnly = false;
-            materialTextBox1.BorderStyle = BorderStyle.None;
-            materialTextBox1.Depth = 0;
-            materialTextBox1.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialTextBox1.LeadingIcon = null;
-            materialTextBox1.Location = new Point(810, 146);
-            materialTextBox1.MaxLength = 50;
-            materialTextBox1.MouseState = MaterialSkin.MouseState.OUT;
-            materialTextBox1.Multiline = false;
-            materialTextBox1.Name = "materialTextBox1";
-            materialTextBox1.Size = new Size(194, 50);
-            materialTextBox1.TabIndex = 121;
-            materialTextBox1.Text = "";
-            materialTextBox1.TrailingIcon = null;
+            typeOfCredittTxt.AnimateReadOnly = false;
+            typeOfCredittTxt.BorderStyle = BorderStyle.None;
+            typeOfCredittTxt.Depth = 0;
+            typeOfCredittTxt.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            typeOfCredittTxt.LeadingIcon = null;
+            typeOfCredittTxt.Location = new Point(810, 146);
+            typeOfCredittTxt.MaxLength = 50;
+            typeOfCredittTxt.MouseState = MaterialSkin.MouseState.OUT;
+            typeOfCredittTxt.Multiline = false;
+            typeOfCredittTxt.Name = "typeOfCredittTxt";
+            typeOfCredittTxt.Size = new Size(194, 50);
+            typeOfCredittTxt.TabIndex = 121;
+            typeOfCredittTxt.Text = "";
+            typeOfCredittTxt.TrailingIcon = null;
             // 
-            // materialTextBox2
+            // productCode1Txt
             // 
-            materialTextBox2.AnimateReadOnly = false;
-            materialTextBox2.BorderStyle = BorderStyle.None;
-            materialTextBox2.Depth = 0;
-            materialTextBox2.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialTextBox2.LeadingIcon = null;
-            materialTextBox2.Location = new Point(345, 237);
-            materialTextBox2.MaxLength = 50;
-            materialTextBox2.MouseState = MaterialSkin.MouseState.OUT;
-            materialTextBox2.Multiline = false;
-            materialTextBox2.Name = "materialTextBox2";
-            materialTextBox2.Size = new Size(194, 50);
-            materialTextBox2.TabIndex = 122;
-            materialTextBox2.Text = "";
-            materialTextBox2.TrailingIcon = null;
+            productCode1Txt.AnimateReadOnly = false;
+            productCode1Txt.BorderStyle = BorderStyle.None;
+            productCode1Txt.Depth = 0;
+            productCode1Txt.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            productCode1Txt.LeadingIcon = null;
+            productCode1Txt.Location = new Point(345, 237);
+            productCode1Txt.MaxLength = 50;
+            productCode1Txt.MouseState = MaterialSkin.MouseState.OUT;
+            productCode1Txt.Multiline = false;
+            productCode1Txt.Name = "productCode1Txt";
+            productCode1Txt.Size = new Size(194, 50);
+            productCode1Txt.TabIndex = 122;
+            productCode1Txt.Text = "";
+            productCode1Txt.TrailingIcon = null;
             // 
-            // materialTextBox3
+            // productCode2Txt
             // 
-            materialTextBox3.AnimateReadOnly = false;
-            materialTextBox3.BorderStyle = BorderStyle.None;
-            materialTextBox3.Depth = 0;
-            materialTextBox3.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialTextBox3.LeadingIcon = null;
-            materialTextBox3.Location = new Point(810, 227);
-            materialTextBox3.MaxLength = 50;
-            materialTextBox3.MouseState = MaterialSkin.MouseState.OUT;
-            materialTextBox3.Multiline = false;
-            materialTextBox3.Name = "materialTextBox3";
-            materialTextBox3.Size = new Size(194, 50);
-            materialTextBox3.TabIndex = 123;
-            materialTextBox3.Text = "";
-            materialTextBox3.TrailingIcon = null;
+            productCode2Txt.AnimateReadOnly = false;
+            productCode2Txt.BorderStyle = BorderStyle.None;
+            productCode2Txt.Depth = 0;
+            productCode2Txt.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            productCode2Txt.LeadingIcon = null;
+            productCode2Txt.Location = new Point(810, 227);
+            productCode2Txt.MaxLength = 50;
+            productCode2Txt.MouseState = MaterialSkin.MouseState.OUT;
+            productCode2Txt.Multiline = false;
+            productCode2Txt.Name = "productCode2Txt";
+            productCode2Txt.Size = new Size(194, 50);
+            productCode2Txt.TabIndex = 123;
+            productCode2Txt.Text = "";
+            productCode2Txt.TrailingIcon = null;
             // 
-            // materialTextBox4
+            // amountTxt
             // 
-            materialTextBox4.AnimateReadOnly = false;
-            materialTextBox4.BorderStyle = BorderStyle.None;
-            materialTextBox4.Depth = 0;
-            materialTextBox4.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialTextBox4.LeadingIcon = null;
-            materialTextBox4.Location = new Point(345, 322);
-            materialTextBox4.MaxLength = 50;
-            materialTextBox4.MouseState = MaterialSkin.MouseState.OUT;
-            materialTextBox4.Multiline = false;
-            materialTextBox4.Name = "materialTextBox4";
-            materialTextBox4.Size = new Size(194, 50);
-            materialTextBox4.TabIndex = 124;
-            materialTextBox4.Text = "";
-            materialTextBox4.TrailingIcon = null;
+            amountTxt.AnimateReadOnly = false;
+            amountTxt.BorderStyle = BorderStyle.None;
+            amountTxt.Depth = 0;
+            amountTxt.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            amountTxt.LeadingIcon = null;
+            amountTxt.Location = new Point(345, 322);
+            amountTxt.MaxLength = 50;
+            amountTxt.MouseState = MaterialSkin.MouseState.OUT;
+            amountTxt.Multiline = false;
+            amountTxt.Name = "amountTxt";
+            amountTxt.Size = new Size(194, 50);
+            amountTxt.TabIndex = 124;
+            amountTxt.Text = "";
+            amountTxt.TrailingIcon = null;
             // 
-            // materialTextBox5
+            // interestTxt
             // 
-            materialTextBox5.AnimateReadOnly = false;
-            materialTextBox5.BorderStyle = BorderStyle.None;
-            materialTextBox5.Depth = 0;
-            materialTextBox5.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialTextBox5.LeadingIcon = null;
-            materialTextBox5.Location = new Point(810, 310);
-            materialTextBox5.MaxLength = 50;
-            materialTextBox5.MouseState = MaterialSkin.MouseState.OUT;
-            materialTextBox5.Multiline = false;
-            materialTextBox5.Name = "materialTextBox5";
-            materialTextBox5.Size = new Size(194, 50);
-            materialTextBox5.TabIndex = 125;
-            materialTextBox5.Text = "";
-            materialTextBox5.TrailingIcon = null;
+            interestTxt.AnimateReadOnly = false;
+            interestTxt.BorderStyle = BorderStyle.None;
+            interestTxt.Depth = 0;
+            interestTxt.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            interestTxt.LeadingIcon = null;
+            interestTxt.Location = new Point(810, 310);
+            interestTxt.MaxLength = 50;
+            interestTxt.MouseState = MaterialSkin.MouseState.OUT;
+            interestTxt.Multiline = false;
+            interestTxt.Name = "interestTxt";
+            interestTxt.Size = new Size(194, 50);
+            interestTxt.TabIndex = 125;
+            interestTxt.Text = "";
+            interestTxt.TrailingIcon = null;
             // 
-            // materialTextBox6
+            // mclrTxt
             // 
-            materialTextBox6.AnimateReadOnly = false;
-            materialTextBox6.BorderStyle = BorderStyle.None;
-            materialTextBox6.Depth = 0;
-            materialTextBox6.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialTextBox6.LeadingIcon = null;
-            materialTextBox6.Location = new Point(345, 414);
-            materialTextBox6.MaxLength = 50;
-            materialTextBox6.MouseState = MaterialSkin.MouseState.OUT;
-            materialTextBox6.Multiline = false;
-            materialTextBox6.Name = "materialTextBox6";
-            materialTextBox6.Size = new Size(194, 50);
-            materialTextBox6.TabIndex = 126;
-            materialTextBox6.Text = "";
-            materialTextBox6.TrailingIcon = null;
+            mclrTxt.AnimateReadOnly = false;
+            mclrTxt.BorderStyle = BorderStyle.None;
+            mclrTxt.Depth = 0;
+            mclrTxt.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            mclrTxt.LeadingIcon = null;
+            mclrTxt.Location = new Point(345, 414);
+            mclrTxt.MaxLength = 50;
+            mclrTxt.MouseState = MaterialSkin.MouseState.OUT;
+            mclrTxt.Multiline = false;
+            mclrTxt.Name = "mclrTxt";
+            mclrTxt.Size = new Size(194, 50);
+            mclrTxt.TabIndex = 126;
+            mclrTxt.Text = "";
+            mclrTxt.TrailingIcon = null;
             // 
-            // materialTextBox7
+            // spreadTxt
             // 
-            materialTextBox7.AnimateReadOnly = false;
-            materialTextBox7.BorderStyle = BorderStyle.None;
-            materialTextBox7.Depth = 0;
-            materialTextBox7.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialTextBox7.LeadingIcon = null;
-            materialTextBox7.Location = new Point(810, 408);
-            materialTextBox7.MaxLength = 50;
-            materialTextBox7.MouseState = MaterialSkin.MouseState.OUT;
-            materialTextBox7.Multiline = false;
-            materialTextBox7.Name = "materialTextBox7";
-            materialTextBox7.Size = new Size(194, 50);
-            materialTextBox7.TabIndex = 127;
-            materialTextBox7.Text = "";
-            materialTextBox7.TrailingIcon = null;
+            spreadTxt.AnimateReadOnly = false;
+            spreadTxt.BorderStyle = BorderStyle.None;
+            spreadTxt.Depth = 0;
+            spreadTxt.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            spreadTxt.LeadingIcon = null;
+            spreadTxt.Location = new Point(810, 408);
+            spreadTxt.MaxLength = 50;
+            spreadTxt.MouseState = MaterialSkin.MouseState.OUT;
+            spreadTxt.Multiline = false;
+            spreadTxt.Name = "spreadTxt";
+            spreadTxt.Size = new Size(194, 50);
+            spreadTxt.TabIndex = 127;
+            spreadTxt.Text = "";
+            spreadTxt.TrailingIcon = null;
             // 
-            // materialTextBox8
+            // emiAmountTxt
             // 
-            materialTextBox8.AnimateReadOnly = false;
-            materialTextBox8.BorderStyle = BorderStyle.None;
-            materialTextBox8.Depth = 0;
-            materialTextBox8.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialTextBox8.LeadingIcon = null;
-            materialTextBox8.Location = new Point(345, 495);
-            materialTextBox8.MaxLength = 50;
-            materialTextBox8.MouseState = MaterialSkin.MouseState.OUT;
-            materialTextBox8.Multiline = false;
-            materialTextBox8.Name = "materialTextBox8";
-            materialTextBox8.Size = new Size(194, 50);
-            materialTextBox8.TabIndex = 128;
-            materialTextBox8.Text = "";
-            materialTextBox8.TrailingIcon = null;
+            emiAmountTxt.AnimateReadOnly = false;
+            emiAmountTxt.BorderStyle = BorderStyle.None;
+            emiAmountTxt.Depth = 0;
+            emiAmountTxt.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            emiAmountTxt.LeadingIcon = null;
+            emiAmountTxt.Location = new Point(345, 495);
+            emiAmountTxt.MaxLength = 50;
+            emiAmountTxt.MouseState = MaterialSkin.MouseState.OUT;
+            emiAmountTxt.Multiline = false;
+            emiAmountTxt.Name = "emiAmountTxt";
+            emiAmountTxt.Size = new Size(194, 50);
+            emiAmountTxt.TabIndex = 128;
+            emiAmountTxt.Text = "";
+            emiAmountTxt.TrailingIcon = null;
             // 
-            // materialTextBox9
+            // noOfMonthTxt
             // 
-            materialTextBox9.AnimateReadOnly = false;
-            materialTextBox9.BorderStyle = BorderStyle.None;
-            materialTextBox9.Depth = 0;
-            materialTextBox9.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialTextBox9.LeadingIcon = null;
-            materialTextBox9.Location = new Point(810, 488);
-            materialTextBox9.MaxLength = 50;
-            materialTextBox9.MouseState = MaterialSkin.MouseState.OUT;
-            materialTextBox9.Multiline = false;
-            materialTextBox9.Name = "materialTextBox9";
-            materialTextBox9.Size = new Size(194, 50);
-            materialTextBox9.TabIndex = 129;
-            materialTextBox9.Text = "";
-            materialTextBox9.TrailingIcon = null;
+            noOfMonthTxt.AnimateReadOnly = false;
+            noOfMonthTxt.BorderStyle = BorderStyle.None;
+            noOfMonthTxt.Depth = 0;
+            noOfMonthTxt.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            noOfMonthTxt.LeadingIcon = null;
+            noOfMonthTxt.Location = new Point(810, 488);
+            noOfMonthTxt.MaxLength = 50;
+            noOfMonthTxt.MouseState = MaterialSkin.MouseState.OUT;
+            noOfMonthTxt.Multiline = false;
+            noOfMonthTxt.Name = "noOfMonthTxt";
+            noOfMonthTxt.Size = new Size(194, 50);
+            noOfMonthTxt.TabIndex = 129;
+            noOfMonthTxt.Text = "";
+            noOfMonthTxt.TrailingIcon = null;
             // 
             // JLGAmount
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(materialTextBox9);
-            Controls.Add(materialTextBox8);
-            Controls.Add(materialTextBox7);
-            Controls.Add(materialTextBox6);
-            Controls.Add(materialTextBox5);
-            Controls.Add(materialTextBox4);
-            Controls.Add(materialTextBox3);
-            Controls.Add(materialTextBox2);
-            Controls.Add(materialTextBox1);
+            Controls.Add(noOfMonthTxt);
+            Controls.Add(emiAmountTxt);
+            Controls.Add(spreadTxt);
+            Controls.Add(mclrTxt);
+            Controls.Add(interestTxt);
+            Controls.Add(amountTxt);
+            Controls.Add(productCode2Txt);
+            Controls.Add(productCode1Txt);
+            Controls.Add(typeOfCredittTxt);
             Controls.Add(label18);
             Controls.Add(label27);
             Controls.Add(label19);
             Controls.Add(label26);
             Controls.Add(label17);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(dateOfFormationdt);
             Controls.Add(label16);
             Controls.Add(label25);
             Controls.Add(label24);
@@ -359,21 +359,21 @@
         private Label label19;
         private Label label26;
         private Label label17;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dateOfFormationdt;
         private Label label16;
         private Label label25;
         private Label label24;
         private Label label23;
         private Label label22;
         private Label label20;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox1;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox2;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox3;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox4;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox5;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox6;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox7;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox8;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox9;
+        private MaterialSkin.Controls.MaterialTextBox typeOfCredittTxt;
+        private MaterialSkin.Controls.MaterialTextBox productCode1Txt;
+        private MaterialSkin.Controls.MaterialTextBox productCode2Txt;
+        private MaterialSkin.Controls.MaterialTextBox amountTxt;
+        private MaterialSkin.Controls.MaterialTextBox interestTxt;
+        private MaterialSkin.Controls.MaterialTextBox mclrTxt;
+        private MaterialSkin.Controls.MaterialTextBox spreadTxt;
+        private MaterialSkin.Controls.MaterialTextBox emiAmountTxt;
+        private MaterialSkin.Controls.MaterialTextBox noOfMonthTxt;
     }
 }

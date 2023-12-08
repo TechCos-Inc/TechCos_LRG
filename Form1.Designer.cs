@@ -48,7 +48,6 @@
             PasswordTxt = new MaterialSkin.Controls.MaterialTextBox();
             UsernameTxt = new MaterialSkin.Controls.MaterialTextBox();
             label12 = new Label();
-            button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuperUserPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)superusrBackBtn).BeginInit();
@@ -204,7 +203,7 @@
             panelContainer.Controls.Add(PasswordTxt);
             panelContainer.Controls.Add(UsernameTxt);
             panelContainer.Controls.Add(label12);
-            panelContainer.Location = new Point(642, 210);
+            panelContainer.Location = new Point(643, 199);
             panelContainer.Name = "panelContainer";
             panelContainer.Size = new Size(509, 322);
             panelContainer.TabIndex = 12;
@@ -271,25 +270,15 @@
             // 
             label12.AutoSize = true;
             label12.Font = new Font("Lucida Fax", 36F, FontStyle.Bold, GraphicsUnit.Point);
-            label12.Location = new Point(34, 14);
+            label12.Location = new Point(150, 16);
             label12.Name = "label12";
             label12.Size = new Size(181, 55);
             label12.TabIndex = 1;
             label12.Text = "Log In";
             // 
-            // button3
-            // 
-            button3.Location = new Point(633, 483);
-            button3.Name = "button3";
-            button3.Size = new Size(8, 8);
-            button3.TabIndex = 13;
-            button3.Text = "button3";
-            button3.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             ClientSize = new Size(1200, 800);
-            Controls.Add(button3);
             Controls.Add(panelContainer);
             Controls.Add(CloseBtn);
             Controls.Add(pictureBox1);
@@ -330,7 +319,6 @@
         private Label label11;
         private PictureBox CloseBtn;
         private Panel panelContainer;
-        private Button button3;
         private Krypton.Toolkit.KryptonBreadCrumb kryptonBreadCrumb1;
         private Label label12;
         private MaterialSkin.Controls.MaterialTextBox UsernameTxt;

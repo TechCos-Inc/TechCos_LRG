@@ -15,9 +15,35 @@ namespace TechCos_LRG.JLG_usercontrol
 {
     public partial class memberpageNum : UserControl
     {
+        public static memberpageNum instance;
+        //public JLGmem1 mem1;
+        public JLGmem2 mem2;
+        public JLGmem3 mem3;
+        public JLGmem4 mem4;
+        public JLGmem5 mem5;
+        public JLGmem6 mem6;
+        public JLGmem7 mem7;
+        public JLGmem8 mem8;
+        public JLGmem9 mem9;
+        public JLGmem10 mem10;
+
+
+
+
         public memberpageNum()
         {
             InitializeComponent();
+            instance = this;
+            //   mem1 = new JLGmem1();
+            mem2 = new JLGmem2();
+            mem3 = new JLGmem3();
+            mem4 = new JLGmem4();
+            mem5 = new JLGmem5();
+            mem6 = new JLGmem6();
+            mem7 = new JLGmem7();
+            mem8 = new JLGmem8();
+            mem9 = new JLGmem9();
+            mem10 = new JLGmem10();
 
 
         }
@@ -28,8 +54,8 @@ namespace TechCos_LRG.JLG_usercontrol
             {
                 hidePg(JLGBorrower.Instance.memcountCmb.SelectedItem.ToString());
             }
-            
-            
+
+
             //   MessageBox.Show(this.Controls.IndexOf(mpage5).ToString());
 
 
@@ -42,7 +68,7 @@ namespace TechCos_LRG.JLG_usercontrol
             try
             {
                 String name;
-                for (int i = int.Parse(num) + 1; i <= 15; i++)
+                for (int i = int.Parse(num) + 1; i <= 10; i++)
                 {
                     //  MessageBox.Show(i.ToString());
                     // this.Controls.RemoveAt(i);
@@ -56,105 +82,77 @@ namespace TechCos_LRG.JLG_usercontrol
 
         private void mpage1_Click(object sender, EventArgs e)
         {
-            JLGMem1 mem1 = new JLGMem1();
-            JLGLoan.instance.AddContUserControl(mem1);
+            JLGLoan.instance.AddContUserControl(JLGLoan.instance.jlgMem1);
         }
 
         private void mpage2_Click(object sender, EventArgs e)
         {
-            JLGmem2 jLGmem2 = new JLGmem2();
-            JLGLoan.instance.AddContUserControl(jLGmem2);
+            JLGLoan.instance.AddContUserControl(mem2);
 
         }
 
         private void mpage3_Click(object sender, EventArgs e)
         {
-            JLGmem3 jLGmem3 = new JLGmem3();
-            JLGLoan.instance.AddContUserControl(jLGmem3);
+
+            JLGLoan.instance.AddContUserControl(mem3);
         }
 
         private void mpage4_Click(object sender, EventArgs e)
         {
-            JLGmem4 jLGmem4 = new JLGmem4();
-            JLGLoan.instance.AddContUserControl(jLGmem4);
+
+            JLGLoan.instance.AddContUserControl(mem4);
         }
 
         private void mpage5_Click(object sender, EventArgs e)
         {
-            JLGmem5 jLGmem5 = new JLGmem5();
-            JLGLoan.instance.AddContUserControl(jLGmem5);
+
+            JLGLoan.instance.AddContUserControl(mem5);
         }
 
         private void mpage6_Click(object sender, EventArgs e)
         {
-            JLGmem6 jLGmem6 = new JLGmem6();
-            JLGLoan.instance.AddContUserControl(jLGmem6);
+
+            JLGLoan.instance.AddContUserControl(mem6);
 
         }
 
         private void mpage7_Click(object sender, EventArgs e)
         {
-            JLGmem7 jLGmem7 = new JLGmem7();
-            JLGLoan.instance.AddContUserControl(jLGmem7);
+
+            JLGLoan.instance.AddContUserControl(mem7);
 
         }
 
         private void mpage8_Click(object sender, EventArgs e)
         {
-            JLGmem8 jLGmem8 = new JLGmem8();
-            JLGLoan.instance.AddContUserControl(jLGmem8);
+
+            JLGLoan.instance.AddContUserControl(mem8);
         }
 
         private void mpage9_Click(object sender, EventArgs e)
         {
-            JLGmem9 jLGmem9 = new JLGmem9();
-            JLGLoan.instance.AddContUserControl(jLGmem9);
+
+            JLGLoan.instance.AddContUserControl(mem9);
         }
 
         private void mpage10_Click(object sender, EventArgs e)
         {
-            JLGmem10 jLGmem10 = new JLGmem10();
-            JLGLoan.instance.AddContUserControl(jLGmem10);
+
+            JLGLoan.instance.AddContUserControl(mem10);
         }
 
-        private void mpage11_Click(object sender, EventArgs e)
-        {
-            JLGmem11 jLGmem11 = new JLGmem11();
-            JLGLoan.instance.AddContUserControl(jLGmem11);
-        }
 
-        private void mpage12_Click(object sender, EventArgs e)
+        private void continueImg_Click(object sender, EventArgs e)
         {
-            JLGmem12 jLGmem12 = new JLGmem12();
-            JLGLoan.instance.AddContUserControl(jLGmem12);
-
+            JLGLoan.instance.AddContUserControl(JLGLoan.instance.jLGAmount);
+            JLGLoan.instance.amtBtn.Enabled = true;
+            JLGLoan.instance.memBottomPanel.Visible = false;
+            JLGLoan.instance.expBtn.Visible = true;
         }
 
         private void mpage13_Click(object sender, EventArgs e)
         {
-            JLGmem13 jLGmem13 = new JLGmem13();
-            JLGLoan.instance.AddContUserControl(jLGmem13);
-        }
 
-        private void mpage14_Click(object sender, EventArgs e)
-        {
-            JLGmem14 jLGmem14 = new JLGmem14();
-            JLGLoan.instance.AddContUserControl(jLGmem14);
-        }
-
-        private void mpage15_Click(object sender, EventArgs e)
-        {
-            JLGmem15 jLGmem15 = new JLGmem15();
-            JLGLoan.instance.AddContUserControl(jLGmem15);
-        }
-
-        private void continueImg_Click(object sender, EventArgs e)
-        {
-            JLGAmount jLGAmount = new JLGAmount();
-            JLGLoan.instance.AddContUserControl(jLGAmount);
-            JLGLoan.instance.amtBtn.Enabled = true;
-            JLGLoan.instance.memBottomPanel.Visible = false;
-            JLGLoan.instance.expBtn.Visible = true;
         }
     }
 

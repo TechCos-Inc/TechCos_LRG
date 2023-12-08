@@ -45,11 +45,15 @@
             BranchBtn = new MaterialSkin.Controls.MaterialButton();
             SuperUserBtn = new MaterialSkin.Controls.MaterialButton();
             openDirBtn = new MaterialSkin.Controls.MaterialButton();
+            pictureBox2 = new PictureBox();
+            materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
+            procodeBtn = new MaterialSkin.Controls.MaterialButton();
             LoanListPanel.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
             containerPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // LoanListPanel
@@ -298,7 +302,7 @@
             openDirBtn.MouseState = MaterialSkin.MouseState.HOVER;
             openDirBtn.Name = "openDirBtn";
             openDirBtn.NoAccentTextColor = Color.Empty;
-            openDirBtn.Size = new Size(158, 36);
+            openDirBtn.Size = new Size(142, 36);
             openDirBtn.TabIndex = 22;
             openDirBtn.Text = "Open Directory";
             openDirBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -306,11 +310,58 @@
             openDirBtn.UseVisualStyleBackColor = true;
             openDirBtn.Click += openDirBtn_Click;
             // 
+            // pictureBox2
+            // 
+            pictureBox2.BackColor = Color.Transparent;
+            pictureBox2.Image = Properties.Resources.signout;
+            pictureBox2.Location = new Point(1078, 16);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(37, 34);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 23;
+            pictureBox2.TabStop = false;
+            pictureBox2.Click += pictureBox2_Click;
+            // 
+            // materialLabel2
+            // 
+            materialLabel2.AutoSize = true;
+            materialLabel2.Depth = 0;
+            materialLabel2.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialLabel2.Location = new Point(1065, 59);
+            materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
+            materialLabel2.Name = "materialLabel2";
+            materialLabel2.Size = new Size(62, 19);
+            materialLabel2.TabIndex = 24;
+            materialLabel2.Text = "Sign Out";
+            // 
+            // procodeBtn
+            // 
+            procodeBtn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            procodeBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            procodeBtn.Depth = 0;
+            procodeBtn.HighEmphasis = true;
+            procodeBtn.Icon = null;
+            procodeBtn.Location = new Point(180, 64);
+            procodeBtn.Margin = new Padding(4, 6, 4, 6);
+            procodeBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            procodeBtn.Name = "procodeBtn";
+            procodeBtn.NoAccentTextColor = Color.Empty;
+            procodeBtn.Size = new Size(88, 36);
+            procodeBtn.TabIndex = 25;
+            procodeBtn.Text = "procode";
+            procodeBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            procodeBtn.UseAccentColor = false;
+            procodeBtn.UseVisualStyleBackColor = true;
+            procodeBtn.Click += procodeBtn_Click;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1184, 761);
+            Controls.Add(procodeBtn);
+            Controls.Add(materialLabel2);
+            Controls.Add(pictureBox2);
             Controls.Add(openDirBtn);
             Controls.Add(SuperUserBtn);
             Controls.Add(BranchBtn);
@@ -333,6 +384,7 @@
             containerPanel.ResumeLayout(false);
             containerPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -354,5 +406,8 @@
         private MaterialSkin.Controls.MaterialButton JlgBtn;
         private MaterialSkin.Controls.MaterialButton BusinessBtn;
         private MaterialSkin.Controls.MaterialButton openDirBtn;
+        private PictureBox pictureBox2;
+        private MaterialSkin.Controls.MaterialLabel materialLabel2;
+        private MaterialSkin.Controls.MaterialButton procodeBtn;
     }
 }

@@ -38,18 +38,13 @@
             mpage8 = new Button();
             mpage9 = new Button();
             mpage10 = new Button();
-            mpage11 = new Button();
-            mpage12 = new Button();
-            mpage13 = new Button();
-            mpage14 = new Button();
-            mpage15 = new Button();
             continueImg = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)continueImg).BeginInit();
             SuspendLayout();
             // 
             // mpage1
             // 
-            mpage1.Location = new Point(41, 14);
+            mpage1.Location = new Point(128, 15);
             mpage1.Name = "mpage1";
             mpage1.Size = new Size(31, 23);
             mpage1.TabIndex = 1;
@@ -59,7 +54,7 @@
             // 
             // mpage2
             // 
-            mpage2.Location = new Point(77, 14);
+            mpage2.Location = new Point(165, 15);
             mpage2.Name = "mpage2";
             mpage2.Size = new Size(31, 23);
             mpage2.TabIndex = 2;
@@ -69,7 +64,7 @@
             // 
             // mpage3
             // 
-            mpage3.Location = new Point(113, 14);
+            mpage3.Location = new Point(201, 15);
             mpage3.Name = "mpage3";
             mpage3.Size = new Size(31, 23);
             mpage3.TabIndex = 3;
@@ -79,7 +74,7 @@
             // 
             // mpage4
             // 
-            mpage4.Location = new Point(149, 13);
+            mpage4.Location = new Point(237, 14);
             mpage4.Name = "mpage4";
             mpage4.Size = new Size(31, 23);
             mpage4.TabIndex = 4;
@@ -89,7 +84,7 @@
             // 
             // mpage5
             // 
-            mpage5.Location = new Point(185, 13);
+            mpage5.Location = new Point(273, 14);
             mpage5.Name = "mpage5";
             mpage5.Size = new Size(31, 23);
             mpage5.TabIndex = 5;
@@ -99,7 +94,7 @@
             // 
             // mpage6
             // 
-            mpage6.Location = new Point(221, 13);
+            mpage6.Location = new Point(309, 14);
             mpage6.Name = "mpage6";
             mpage6.Size = new Size(31, 23);
             mpage6.TabIndex = 6;
@@ -109,7 +104,7 @@
             // 
             // mpage7
             // 
-            mpage7.Location = new Point(255, 14);
+            mpage7.Location = new Point(343, 15);
             mpage7.Name = "mpage7";
             mpage7.Size = new Size(31, 23);
             mpage7.TabIndex = 7;
@@ -119,7 +114,7 @@
             // 
             // mpage8
             // 
-            mpage8.Location = new Point(286, 14);
+            mpage8.Location = new Point(374, 15);
             mpage8.Name = "mpage8";
             mpage8.Size = new Size(31, 23);
             mpage8.TabIndex = 8;
@@ -129,7 +124,7 @@
             // 
             // mpage9
             // 
-            mpage9.Location = new Point(318, 14);
+            mpage9.Location = new Point(406, 15);
             mpage9.Name = "mpage9";
             mpage9.Size = new Size(31, 23);
             mpage9.TabIndex = 9;
@@ -139,63 +134,13 @@
             // 
             // mpage10
             // 
-            mpage10.Location = new Point(353, 15);
+            mpage10.Location = new Point(441, 16);
             mpage10.Name = "mpage10";
             mpage10.Size = new Size(31, 23);
             mpage10.TabIndex = 10;
             mpage10.Text = "10";
             mpage10.UseVisualStyleBackColor = true;
             mpage10.Click += mpage10_Click;
-            // 
-            // mpage11
-            // 
-            mpage11.Location = new Point(386, 16);
-            mpage11.Name = "mpage11";
-            mpage11.Size = new Size(31, 23);
-            mpage11.TabIndex = 11;
-            mpage11.Text = "11";
-            mpage11.UseVisualStyleBackColor = true;
-            mpage11.Click += mpage11_Click;
-            // 
-            // mpage12
-            // 
-            mpage12.Location = new Point(419, 16);
-            mpage12.Name = "mpage12";
-            mpage12.Size = new Size(31, 23);
-            mpage12.TabIndex = 12;
-            mpage12.Text = "12";
-            mpage12.UseVisualStyleBackColor = true;
-            mpage12.Click += mpage12_Click;
-            // 
-            // mpage13
-            // 
-            mpage13.Location = new Point(451, 16);
-            mpage13.Name = "mpage13";
-            mpage13.Size = new Size(31, 23);
-            mpage13.TabIndex = 13;
-            mpage13.Text = "13";
-            mpage13.UseVisualStyleBackColor = true;
-            mpage13.Click += mpage13_Click;
-            // 
-            // mpage14
-            // 
-            mpage14.Location = new Point(487, 16);
-            mpage14.Name = "mpage14";
-            mpage14.Size = new Size(31, 23);
-            mpage14.TabIndex = 14;
-            mpage14.Text = "14";
-            mpage14.UseVisualStyleBackColor = true;
-            mpage14.Click += mpage14_Click;
-            // 
-            // mpage15
-            // 
-            mpage15.Location = new Point(521, 16);
-            mpage15.Name = "mpage15";
-            mpage15.Size = new Size(31, 23);
-            mpage15.TabIndex = 15;
-            mpage15.Text = "15";
-            mpage15.UseVisualStyleBackColor = true;
-            mpage15.Click += mpage15_Click;
             // 
             // continueImg
             // 
@@ -224,11 +169,6 @@
             Controls.Add(mpage8);
             Controls.Add(mpage9);
             Controls.Add(mpage10);
-            Controls.Add(mpage11);
-            Controls.Add(mpage12);
-            Controls.Add(mpage13);
-            Controls.Add(mpage14);
-            Controls.Add(mpage15);
             Name = "memberpageNum";
             Size = new Size(680, 55);
             Load += memberpageNum_Load;
@@ -251,11 +191,6 @@
         private Button mpage8;
         private Button mpage9;
         private Button mpage10;
-        private Button mpage11;
-        private Button mpage12;
-        private Button mpage13;
-        private Button mpage14;
-        private Button mpage15;
         private PictureBox continueImg;
     }
 }

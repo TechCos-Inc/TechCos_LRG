@@ -1,7 +1,4 @@
 ﻿using Microsoft.Office.Interop.Word;
-using PdfSharp.Drawing;
-using PdfSharp.Drawing.Layout;
-using PdfSharp.Pdf;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

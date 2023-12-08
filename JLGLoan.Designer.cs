@@ -62,6 +62,7 @@
             exportBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             exportBtn.UseAccentColor = false;
             exportBtn.UseVisualStyleBackColor = true;
+            exportBtn.Click += exportBtn_Click;
             // 
             // containerPanel
             // 

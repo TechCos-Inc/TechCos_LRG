@@ -3,7 +3,6 @@
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <Import Project="$(NuGetPackageRoot)uno.sourcegenerationtasks\4.2.0\build\netstandard1.0\Uno.SourceGenerationTasks.targets" Condition="Exists('$(NuGetPackageRoot)uno.sourcegenerationtasks\4.2.0\build\netstandard1.0\Uno.SourceGenerationTasks.targets')" />
     <Import Project="$(NuGetPackageRoot)uno.winui\4.10.26\buildTransitive\net7.0\uno.winui.targets" Condition="Exists('$(NuGetPackageRoot)uno.winui\4.10.26\buildTransitive\net7.0\uno.winui.targets')" />
-    <Import Project="$(NuGetPackageRoot)microsoft.codedom.providers.dotnetcompilerplatform\4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.codedom.providers.dotnetcompilerplatform\4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" />
     <Import Project="$(NuGetPackageRoot)avalonia.buildservices\0.0.29\buildTransitive\Avalonia.BuildServices.targets" Condition="Exists('$(NuGetPackageRoot)avalonia.buildservices\0.0.29\buildTransitive\Avalonia.BuildServices.targets')" />
     <Import Project="$(NuGetPackageRoot)avalonia\11.0.5\buildTransitive\Avalonia.targets" Condition="Exists('$(NuGetPackageRoot)avalonia\11.0.5\buildTransitive\Avalonia.targets')" />
   </ImportGroup>

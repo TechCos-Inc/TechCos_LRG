@@ -358,7 +358,7 @@
             PRESNoTxt.AnimateReadOnly = false;
             PRESNoTxt.BorderStyle = BorderStyle.None;
             PRESNoTxt.Depth = 0;
-            PRESNoTxt.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            PRESNoTxt.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
             PRESNoTxt.LeadingIcon = null;
             PRESNoTxt.Location = new Point(820, 412);
             PRESNoTxt.MaxLength = 50;

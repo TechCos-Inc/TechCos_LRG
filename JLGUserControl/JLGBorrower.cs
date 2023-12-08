@@ -31,11 +31,6 @@ namespace TechCos_LRG.JLG_usercontrol
             memCountCombo.Items.Add("8");
             memCountCombo.Items.Add("9");
             memCountCombo.Items.Add("10");
-            memCountCombo.Items.Add("11");
-            memCountCombo.Items.Add("12");
-            memCountCombo.Items.Add("13");
-            memCountCombo.Items.Add("14");
-            memCountCombo.Items.Add("15");
             doc_date = Doc_date;
             app_date = App_date;
             jlgname = JlgNameTxt;
@@ -55,11 +50,10 @@ namespace TechCos_LRG.JLG_usercontrol
 
         private void continueImg_Click(object sender, EventArgs e)
         {
-            JLGMem1 jLGMem1 = new JLGMem1();
-            JLGLoan.instance.AddContUserControl(jLGMem1);
-            memberpageNum membpageNum = new memberpageNum();
+            
+            JLGLoan.instance.AddContUserControl(JLGLoan.instance.jlgMem1);
             JLGLoan.instance.memBottomPanel.Visible = true;
-            JLGLoan.instance.AddBottoMemPgUserControl(membpageNum);
+            JLGLoan.instance.AddBottoMemPgUserControl(JLGLoan.instance.membpageNum);
             JLGLoan.instance.memBtn.Enabled = true;
         }
     }

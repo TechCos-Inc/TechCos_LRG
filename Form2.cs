@@ -18,7 +18,7 @@ namespace TechCos_LRG
         public ComboBox branchCB;
         SqlConnection cn;
         SqlCommand cmd;
-        SqlDataReader dr,dra;
+        SqlDataReader dr, dra;
         object baseDir = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\TechCos LRG\\";
         public Form2()
         {
@@ -44,17 +44,18 @@ namespace TechCos_LRG
             }
 
             dr.Close();
-            
+
             if (Form1.instance.role.Equals("Normal"))
             {
                 SuperUserBtn.Visible = false;
+                procodeBtn.Visible = false;
             }
 
         }
-        
-        
 
- 
+
+
+
 
         private void PersonalBtn_Click(object sender, EventArgs e)
         {
@@ -79,7 +80,7 @@ namespace TechCos_LRG
         {
             try
             {
-                String sqlQuery = "Select * from JLGLoan where BranchName='" + branchCB.SelectedItem + "'";
+                String sqlQuery = "Select * from JLGBorrower where BranchName='" + branchCB.SelectedItem + "'";
                 DataTable dt = new DataTable("Records");
                 SqlDataAdapter adapter = new SqlDataAdapter(sqlQuery, cn);
                 adapter.Fill(dt);
@@ -150,15 +151,28 @@ namespace TechCos_LRG
 
         private void openDirBtn_Click(object sender, EventArgs e)
         {
-                //string cmd = "explorer.exe";
-                //string arg = "/select, " + baseDir.ToString() ;
-                //Process.Start(cmd, arg);
-                System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo()
-                {
-                    FileName = baseDir.ToString(),
-                    UseShellExecute = true,
-                    Verb = "open"
-                });
-            }
+            //string cmd = "explorer.exe";
+            //string arg = "/select, " + baseDir.ToString() ;
+            //Process.Start(cmd, arg);
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo()
+            {
+                FileName = baseDir.ToString(),
+                UseShellExecute = true,
+                Verb = "open"
+            });
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1();
+            form1.ShowDialog();
+        }
+
+        private void procodeBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Procode procode = new Procode();
+            procode.ShowDialog();
+        }
     }
 }

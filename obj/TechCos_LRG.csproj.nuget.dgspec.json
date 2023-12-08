@@ -44,21 +44,21 @@
               "target": "Package",
               "version": "[11.0.5, )"
             },
+            "FreeSpire.Doc": {
+              "target": "Package",
+              "version": "[11.6.0, )"
+            },
             "Krypton.Toolkit": {
               "target": "Package",
               "version": "[70.22.11.312, )"
-            },
-            "MaterialSkin": {
-              "target": "Package",
-              "version": "[0.2.1, )"
             },
             "MaterialSkin.2": {
               "target": "Package",
               "version": "[2.3.1, )"
             },
-            "Microsoft.CodeDom.Providers.DotNetCompilerPlatform": {
+            "Microsoft.Office.Interop.Excel": {
               "target": "Package",
-              "version": "[4.1.0, )"
+              "version": "[15.0.4795.1001, )"
             },
             "Microsoft.Office.Interop.Word": {
               "target": "Package",
@@ -67,10 +67,6 @@
             "Microsoft.SqlServer.SqlManagementObjects": {
               "target": "Package",
               "version": "[170.18.0, )"
-            },
-            "PdfSharp": {
-              "target": "Package",
-              "version": "[1.50.5147, )"
             },
             "SqlConnection": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -119,7 +115,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
