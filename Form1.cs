@@ -9,6 +9,7 @@ using MaterialSkin.Controls;
 using System.Reflection.Metadata;
 using Spire.Doc;
 using Document = Spire.Doc.Document;
+using TechCos_LRG.Utils;
 
 namespace TechCos_LRG
 {

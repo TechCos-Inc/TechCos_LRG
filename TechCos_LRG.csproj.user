@@ -2,7 +2,16 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
-    <Compile Update="BranchForm.cs">
+    <Compile Update="JLG\JLGUserControl\DueDiligenceReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="JLG\JLGUserControl\PreSanctionSurvey.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="JLG\JLGUserControl\VisitReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="OtherForms\BranchForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="BusinessLoan.cs">
@@ -14,61 +23,58 @@
     <Compile Update="Form2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="JLGLoan.cs">
+    <Compile Update="JLG\JLGLoan.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="JlgLoane.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="JLGUserControl\AnnexurePageNum.cs">
+    <Compile Update="JLG\JLGUserControl\JLGAmount.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="JLGUserControl\JLGAmount.cs">
+    <Compile Update="JLG\JLGUserControl\JLGDetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="JLGUserControl\JLGDetails.cs">
+    <Compile Update="JLG\JLGUserControl\JLGMem1.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="JLGUserControl\JLGMem1.cs">
+    <Compile Update="JLG\JLGUserControl\JLGMem10.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="JLGUserControl\JLGMem10.cs">
+    <Compile Update="JLG\JLGUserControl\JLGMem2.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="JLGUserControl\JLGMem2.cs">
+    <Compile Update="JLG\JLGUserControl\JLGMem3.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="JLGUserControl\JLGMem3.cs">
+    <Compile Update="JLG\JLGUserControl\JLGMem4.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="JLGUserControl\JLGMem4.cs">
+    <Compile Update="JLG\JLGUserControl\JLGMem5.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="JLGUserControl\JLGMem5.cs">
+    <Compile Update="JLG\JLGUserControl\JLGMem6.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="JLGUserControl\JLGMem6.cs">
+    <Compile Update="JLG\JLGUserControl\JLGMem7.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="JLGUserControl\JLGMem7.cs">
+    <Compile Update="JLG\JLGUserControl\JLGMem8.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="JLGUserControl\JLGMem8.cs">
+    <Compile Update="JLG\JLGUserControl\JLGMem9.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="JLGUserControl\JLGMem9.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="JLGUserControl\memberpageNum.cs">
+    <Compile Update="JLG\JLGUserControl\memberpageNum.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="PersonalLoan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Procode.cs">
+    <Compile Update="OtherForms\Procode.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="SuperUserForm.cs">
+    <Compile Update="OtherForms\SuperUserForm.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
