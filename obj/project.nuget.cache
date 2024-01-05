@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "4HRSHsALinRfGLtZRQEm+td6p4ZkCC/SVZ4Tn4hR1/sFSDwon+H6yRBN2dmRA8wMeVBWmkKoc7tJZplF6Opbog==",
+  "dgSpecHash": "ttdk9mf58tA0NFgKCPK52Glv5BU22Hs49x/bd0DppU1sw9wEHJLn2D42sEx4nrdUZjEvNrTOtkU2W2Zspt296A==",
   "success": true,
   "projectFilePath": "C:\\Users\\Harish K\\source\\repos\\HarishK-CS\\TechCos_LRG\\TechCos_LRG.csproj",
   "expectedPackageFiles": [
@@ -94,7 +94,7 @@
     "C:\\Users\\Harish K\\.nuget\\packages\\uno.foundation.logging\\4.10.26\\uno.foundation.logging.4.10.26.nupkg.sha512",
     "C:\\Users\\Harish K\\.nuget\\packages\\uno.sourcegenerationtasks\\4.2.0\\uno.sourcegenerationtasks.4.2.0.nupkg.sha512",
     "C:\\Users\\Harish K\\.nuget\\packages\\uno.winui\\4.10.26\\uno.winui.4.10.26.nupkg.sha512",
-    "C:\\Users\\Harish K\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.17763.29\\microsoft.windows.sdk.net.ref.10.0.17763.29.nupkg.sha512"
+    "C:\\Users\\Harish K\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.17763.31\\microsoft.windows.sdk.net.ref.10.0.17763.31.nupkg.sha512"
   ],
   "logs": []
 }

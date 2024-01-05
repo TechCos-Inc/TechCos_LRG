@@ -30,6 +30,7 @@
         {
             label21 = new Label();
             kryptonPanel2 = new Krypton.Toolkit.KryptonPanel();
+            memrelationship1cmb = new MaterialSkin.Controls.MaterialComboBox();
             memdob1 = new DateTimePicker();
             memgen1cmb = new MaterialSkin.Controls.MaterialComboBox();
             memcomm1cmb = new MaterialSkin.Controls.MaterialComboBox();
@@ -38,7 +39,6 @@
             memaadhar1txt = new MaterialSkin.Controls.MaterialTextBox();
             memage1txt = new MaterialSkin.Controls.MaterialTextBox();
             memwork1txt = new MaterialSkin.Controls.MaterialTextBox();
-            memrelation1txt = new MaterialSkin.Controls.MaterialTextBox();
             memfather1txt = new MaterialSkin.Controls.MaterialTextBox();
             memsb1txt = new MaterialSkin.Controls.MaterialTextBox();
             memname1txt = new MaterialSkin.Controls.MaterialTextBox();
@@ -84,6 +84,7 @@
             // 
             // kryptonPanel2
             // 
+            kryptonPanel2.Controls.Add(memrelationship1cmb);
             kryptonPanel2.Controls.Add(memdob1);
             kryptonPanel2.Controls.Add(memgen1cmb);
             kryptonPanel2.Controls.Add(memcomm1cmb);
@@ -92,7 +93,6 @@
             kryptonPanel2.Controls.Add(memaadhar1txt);
             kryptonPanel2.Controls.Add(memage1txt);
             kryptonPanel2.Controls.Add(memwork1txt);
-            kryptonPanel2.Controls.Add(memrelation1txt);
             kryptonPanel2.Controls.Add(memfather1txt);
             kryptonPanel2.Controls.Add(memsb1txt);
             kryptonPanel2.Controls.Add(memname1txt);
@@ -112,6 +112,28 @@
             kryptonPanel2.Name = "kryptonPanel2";
             kryptonPanel2.Size = new Size(983, 357);
             kryptonPanel2.TabIndex = 154;
+            // 
+            // memrelationship1cmb
+            // 
+            memrelationship1cmb.AutoResize = false;
+            memrelationship1cmb.BackColor = Color.FromArgb(255, 255, 255);
+            memrelationship1cmb.Depth = 0;
+            memrelationship1cmb.DrawMode = DrawMode.OwnerDrawVariable;
+            memrelationship1cmb.DropDownHeight = 174;
+            memrelationship1cmb.DropDownStyle = ComboBoxStyle.DropDownList;
+            memrelationship1cmb.DropDownWidth = 121;
+            memrelationship1cmb.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            memrelationship1cmb.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            memrelationship1cmb.FormattingEnabled = true;
+            memrelationship1cmb.IntegralHeight = false;
+            memrelationship1cmb.ItemHeight = 43;
+            memrelationship1cmb.Location = new Point(169, 146);
+            memrelationship1cmb.MaxDropDownItems = 4;
+            memrelationship1cmb.MouseState = MaterialSkin.MouseState.OUT;
+            memrelationship1cmb.Name = "memrelationship1cmb";
+            memrelationship1cmb.Size = new Size(193, 49);
+            memrelationship1cmb.StartIndex = 0;
+            memrelationship1cmb.TabIndex = 167;
             // 
             // memdob1
             // 
@@ -192,7 +214,7 @@
             memph1txt.AnimateReadOnly = false;
             memph1txt.BorderStyle = BorderStyle.None;
             memph1txt.Depth = 0;
-            memph1txt.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            memph1txt.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
             memph1txt.LeadingIcon = null;
             memph1txt.Location = new Point(732, 284);
             memph1txt.MaxLength = 50;
@@ -209,7 +231,7 @@
             memaadhar1txt.AnimateReadOnly = false;
             memaadhar1txt.BorderStyle = BorderStyle.None;
             memaadhar1txt.Depth = 0;
-            memaadhar1txt.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            memaadhar1txt.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
             memaadhar1txt.LeadingIcon = null;
             memaadhar1txt.Location = new Point(169, 284);
             memaadhar1txt.MaxLength = 50;
@@ -226,7 +248,7 @@
             memage1txt.AnimateReadOnly = false;
             memage1txt.BorderStyle = BorderStyle.None;
             memage1txt.Depth = 0;
-            memage1txt.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            memage1txt.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
             memage1txt.LeadingIcon = null;
             memage1txt.Location = new Point(490, 222);
             memage1txt.MaxLength = 50;
@@ -243,7 +265,7 @@
             memwork1txt.AnimateReadOnly = false;
             memwork1txt.BorderStyle = BorderStyle.None;
             memwork1txt.Depth = 0;
-            memwork1txt.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            memwork1txt.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
             memwork1txt.LeadingIcon = null;
             memwork1txt.Location = new Point(731, 148);
             memwork1txt.MaxLength = 50;
@@ -255,29 +277,12 @@
             memwork1txt.Text = "";
             memwork1txt.TrailingIcon = null;
             // 
-            // memrelation1txt
-            // 
-            memrelation1txt.AnimateReadOnly = false;
-            memrelation1txt.BorderStyle = BorderStyle.None;
-            memrelation1txt.Depth = 0;
-            memrelation1txt.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            memrelation1txt.LeadingIcon = null;
-            memrelation1txt.Location = new Point(171, 148);
-            memrelation1txt.MaxLength = 50;
-            memrelation1txt.MouseState = MaterialSkin.MouseState.OUT;
-            memrelation1txt.Multiline = false;
-            memrelation1txt.Name = "memrelation1txt";
-            memrelation1txt.Size = new Size(180, 50);
-            memrelation1txt.TabIndex = 154;
-            memrelation1txt.Text = "";
-            memrelation1txt.TrailingIcon = null;
-            // 
             // memfather1txt
             // 
             memfather1txt.AnimateReadOnly = false;
             memfather1txt.BorderStyle = BorderStyle.None;
             memfather1txt.Depth = 0;
-            memfather1txt.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            memfather1txt.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
             memfather1txt.LeadingIcon = null;
             memfather1txt.Location = new Point(267, 75);
             memfather1txt.MaxLength = 50;
@@ -294,7 +299,7 @@
             memsb1txt.AnimateReadOnly = false;
             memsb1txt.BorderStyle = BorderStyle.None;
             memsb1txt.Depth = 0;
-            memsb1txt.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            memsb1txt.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
             memsb1txt.LeadingIcon = null;
             memsb1txt.Location = new Point(731, 14);
             memsb1txt.MaxLength = 50;
@@ -311,7 +316,7 @@
             memname1txt.AnimateReadOnly = false;
             memname1txt.BorderStyle = BorderStyle.None;
             memname1txt.Depth = 0;
-            memname1txt.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            memname1txt.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
             memname1txt.LeadingIcon = null;
             memname1txt.Location = new Point(267, 14);
             memname1txt.MaxLength = 50;
@@ -478,7 +483,7 @@
             mempincode1txt.AnimateReadOnly = false;
             mempincode1txt.BorderStyle = BorderStyle.None;
             mempincode1txt.Depth = 0;
-            mempincode1txt.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            mempincode1txt.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
             mempincode1txt.LeadingIcon = null;
             mempincode1txt.Location = new Point(736, 121);
             mempincode1txt.MaxLength = 50;
@@ -495,7 +500,7 @@
             memadds41txt.AnimateReadOnly = false;
             memadds41txt.BorderStyle = BorderStyle.None;
             memadds41txt.Depth = 0;
-            memadds41txt.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            memadds41txt.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
             memadds41txt.LeadingIcon = null;
             memadds41txt.Location = new Point(232, 121);
             memadds41txt.MaxLength = 50;
@@ -512,7 +517,7 @@
             memadds31txt.AnimateReadOnly = false;
             memadds31txt.BorderStyle = BorderStyle.None;
             memadds31txt.Depth = 0;
-            memadds31txt.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            memadds31txt.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
             memadds31txt.LeadingIcon = null;
             memadds31txt.Location = new Point(736, 60);
             memadds31txt.MaxLength = 50;
@@ -529,7 +534,7 @@
             memadds21txt.AnimateReadOnly = false;
             memadds21txt.BorderStyle = BorderStyle.None;
             memadds21txt.Depth = 0;
-            memadds21txt.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            memadds21txt.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
             memadds21txt.LeadingIcon = null;
             memadds21txt.Location = new Point(393, 60);
             memadds21txt.MaxLength = 50;
@@ -546,7 +551,7 @@
             memadds11txt.AnimateReadOnly = false;
             memadds11txt.BorderStyle = BorderStyle.None;
             memadds11txt.Depth = 0;
-            memadds11txt.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            memadds11txt.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
             memadds11txt.LeadingIcon = null;
             memadds11txt.Location = new Point(140, 60);
             memadds11txt.MaxLength = 50;
@@ -655,7 +660,6 @@
         private MaterialSkin.Controls.MaterialTextBox memaadhar1txt;
         private MaterialSkin.Controls.MaterialTextBox memage1txt;
         private MaterialSkin.Controls.MaterialTextBox memwork1txt;
-        private MaterialSkin.Controls.MaterialTextBox memrelation1txt;
         private MaterialSkin.Controls.MaterialTextBox memfather1txt;
         private MaterialSkin.Controls.MaterialTextBox memsb1txt;
         private MaterialSkin.Controls.MaterialTextBox memname1txt;
@@ -683,5 +687,6 @@
         private Label label35;
         private Label label32;
         private Label label31;
+        private MaterialSkin.Controls.MaterialComboBox memrelationship1cmb;
     }
 }

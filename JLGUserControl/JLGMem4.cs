@@ -15,8 +15,8 @@ namespace TechCos_LRG.JLG_usercontrol
     public partial class JLGmem4 : UserControl
     {
         public static JLGmem4 instance;
-        public MaterialTextBox memname1, memsb1, memfather1, memrelation1, memwork1, memage1, memaadhar1, memph1, memadds11, memadds21, memadds31, memadds41, mempincode1;
-        public MaterialComboBox memmarital1, memcomm1, memgender1;
+        public MaterialTextBox memname1, memsb1, memfather1, memwork1, memage1, memaadhar1, memph1, memadds11, memadds21, memadds31, memadds41, mempincode1;
+        public MaterialComboBox memmarital1, memcomm1, memgender1, memrelation1;
         public DateTimePicker memdob1dt;
         public JLGmem4()
         {
@@ -25,7 +25,7 @@ namespace TechCos_LRG.JLG_usercontrol
             memname1 = memname1txt;
             memsb1 = memsb1txt;
             memfather1 = memfather1txt;
-            memrelation1 = memrelation1txt;
+            memrelation1 = memrelationship1cmb;
             memwork1 = memwork1txt;
             memage1 = memage1txt;
             memaadhar1 = memaadhar1txt;
@@ -39,6 +39,8 @@ namespace TechCos_LRG.JLG_usercontrol
             memmarital1 = memmaritstatus1cmb;
             memcomm1 = memcomm1cmb;
             memdob1dt = memdob1;
+            memrelationship1cmb.Items.Add("Father");
+            memrelationship1cmb.Items.Add("Husband");
             memmaritstatus1cmb.Items.Add("Married");
             memmaritstatus1cmb.Items.Add("Unmarried");
             memcomm1cmb.Items.Add("OBC");

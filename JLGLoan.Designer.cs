@@ -139,7 +139,7 @@
             borrowerBtn.NoAccentTextColor = Color.Empty;
             borrowerBtn.Size = new Size(161, 36);
             borrowerBtn.TabIndex = 20;
-            borrowerBtn.Text = "Borrower Details";
+            borrowerBtn.Text = "JLG Details";
             borrowerBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             borrowerBtn.UseAccentColor = false;
             borrowerBtn.UseVisualStyleBackColor = true;

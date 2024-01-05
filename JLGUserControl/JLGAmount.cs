@@ -15,7 +15,7 @@ namespace TechCos_LRG.JLG_usercontrol
     {
         public static JLGAmount instance;
         public DateTimePicker dateofFormation;
-        public MaterialTextBox typeOfCredit, procode1, procode2, amount, interest, spread, mclr, emiAmount, noOfMonths;
+        public MaterialTextBox typeOfCredit, procode1, procode2, amount, interest, spread,itspread,prspread,penalinterest ,mclr, emiAmount, noOfMonths;
         public JLGAmount()
         {
             InitializeComponent();
@@ -27,6 +27,9 @@ namespace TechCos_LRG.JLG_usercontrol
             amount = amountTxt;
             interest = interestTxt;
             spread = spreadTxt;
+            prspread = prSpreadTxt;
+            penalinterest = penalInterestTxt;
+            itspread = itSpreadTxt;
             mclr = mclrTxt;
             emiAmount = emiAmountTxt;
             noOfMonths = noOfMonthTxt;

@@ -31,7 +31,7 @@ namespace TechCos_LRG
 
         private void SuperUserForm_Load(object sender, EventArgs e)
         {
-            cn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Harish K\\source\\repos\\HarishK-CS\\TechCos_LRG\\Database.mdf\";Integrated Security=True");
+            cn = new SqlConnection(ConnectionString.ConnStr);
             cn.Open();
         }
 

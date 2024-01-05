@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TechCos_LRG")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+23334ead3b94e8008ce9fe7cb11bdf9210d50fc7")]
 [assembly: System.Reflection.AssemblyProductAttribute("TechCos_LRG")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TechCos_LRG")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

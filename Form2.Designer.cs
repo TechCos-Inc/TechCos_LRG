@@ -48,6 +48,7 @@
             pictureBox2 = new PictureBox();
             materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             procodeBtn = new MaterialSkin.Controls.MaterialButton();
+            BdoBtn = new MaterialSkin.Controls.MaterialButton();
             LoanListPanel.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
@@ -354,11 +355,32 @@
             procodeBtn.UseVisualStyleBackColor = true;
             procodeBtn.Click += procodeBtn_Click;
             // 
+            // BdoBtn
+            // 
+            BdoBtn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            BdoBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            BdoBtn.Depth = 0;
+            BdoBtn.HighEmphasis = true;
+            BdoBtn.Icon = null;
+            BdoBtn.Location = new Point(13, 112);
+            BdoBtn.Margin = new Padding(4, 6, 4, 6);
+            BdoBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            BdoBtn.Name = "BdoBtn";
+            BdoBtn.NoAccentTextColor = Color.Empty;
+            BdoBtn.Size = new Size(142, 36);
+            BdoBtn.TabIndex = 26;
+            BdoBtn.Text = "BDO";
+            BdoBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            BdoBtn.UseAccentColor = false;
+            BdoBtn.UseVisualStyleBackColor = true;
+            BdoBtn.Click += BdoBtn_Click;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1184, 761);
+            Controls.Add(BdoBtn);
             Controls.Add(procodeBtn);
             Controls.Add(materialLabel2);
             Controls.Add(pictureBox2);
@@ -409,5 +431,6 @@
         private PictureBox pictureBox2;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private MaterialSkin.Controls.MaterialButton procodeBtn;
+        private MaterialSkin.Controls.MaterialButton BdoBtn;
     }
 }

@@ -42,6 +42,7 @@
             memadds21txt = new MaterialSkin.Controls.MaterialTextBox();
             memadds11txt = new MaterialSkin.Controls.MaterialTextBox();
             kryptonPanel2 = new Krypton.Toolkit.KryptonPanel();
+            memrelationship1cmb = new MaterialSkin.Controls.MaterialComboBox();
             memdob1 = new DateTimePicker();
             memgen1cmb = new MaterialSkin.Controls.MaterialComboBox();
             memcomm1cmb = new MaterialSkin.Controls.MaterialComboBox();
@@ -50,7 +51,6 @@
             memaadhar1txt = new MaterialSkin.Controls.MaterialTextBox();
             memage1txt = new MaterialSkin.Controls.MaterialTextBox();
             memwork1txt = new MaterialSkin.Controls.MaterialTextBox();
-            memrelation1txt = new MaterialSkin.Controls.MaterialTextBox();
             memfather1txt = new MaterialSkin.Controls.MaterialTextBox();
             memsb1txt = new MaterialSkin.Controls.MaterialTextBox();
             memname1txt = new MaterialSkin.Controls.MaterialTextBox();
@@ -254,6 +254,7 @@
             // 
             // kryptonPanel2
             // 
+            kryptonPanel2.Controls.Add(memrelationship1cmb);
             kryptonPanel2.Controls.Add(memdob1);
             kryptonPanel2.Controls.Add(memgen1cmb);
             kryptonPanel2.Controls.Add(memcomm1cmb);
@@ -262,7 +263,6 @@
             kryptonPanel2.Controls.Add(memaadhar1txt);
             kryptonPanel2.Controls.Add(memage1txt);
             kryptonPanel2.Controls.Add(memwork1txt);
-            kryptonPanel2.Controls.Add(memrelation1txt);
             kryptonPanel2.Controls.Add(memfather1txt);
             kryptonPanel2.Controls.Add(memsb1txt);
             kryptonPanel2.Controls.Add(memname1txt);
@@ -282,6 +282,28 @@
             kryptonPanel2.Name = "kryptonPanel2";
             kryptonPanel2.Size = new Size(983, 357);
             kryptonPanel2.TabIndex = 148;
+            // 
+            // memrelationship1cmb
+            // 
+            memrelationship1cmb.AutoResize = false;
+            memrelationship1cmb.BackColor = Color.FromArgb(255, 255, 255);
+            memrelationship1cmb.Depth = 0;
+            memrelationship1cmb.DrawMode = DrawMode.OwnerDrawVariable;
+            memrelationship1cmb.DropDownHeight = 174;
+            memrelationship1cmb.DropDownStyle = ComboBoxStyle.DropDownList;
+            memrelationship1cmb.DropDownWidth = 121;
+            memrelationship1cmb.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            memrelationship1cmb.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            memrelationship1cmb.FormattingEnabled = true;
+            memrelationship1cmb.IntegralHeight = false;
+            memrelationship1cmb.ItemHeight = 43;
+            memrelationship1cmb.Location = new Point(171, 146);
+            memrelationship1cmb.MaxDropDownItems = 4;
+            memrelationship1cmb.MouseState = MaterialSkin.MouseState.OUT;
+            memrelationship1cmb.Name = "memrelationship1cmb";
+            memrelationship1cmb.Size = new Size(193, 49);
+            memrelationship1cmb.StartIndex = 0;
+            memrelationship1cmb.TabIndex = 166;
             // 
             // memdob1
             // 
@@ -426,23 +448,6 @@
             memwork1txt.TabIndex = 156;
             memwork1txt.Text = "";
             memwork1txt.TrailingIcon = null;
-            // 
-            // memrelation1txt
-            // 
-            memrelation1txt.AnimateReadOnly = false;
-            memrelation1txt.BorderStyle = BorderStyle.None;
-            memrelation1txt.Depth = 0;
-            memrelation1txt.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            memrelation1txt.LeadingIcon = null;
-            memrelation1txt.Location = new Point(171, 148);
-            memrelation1txt.MaxLength = 50;
-            memrelation1txt.MouseState = MaterialSkin.MouseState.OUT;
-            memrelation1txt.Multiline = false;
-            memrelation1txt.Name = "memrelation1txt";
-            memrelation1txt.Size = new Size(180, 50);
-            memrelation1txt.TabIndex = 154;
-            memrelation1txt.Text = "";
-            memrelation1txt.TrailingIcon = null;
             // 
             // memfather1txt
             // 
@@ -670,7 +675,6 @@
         private Label label28;
         private Label label37;
         private Label label36;
-        private MaterialSkin.Controls.MaterialTextBox memrelation1txt;
 
         private MaterialSkin.Controls.MaterialTextBox memfather1txt;
         private MaterialSkin.Controls.MaterialTextBox memsb1txt;
@@ -688,5 +692,6 @@
         private MaterialSkin.Controls.MaterialComboBox memcomm1cmb;
         private MaterialSkin.Controls.MaterialComboBox memgen1cmb;
         private DateTimePicker memdob1;
+        private MaterialSkin.Controls.MaterialComboBox memrelationship1cmb;
     }
 }

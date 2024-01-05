@@ -23,13 +23,13 @@ namespace TechCos_LRG
         public static JLGLoan instance;
         public Panel contPanel;
         public MaterialButton borBtn, memBtn, amtBtn, expBtn;
-        JLGBorrower jlgBor;
+        JLGDetails jlgBor;
         public JLGmem1 jlgMem1;
         public memberpageNum membpageNum;
         public JLGAmount jLGAmount;
         public Panel memBottomPanel;
         SqlConnection cn;
-        SqlCommand cmd, cmd1,cmd2, cmd3, cmd4, cmd5, cmd6, cmd7, cmd8, cmd9, cmd10, cmd11, cmd15, cmd12, cmd13, cmd14, cmd16,cmd17;
+        SqlCommand cmd, cmd1, cmd2, cmd3, cmd4, cmd5, cmd6, cmd7, cmd8, cmd9, cmd10, cmd11, cmd15, cmd12, cmd13, cmd14, cmd16, cmd17;
         SqlDataReader dr;
         Microsoft.Office.Interop.Word.Application app;
         Microsoft.Office.Interop.Word.Document doc;
@@ -49,7 +49,7 @@ namespace TechCos_LRG
             amtBtn = amountDetailsBtn;
             expBtn = exportBtn;
             memBottomPanel = bottomMemPgPanel;
-            jlgBor = new JLGBorrower();
+            jlgBor = new JLGDetails();
             jlgMem1 = new JLGmem1();
             membpageNum = new memberpageNum();
             jLGAmount = new JLGAmount();
@@ -62,7 +62,7 @@ namespace TechCos_LRG
 
         private void JLGLoan_Load(object sender, EventArgs e)
         {
-            cn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Harish K\\source\\repos\\HarishK-CS\\TechCos_LRG\\Database.mdf\";Integrated Security=True");
+            cn = new SqlConnection(ConnectionString.ConnStr);
             cn.Open();
         }
 
@@ -72,13 +72,13 @@ namespace TechCos_LRG
         {
             // getting Members Count
             int count;
-            if (JLGBorrower.Instance.memcountCmb.SelectedItem == null)
+            if (JLGDetails.Instance.memcountCmb.SelectedItem == null)
             {
                 count = 15;
             }
             else
             {
-                count = int.Parse(JLGBorrower.Instance.memcountCmb.SelectedItem.ToString());
+                count = int.Parse(JLGDetails.Instance.memcountCmb.SelectedItem.ToString());
             }
 
 
@@ -86,24 +86,24 @@ namespace TechCos_LRG
             // Borrower SQL Insert Operation
 
             cmd = new SqlCommand("insert into JLGBorrower values(@presph,@jlgname,@adds1,@adds2,@adds3,@adds4,@pincode,@presname,@secrname,@secrph,@docdate,@appldate,@brname,@sb_no,@memcount)", cn);
-            cmd.Parameters.AddWithValue("presph", JLGBorrower.Instance.presno.Text);
-            cmd.Parameters.AddWithValue("jlgname", JLGBorrower.Instance.jlgname.Text.ToUpper());
-            cmd.Parameters.AddWithValue("adds1", JLGBorrower.Instance.adds1.Text.ToUpper());
-            cmd.Parameters.AddWithValue("adds2", JLGBorrower.Instance.adds2.Text.ToUpper());
-            cmd.Parameters.AddWithValue("adds3", JLGBorrower.Instance.adds3.Text.ToUpper());
-            cmd.Parameters.AddWithValue("adds4", JLGBorrower.Instance.adds4.Text.ToUpper());
-            cmd.Parameters.AddWithValue("pincode", JLGBorrower.Instance.pincode.Text);
-            cmd.Parameters.AddWithValue("presname", JLGBorrower.Instance.presname.Text.ToUpper());
-            cmd.Parameters.AddWithValue("secrname", JLGBorrower.Instance.secrname.Text.ToUpper());
-            cmd.Parameters.AddWithValue("secrph", JLGBorrower.Instance.secrno.Text);
+            cmd.Parameters.AddWithValue("presph", JLGDetails.Instance.presno.Text);
+            cmd.Parameters.AddWithValue("jlgname", JLGDetails.Instance.jlgname.Text.ToUpper());
+            cmd.Parameters.AddWithValue("adds1", JLGDetails.Instance.adds1.Text.ToUpper());
+            cmd.Parameters.AddWithValue("adds2", JLGDetails.Instance.adds2.Text.ToUpper());
+            cmd.Parameters.AddWithValue("adds3", JLGDetails.Instance.adds3.Text.ToUpper());
+            cmd.Parameters.AddWithValue("adds4", JLGDetails.Instance.adds4.Text.ToUpper());
+            cmd.Parameters.AddWithValue("pincode", JLGDetails.Instance.pincode.Text);
+            cmd.Parameters.AddWithValue("presname", JLGDetails.Instance.presname.Text.ToUpper());
+            cmd.Parameters.AddWithValue("secrname", JLGDetails.Instance.secrname.Text.ToUpper());
+            cmd.Parameters.AddWithValue("secrph", JLGDetails.Instance.secrno.Text);
             cmd.Parameters.AddWithValue("memcount", count);
             //  String docdate = Doc_date.Value.Date
             //   String appdate = App_date.Value.Date.ToString("dd/MM/yyyy");
 
             //   String appdate = App_date.Value.ToString("dd/MM/yyyy");
-            cmd.Parameters.AddWithValue("docdate", JLGBorrower.Instance.doc_date.Value.Date);
-            cmd.Parameters.AddWithValue("appldate", JLGBorrower.Instance.app_date.Value.Date);
-            cmd.Parameters.AddWithValue("sb_no", JLGBorrower.Instance.sbno.Text);
+            cmd.Parameters.AddWithValue("docdate", JLGDetails.Instance.doc_date.Value.Date);
+            cmd.Parameters.AddWithValue("appldate", JLGDetails.Instance.app_date.Value.Date);
+            cmd.Parameters.AddWithValue("sb_no", JLGDetails.Instance.sbno.Text);
             cmd.Parameters.AddWithValue("brname", Form2.instance.branchCB.SelectedItem);
 
 
@@ -189,15 +189,15 @@ namespace TechCos_LRG
                     Mem9Operation();
                     Mem10Operation();
                     break;
-                
+
             }
-         
+
 
             // Amount SQL
 
-            cmd17 = new SqlCommand("insert into JLGAmountDetail values(@presph,@dateform,@typeofcredit,@procode1,@procode2,@amount,@interest,@mclr,@spread,@emiamount,@noofmonth)",cn);
-            cmd17.Parameters.AddWithValue("presph", JLGBorrower.Instance.presno.Text);
-            cmd17.Parameters.AddWithValue("dateform",JLGAmount.instance.dateofFormation.Value.Date);
+            cmd17 = new SqlCommand("insert into JLGAmountDetail values(@presph,@dateform,@typeofcredit,@procode1,@procode2,@amount,@interest,@mclr,@spread,@emiamount,@noofmonth)", cn);
+            cmd17.Parameters.AddWithValue("presph", JLGDetails.Instance.presno.Text);
+            cmd17.Parameters.AddWithValue("dateform", JLGAmount.instance.dateofFormation.Value.Date);
             cmd17.Parameters.AddWithValue("typeofcredit", JLGAmount.instance.typeOfCredit.Text);
             cmd17.Parameters.AddWithValue("procode1", JLGAmount.instance.procode1.Text);
             cmd17.Parameters.AddWithValue("procode2", JLGAmount.instance.procode2.Text);
@@ -270,11 +270,11 @@ namespace TechCos_LRG
                 app = new Microsoft.Office.Interop.Word.Application();
                 doc = app.Documents.Open(ref FileLocation, ref objMiss, ref objMiss, ref objMiss, ref objMiss, ref objMiss, ref objMiss, ref objMiss, ref objMiss, ref objMiss, ref objMiss, ref objMiss, ref objMiss, ref objMiss, ref objMiss, ref objMiss);
 
-               
 
 
 
-                tmpfile = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\TechCos LRG\\" + JLGBorrower.Instance.jlgname.Text + "_" + DateTime.Now.ToString("dd-MM-yyyy-hh-mm-ss") + ".pdf";
+
+                tmpfile = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\TechCos LRG\\" + JLGDetails.Instance.jlgname.Text + "_" + DateTime.Now.ToString("dd-MM-yyyy-hh-mm-ss") + ".pdf";
 
                 // Borrower Data Binding Operation 
                 FindAndReplace("[BrAddress]", braddr);
@@ -283,18 +283,25 @@ namespace TechCos_LRG
                 FindAndReplace("[Br_Mgr_Name]", brmgr);
                 FindAndReplace("[BrName]", brname);
                 FindAndReplace("[BrPinCode]", pincode);
-                FindAndReplace("[JLG_Name]", JLGBorrower.Instance.jlgname.Text.ToUpper());
-                FindAndReplace("[ADDs1]", JLGBorrower.Instance.adds1.Text.ToUpper());
-                FindAndReplace("[ADDs2]", JLGBorrower.Instance.adds2.Text.ToUpper());
-                FindAndReplace("[ADDs3]", JLGBorrower.Instance.adds3.Text.ToUpper());
-                FindAndReplace("[ADDs4]", JLGBorrower.Instance.adds4.Text.ToUpper());
-                FindAndReplace("[Pincode]", JLGBorrower.Instance.pincode.Text);
-                FindAndReplace("[SB_no]", JLGBorrower.Instance.sbno.Text);
-                FindAndReplace("[PRES_Name]", JLGBorrower.Instance.presname.Text.ToUpper());
-                FindAndReplace("[SECR_Name]", JLGBorrower.Instance.secrname.Text.ToUpper());
-                FindAndReplace("[PRES_Ph]", JLGBorrower.Instance.presno.Text);
-                FindAndReplace("[SECR_Ph]", JLGBorrower.Instance.secrno.Text);
-                FindAndReplace("[MEM_COUNT]", JLGBorrower.Instance.memcountCmb.SelectedItem);
+                FindAndReplace("[JLG_Name]", JLGDetails.Instance.jlgname.Text.ToUpper());
+                FindAndReplace("[ADDs1]", JLGDetails.Instance.adds1.Text.ToUpper());
+                FindAndReplace("[ADDs2]", JLGDetails.Instance.adds2.Text.ToUpper());
+                FindAndReplace("[ADDs3]", JLGDetails.Instance.adds3.Text.ToUpper());
+                FindAndReplace("[ADDs4]", JLGDetails.Instance.adds4.Text.ToUpper());
+                FindAndReplace("[Pincode]", JLGDetails.Instance.pincode.Text);
+                FindAndReplace("[SB_no]", JLGDetails.Instance.sbno.Text);
+                FindAndReplace("[doc_date]", JLGDetails.Instance.doc_date.Value.Date);
+                FindAndReplace("[Presan_date]", JLGDetails.Instance.presan_date.Value.Date);
+                FindAndReplace("[PRES_Name]", JLGDetails.Instance.presname.Text.ToUpper());
+                FindAndReplace("[SECR_Name]", JLGDetails.Instance.secrname.Text.ToUpper());
+                FindAndReplace("[PRES_Ph]", JLGDetails.Instance.presno.Text);
+                FindAndReplace("[SECR_Ph]", JLGDetails.Instance.secrno.Text);
+                FindAndReplace("[MEM_COUNT]", JLGDetails.Instance.memcountCmb.SelectedItem);
+                FindAndReplace("[SECR_Ph]", JLGDetails.Instance.secrno.Text);
+                FindAndReplace("[LOAN_Amt_INWORDS]", ConvertNumbertoWords(int.Parse(JLGDetails.Instance.amount.Text)));
+                FindAndReplace("[Amt]", JLGDetails.Instance.amount.Text);
+                FindAndReplace("[Loan_his]", JLGDetails.Instance.loanhistory.Text);
+
                 // Mem 1
                 FindAndReplace("[PRES_Name]", JLGmem1.instance.memname1.Text);
                 FindAndReplace("[PRES_Ph]", JLGmem1.instance.memph1.Text);
@@ -436,7 +443,7 @@ namespace TechCos_LRG
             try
             {
                 cmd2 = new SqlCommand("insert into JLGMemberDetail values(@presph,@mname,@msbno,@mfathername,@mmarital,@mrealtionship,@mcomm,@mwork,@mdob,@mage,@mgender,@maadhar,@mphno,@madds1,@madds2,@madds3,@madds4,@mpincode)", cn);
-                cmd2.Parameters.AddWithValue("presph", JLGBorrower.Instance.presno.Text);
+                cmd2.Parameters.AddWithValue("presph", JLGDetails.Instance.presno.Text);
                 cmd2.Parameters.AddWithValue("mname", JLGmem1.instance.memname1.Text);
                 cmd2.Parameters.AddWithValue("msbno", JLGmem1.instance.memsb1.Text);
                 cmd2.Parameters.AddWithValue("mfathername", JLGmem1.instance.memfather1.Text);
@@ -457,7 +464,7 @@ namespace TechCos_LRG
                 cmd2.ExecuteNonQuery();
                 MessageBox.Show("Mem 1 added successfully");
 
-                
+
 
             }
             catch (Exception ex)
@@ -471,7 +478,7 @@ namespace TechCos_LRG
             try
             {
                 cmd3 = new SqlCommand("insert into JLGMemberDetail values(@presph,@mname,@msbno,@mfathername,@mmarital,@mrealtionship,@mcomm,@mwork,@mdob,@mage,@mgender,@maadhar,@mphno,@madds1,@madds2,@madds3,@madds4,@mpincode)", cn);
-                cmd3.Parameters.AddWithValue("presph", JLGBorrower.Instance.presno.Text);
+                cmd3.Parameters.AddWithValue("presph", JLGDetails.Instance.presno.Text);
                 cmd3.Parameters.AddWithValue("mname", JLGmem2.instance.memname1.Text);
                 cmd3.Parameters.AddWithValue("msbno", JLGmem2.instance.memsb1.Text);
                 cmd3.Parameters.AddWithValue("mfathername", JLGmem2.instance.memfather1.Text);
@@ -507,7 +514,7 @@ namespace TechCos_LRG
             try
             {
                 cmd4 = new SqlCommand("insert into JLGMemberDetail values(@presph,@mname,@msbno,@mfathername,@mmarital,@mrealtionship,@mcomm,@mwork,@mdob,@mage,@mgender,@maadhar,@mphno,@madds1,@madds2,@madds3,@madds4,@mpincode)", cn);
-                cmd4.Parameters.AddWithValue("presph", JLGBorrower.Instance.presno.Text);
+                cmd4.Parameters.AddWithValue("presph", JLGDetails.Instance.presno.Text);
                 cmd4.Parameters.AddWithValue("mname", JLGmem3.instance.memname1.Text);
                 cmd4.Parameters.AddWithValue("msbno", JLGmem3.instance.memsb1.Text);
                 cmd4.Parameters.AddWithValue("mfathername", JLGmem3.instance.memfather1.Text);
@@ -543,7 +550,7 @@ namespace TechCos_LRG
             try
             {
                 cmd5 = new SqlCommand("insert into JLGMemberDetail values(@presph,@mname,@msbno,@mfathername,@mmarital,@mrealtionship,@mcomm,@mwork,@mdob,@mage,@mgender,@maadhar,@mphno,@madds1,@madds2,@madds3,@madds4,@mpincode)", cn);
-                cmd5.Parameters.AddWithValue("presph", JLGBorrower.Instance.presno.Text);
+                cmd5.Parameters.AddWithValue("presph", JLGDetails.Instance.presno.Text);
                 cmd5.Parameters.AddWithValue("mname", JLGmem4.instance.memname1.Text);
                 cmd5.Parameters.AddWithValue("msbno", JLGmem4.instance.memsb1.Text);
                 cmd5.Parameters.AddWithValue("mfathername", JLGmem4.instance.memfather1.Text);
@@ -564,7 +571,7 @@ namespace TechCos_LRG
                 cmd5.ExecuteNonQuery();
                 MessageBox.Show("Mem 4 added successfully");
 
-            
+
 
             }
             catch (Exception ex)
@@ -578,7 +585,7 @@ namespace TechCos_LRG
             try
             {
                 cmd6 = new SqlCommand("insert into JLGMemberDetail values(@presph,@mname,@msbno,@mfathername,@mmarital,@mrealtionship,@mcomm,@mwork,@mdob,@mage,@mgender,@maadhar,@mphno,@madds1,@madds2,@madds3,@madds4,@mpincode)", cn);
-                cmd6.Parameters.AddWithValue("presph", JLGBorrower.Instance.presno.Text);
+                cmd6.Parameters.AddWithValue("presph", JLGDetails.Instance.presno.Text);
                 cmd6.Parameters.AddWithValue("mname", JLGmem5.instance.memname1.Text);
                 cmd6.Parameters.AddWithValue("msbno", JLGmem5.instance.memsb1.Text);
                 cmd6.Parameters.AddWithValue("mfathername", JLGmem5.instance.memfather1.Text);
@@ -599,7 +606,7 @@ namespace TechCos_LRG
                 cmd6.ExecuteNonQuery();
                 MessageBox.Show("Mem 5 added successfully");
 
-             
+
             }
             catch (Exception ex)
             {
@@ -611,7 +618,7 @@ namespace TechCos_LRG
             try
             {
                 cmd7 = new SqlCommand("insert into JLGMemberDetail values(@presph,@mname,@msbno,@mfathername,@mmarital,@mrealtionship,@mcomm,@mwork,@mdob,@mage,@mgender,@maadhar,@mphno,@madds1,@madds2,@madds3,@madds4,@mpincode)", cn);
-                cmd7.Parameters.AddWithValue("presph", JLGBorrower.Instance.presno.Text);
+                cmd7.Parameters.AddWithValue("presph", JLGDetails.Instance.presno.Text);
                 cmd7.Parameters.AddWithValue("mname", JLGmem6.instance.memname1.Text);
                 cmd7.Parameters.AddWithValue("msbno", JLGmem6.instance.memsb1.Text);
                 cmd7.Parameters.AddWithValue("mfathername", JLGmem6.instance.memfather1.Text);
@@ -632,7 +639,7 @@ namespace TechCos_LRG
                 cmd7.ExecuteNonQuery();
                 MessageBox.Show("Mem 6 added successfully");
 
-              
+
             }
             catch (Exception ex)
             {
@@ -644,7 +651,7 @@ namespace TechCos_LRG
             try
             {
                 cmd8 = new SqlCommand("insert into JLGMemberDetail values(@presph,@mname,@msbno,@mfathername,@mmarital,@mrealtionship,@mcomm,@mwork,@mdob,@mage,@mgender,@maadhar,@mphno,@madds1,@madds2,@madds3,@madds4,@mpincode)", cn);
-                cmd8.Parameters.AddWithValue("presph", JLGBorrower.Instance.presno.Text);
+                cmd8.Parameters.AddWithValue("presph", JLGDetails.Instance.presno.Text);
                 cmd8.Parameters.AddWithValue("mname", JLGmem7.instance.memname1.Text);
                 cmd8.Parameters.AddWithValue("msbno", JLGmem7.instance.memsb1.Text);
                 cmd8.Parameters.AddWithValue("mfathername", JLGmem7.instance.memfather1.Text);
@@ -666,7 +673,7 @@ namespace TechCos_LRG
                 MessageBox.Show("Mem 7 added successfully");
 
 
-              
+
             }
             catch (Exception ex)
             {
@@ -678,7 +685,7 @@ namespace TechCos_LRG
             try
             {
                 cmd9 = new SqlCommand("insert into JLGMemberDetail values(@presph,@mname,@msbno,@mfathername,@mmarital,@mrealtionship,@mcomm,@mwork,@mdob,@mage,@mgender,@maadhar,@mphno,@madds1,@madds2,@madds3,@madds4,@mpincode)", cn);
-                cmd9.Parameters.AddWithValue("presph", JLGBorrower.Instance.presno.Text);
+                cmd9.Parameters.AddWithValue("presph", JLGDetails.Instance.presno.Text);
                 cmd9.Parameters.AddWithValue("mname", JLGmem8.instance.memname1.Text);
                 cmd9.Parameters.AddWithValue("msbno", JLGmem8.instance.memsb1.Text);
                 cmd9.Parameters.AddWithValue("mfathername", JLGmem8.instance.memfather1.Text);
@@ -699,7 +706,7 @@ namespace TechCos_LRG
                 cmd9.ExecuteNonQuery();
                 MessageBox.Show("Mem 8 added successfully");
 
-             
+
 
             }
             catch (Exception ex)
@@ -712,7 +719,7 @@ namespace TechCos_LRG
             try
             {
                 cmd10 = new SqlCommand("insert into JLGMemberDetail values(@presph,@mname,@msbno,@mfathername,@mmarital,@mrealtionship,@mcomm,@mwork,@mdob,@mage,@mgender,@maadhar,@mphno,@madds1,@madds2,@madds3,@madds4,@mpincode)", cn);
-                cmd10.Parameters.AddWithValue("presph", JLGBorrower.Instance.presno.Text);
+                cmd10.Parameters.AddWithValue("presph", JLGDetails.Instance.presno.Text);
                 cmd10.Parameters.AddWithValue("mname", JLGmem9.instance.memname1.Text);
                 cmd10.Parameters.AddWithValue("msbno", JLGmem9.instance.memsb1.Text);
                 cmd10.Parameters.AddWithValue("mfathername", JLGmem9.instance.memfather1.Text);
@@ -733,7 +740,7 @@ namespace TechCos_LRG
                 cmd10.ExecuteNonQuery();
                 MessageBox.Show("Mem 9 added successfully");
 
-               
+
 
             }
             catch (Exception ex)
@@ -747,7 +754,7 @@ namespace TechCos_LRG
             try
             {
                 cmd11 = new SqlCommand("insert into JLGMemberDetail values(@presph,@mname,@msbno,@mfathername,@mmarital,@mrealtionship,@mcomm,@mwork,@mdob,@mage,@mgender,@maadhar,@mphno,@madds1,@madds2,@madds3,@madds4,@mpincode)", cn);
-                cmd11.Parameters.AddWithValue("presph", JLGBorrower.Instance.presno.Text);
+                cmd11.Parameters.AddWithValue("presph", JLGDetails.Instance.presno.Text);
                 cmd11.Parameters.AddWithValue("mname", JLGmem10.instance.memname1.Text);
                 cmd10.Parameters.AddWithValue("msbno", JLGmem10.instance.memsb1.Text);
                 cmd11.Parameters.AddWithValue("mfathername", JLGmem10.instance.memfather1.Text);
@@ -768,15 +775,15 @@ namespace TechCos_LRG
                 cmd11.ExecuteNonQuery();
                 MessageBox.Show("Mem 10 added successfully");
 
-              
+
 
             }
             catch (Exception ex)
             {
-               MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message);
             }
         }
-      
+
 
 
         public void AddContUserControl(UserControl userControl)
@@ -839,6 +846,77 @@ namespace TechCos_LRG
         private void FindAndReplace(object FindText, object ReplaceText)
         {
             this.app.Selection.Find.Execute(ref FindText, true, true, false, false, false, true, false, 1, ref ReplaceText, 2, false, false, false, false);
+        }
+
+
+        public void calculateEMI()
+        {
+            double per;
+            int month;
+            Console.WriteLine("enter per");
+            per = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("enter month");
+            month = Convert.ToInt32(Console.ReadLine());
+            double rate;
+            rate = per / 100;
+            Console.WriteLine("rate" + rate);
+            Console.WriteLine("enter amount");
+            int amt;
+            amt = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("value of emi");
+            double emi;
+            emi = (amt * Math.Pow((rate / 12) + 1,
+                            (month)) * rate / 12) / (Math.Pow
+                            (rate / 12 + 1, (month)) - 1);
+            //num1 = (amt * rate * (1 + rate) * month);
+            //emi = num1 / num2;
+            Console.WriteLine(Math.Round(emi));
+        }
+
+        public string ConvertNumbertoWords(long number)
+        {
+            if (number == 0) return "ZERO";
+            if (number < 0) return "minus " + ConvertNumbertoWords(Math.Abs(number));
+            string words = "";
+            if ((number / 1000000) > 0)
+            {
+                words += ConvertNumbertoWords(number / 100000) + " LAKHS ";
+                number %= 1000000;
+            }
+            if ((number / 1000) > 0)
+            {
+                words += ConvertNumbertoWords(number / 1000) + " THOUSAND ";
+                number %= 1000;
+            }
+            if ((number / 100) > 0)
+            {
+                words += ConvertNumbertoWords(number / 100) + " HUNDRED ";
+                number %= 100;
+            }
+            //if ((number / 10) > 0)  
+            //{  
+            // words += ConvertNumbertoWords(number / 10) + " RUPEES ";  
+            // number %= 10;  
+            //}  
+            if (number > 0)
+            {
+                if (words != "") words += "AND ";
+                var unitsMap = new[]
+                {
+            "ZERO", "ONE", "TWO", "THREE", "FOUR", "FIVE", "SIX", "SEVEN", "EIGHT", "NINE", "TEN", "ELEVEN", "TWELVE", "THIRTEEN", "FOURTEEN", "FIFTEEN", "SIXTEEN", "SEVENTEEN", "EIGHTEEN", "NINETEEN"
+        };
+                var tensMap = new[]
+                {
+            "ZERO", "TEN", "TWENTY", "THIRTY", "FORTY", "FIFTY", "SIXTY", "SEVENTY", "EIGHTY", "NINETY"
+        };
+                if (number < 20) words += unitsMap[number];
+                else
+                {
+                    words += tensMap[number / 10];
+                    if ((number % 10) > 0) words += " " + unitsMap[number % 10];
+                }
+            }
+            return words;
         }
     }
 }

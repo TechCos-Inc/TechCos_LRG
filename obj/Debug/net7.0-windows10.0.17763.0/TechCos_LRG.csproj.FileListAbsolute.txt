@@ -132,7 +132,6 @@ C:\Users\Harish K\source\repos\HarishK-CS\TechCos_LRG\obj\Debug\net7.0-windows10
 C:\Users\Harish K\source\repos\HarishK-CS\TechCos_LRG\obj\Debug\net7.0-windows10.0.17763.0\TechCos_LRG.JlgLoane.resources
 C:\Users\Harish K\source\repos\HarishK-CS\TechCos_LRG\obj\Debug\net7.0-windows10.0.17763.0\TechCos_LRG.JLG_usercontrol.AnnexurePageNum.resources
 C:\Users\Harish K\source\repos\HarishK-CS\TechCos_LRG\obj\Debug\net7.0-windows10.0.17763.0\TechCos_LRG.JLG_usercontrol.JLGAmount.resources
-C:\Users\Harish K\source\repos\HarishK-CS\TechCos_LRG\obj\Debug\net7.0-windows10.0.17763.0\TechCos_LRG.JLG_usercontrol.JLGBorrower.resources
 C:\Users\Harish K\source\repos\HarishK-CS\TechCos_LRG\obj\Debug\net7.0-windows10.0.17763.0\TechCos_LRG.JLG_usercontrol.JLGmem1.resources
 C:\Users\Harish K\source\repos\HarishK-CS\TechCos_LRG\obj\Debug\net7.0-windows10.0.17763.0\TechCos_LRG.JLG_usercontrol.JLGmem10.resources
 C:\Users\Harish K\source\repos\HarishK-CS\TechCos_LRG\obj\Debug\net7.0-windows10.0.17763.0\TechCos_LRG.JLG_usercontrol.JLGmem2.resources
@@ -160,3 +159,6 @@ C:\Users\Harish K\source\repos\HarishK-CS\TechCos_LRG\obj\Debug\net7.0-windows10
 C:\Users\Harish K\source\repos\HarishK-CS\TechCos_LRG\obj\Debug\net7.0-windows10.0.17763.0\TechCos_LRG.genruntimeconfig.cache
 C:\Users\Harish K\source\repos\HarishK-CS\TechCos_LRG\obj\Debug\net7.0-windows10.0.17763.0\ref\TechCos_LRG.dll
 C:\Users\Harish K\source\repos\HarishK-CS\TechCos_LRG\bin\Debug\net7.0-windows10.0.17763.0\Spire.Doc.dll
+C:\Users\Harish K\source\repos\HarishK-CS\TechCos_LRG\obj\Debug\net7.0-windows10.0.17763.0\TechCos_LRG.sourcelink.json
+C:\Users\Harish K\source\repos\HarishK-CS\TechCos_LRG\obj\Debug\net7.0-windows10.0.17763.0\TechCos_LRG.JLG_usercontrol.JLGDetails.resources
+C:\Users\Harish K\source\repos\HarishK-CS\TechCos_LRG\obj\Debug\net7.0-windows10.0.17763.0\TechCos_LRG.BDOForm.resources

@@ -49,6 +49,12 @@
             spreadTxt = new MaterialSkin.Controls.MaterialTextBox();
             emiAmountTxt = new MaterialSkin.Controls.MaterialTextBox();
             noOfMonthTxt = new MaterialSkin.Controls.MaterialTextBox();
+            itSpreadTxt = new MaterialSkin.Controls.MaterialTextBox();
+            prSpreadTxt = new MaterialSkin.Controls.MaterialTextBox();
+            label1 = new Label();
+            label2 = new Label();
+            penalInterestTxt = new MaterialSkin.Controls.MaterialTextBox();
+            label3 = new Label();
             SuspendLayout();
             // 
             // label18
@@ -322,10 +328,98 @@
             noOfMonthTxt.Text = "";
             noOfMonthTxt.TrailingIcon = null;
             // 
+            // itSpreadTxt
+            // 
+            itSpreadTxt.AnimateReadOnly = false;
+            itSpreadTxt.BorderStyle = BorderStyle.None;
+            itSpreadTxt.Depth = 0;
+            itSpreadTxt.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            itSpreadTxt.LeadingIcon = null;
+            itSpreadTxt.Location = new Point(808, 565);
+            itSpreadTxt.MaxLength = 50;
+            itSpreadTxt.MouseState = MaterialSkin.MouseState.OUT;
+            itSpreadTxt.Multiline = false;
+            itSpreadTxt.Name = "itSpreadTxt";
+            itSpreadTxt.Size = new Size(194, 50);
+            itSpreadTxt.TabIndex = 133;
+            itSpreadTxt.Text = "";
+            itSpreadTxt.TrailingIcon = null;
+            // 
+            // prSpreadTxt
+            // 
+            prSpreadTxt.AnimateReadOnly = false;
+            prSpreadTxt.BorderStyle = BorderStyle.None;
+            prSpreadTxt.Depth = 0;
+            prSpreadTxt.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            prSpreadTxt.LeadingIcon = null;
+            prSpreadTxt.Location = new Point(343, 572);
+            prSpreadTxt.MaxLength = 50;
+            prSpreadTxt.MouseState = MaterialSkin.MouseState.OUT;
+            prSpreadTxt.Multiline = false;
+            prSpreadTxt.Name = "prSpreadTxt";
+            prSpreadTxt.Size = new Size(194, 50);
+            prSpreadTxt.TabIndex = 132;
+            prSpreadTxt.Text = "";
+            prSpreadTxt.TrailingIcon = null;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(617, 572);
+            label1.Name = "label1";
+            label1.Size = new Size(94, 28);
+            label1.TabIndex = 131;
+            label1.Text = "IT Spread";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(173, 582);
+            label2.Name = "label2";
+            label2.Size = new Size(102, 28);
+            label2.TabIndex = 130;
+            label2.Text = "PR Spread";
+            // 
+            // penalInterestTxt
+            // 
+            penalInterestTxt.AnimateReadOnly = false;
+            penalInterestTxt.BorderStyle = BorderStyle.None;
+            penalInterestTxt.Depth = 0;
+            penalInterestTxt.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            penalInterestTxt.LeadingIcon = null;
+            penalInterestTxt.Location = new Point(564, 654);
+            penalInterestTxt.MaxLength = 50;
+            penalInterestTxt.MouseState = MaterialSkin.MouseState.OUT;
+            penalInterestTxt.Multiline = false;
+            penalInterestTxt.Name = "penalInterestTxt";
+            penalInterestTxt.Size = new Size(194, 50);
+            penalInterestTxt.TabIndex = 135;
+            penalInterestTxt.Text = "";
+            penalInterestTxt.TrailingIcon = null;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(394, 664);
+            label3.Name = "label3";
+            label3.Size = new Size(145, 28);
+            label3.TabIndex = 134;
+            label3.Text = "Penalty Interest";
+            // 
             // JLGAmount
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoScroll = true;
+            Controls.Add(penalInterestTxt);
+            Controls.Add(label3);
+            Controls.Add(itSpreadTxt);
+            Controls.Add(prSpreadTxt);
+            Controls.Add(label1);
+            Controls.Add(label2);
             Controls.Add(noOfMonthTxt);
             Controls.Add(emiAmountTxt);
             Controls.Add(spreadTxt);
@@ -348,7 +442,7 @@
             Controls.Add(label22);
             Controls.Add(label20);
             Name = "JLGAmount";
-            Size = new Size(1184, 605);
+            Size = new Size(1150, 605);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -375,5 +469,11 @@
         private MaterialSkin.Controls.MaterialTextBox spreadTxt;
         private MaterialSkin.Controls.MaterialTextBox emiAmountTxt;
         private MaterialSkin.Controls.MaterialTextBox noOfMonthTxt;
+        private MaterialSkin.Controls.MaterialTextBox itSpreadTxt;
+        private MaterialSkin.Controls.MaterialTextBox prSpreadTxt;
+        private Label label1;
+        private Label label2;
+        private MaterialSkin.Controls.MaterialTextBox penalInterestTxt;
+        private Label label3;
     }
 }

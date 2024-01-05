@@ -50,9 +50,9 @@ namespace TechCos_LRG.JLG_usercontrol
 
         private void memberpageNum_Load(object sender, EventArgs e)
         {
-            if (JLGBorrower.Instance.memcountCmb.SelectedItem != null)
+            if (JLGDetails.Instance.memcountCmb.SelectedItem != null)
             {
-                hidePg(JLGBorrower.Instance.memcountCmb.SelectedItem.ToString());
+                hidePg(JLGDetails.Instance.memcountCmb.SelectedItem.ToString());
             }
 
 

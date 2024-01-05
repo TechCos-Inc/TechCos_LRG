@@ -31,7 +31,7 @@ namespace TechCos_LRG
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            cn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Harish K\\source\\repos\\HarishK-CS\\TechCos_LRG\\Database.mdf\";Integrated Security=True");
+            cn = new SqlConnection(ConnectionString.ConnStr);
             cn.Open();
             string Sql = "select BranchName from Branch";
 
@@ -164,6 +164,8 @@ namespace TechCos_LRG
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            this.Close();
             Form1 form1 = new Form1();
             form1.ShowDialog();
         }
@@ -173,6 +175,13 @@ namespace TechCos_LRG
             this.Hide();
             Procode procode = new Procode();
             procode.ShowDialog();
+        }
+
+        private void BdoBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            BDOForm bdo = new BDOForm();
+            bdo.ShowDialog();
         }
     }
 }
